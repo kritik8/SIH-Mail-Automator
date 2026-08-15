@@ -1,0 +1,22 @@
+# Credentials and Environment
+.env
+.env.*
+!.env.example
+
+# Runtime Output
+preview/
+send_log.csv
+
+# Python environment and caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+ENV/
+dist/
+build/
+*.egg-info/
+.idea/
+.vscode/

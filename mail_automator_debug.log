@@ -1,0 +1,181 @@
+2026-08-15 17:36:54,878 [INFO] app: ====================================================
+2026-08-15 17:36:54,880 [INFO] app:                   DRY RUN ACTIVE                    
+2026-08-15 17:36:54,880 [INFO] app: ====================================================
+2026-08-15 17:36:54,880 [INFO] app: Emails will only be rendered and saved to preview/
+2026-08-15 17:36:54,880 [INFO] app: ====================================================
+2026-08-15 17:36:54,880 [INFO] app: Loading teams from: data/sample_teams_test.csv
+2026-08-15 17:36:54,885 [WARNING] csv_loader: [Line 5] Skipping row: 'team_number' is empty.
+2026-08-15 17:36:54,886 [WARNING] csv_loader: [Line 6] Skipping row: 'leader_email' is empty.
+2026-08-15 17:36:54,886 [WARNING] csv_loader: [Line 7] Skipping team SIH-046 due to validation error: 1 validation error for TeamData
+leader_email
+  value is not a valid email address: An email address must have an @-sign. [type=value_error, input_value='not-a-valid-email', input_type=str]
+2026-08-15 17:36:54,887 [INFO] app: Successfully loaded 4 valid team rows from CSV.
+2026-08-15 17:36:54,908 [INFO] app: Found 0 teams already successfully emailed in log.
+2026-08-15 17:36:54,916 [INFO] app: [1/4] Processing team SIH-042 (CodeCrafters) -> aditi.test@example.com
+2026-08-15 17:36:54,927 [INFO] mailer: [DRY RUN] Generated preview for team SIH-042 at: preview\team_SIH-042.html
+2026-08-15 17:36:54,928 [INFO] app: [2/4] Processing team SIH-043 (ElectroWaves) -> vikram.test@example.com
+2026-08-15 17:36:54,930 [INFO] mailer: [DRY RUN] Generated preview for team SIH-043 at: preview\team_SIH-043.html
+2026-08-15 17:36:54,931 [INFO] app: [3/4] Processing team SIH-044 (DevDynasty) -> kunal.test@example.com
+2026-08-15 17:36:54,933 [INFO] mailer: [DRY RUN] Generated preview for team SIH-044 at: preview\team_SIH-044.html
+2026-08-15 17:36:54,935 [INFO] app: [4/4] Processing team SIH-047 (QuickCoders) -> sara.test@example.com
+2026-08-15 17:36:54,937 [INFO] mailer: [DRY RUN] Generated preview for team SIH-047 at: preview\team_SIH-047.html
+2026-08-15 17:36:54,939 [INFO] app: ====================================================
+2026-08-15 17:36:54,939 [INFO] app:                 EXECUTION SUMMARY                   
+2026-08-15 17:36:54,939 [INFO] app: ====================================================
+2026-08-15 17:36:54,939 [INFO] app: Total teams loaded: 4
+2026-08-15 17:36:54,939 [INFO] app: Skipped (already sent): 0
+2026-08-15 17:36:54,939 [INFO] app: Successfully processed: 4
+2026-08-15 17:36:54,939 [INFO] app: Failed to process:      0
+2026-08-15 17:36:54,940 [INFO] app: ====================================================
+2026-08-15 17:37:07,493 [INFO] app: ====================================================
+2026-08-15 17:37:07,494 [INFO] app:                   DRY RUN ACTIVE                    
+2026-08-15 17:37:07,495 [INFO] app: ====================================================
+2026-08-15 17:37:07,495 [INFO] app: Emails will be redirect-sent to test: test@example.com
+2026-08-15 17:37:07,495 [INFO] app: ====================================================
+2026-08-15 17:37:07,495 [INFO] app: Loading teams from: data/sample_teams_test.csv
+2026-08-15 17:37:07,504 [WARNING] csv_loader: [Line 5] Skipping row: 'team_number' is empty.
+2026-08-15 17:37:07,504 [WARNING] csv_loader: [Line 6] Skipping row: 'leader_email' is empty.
+2026-08-15 17:37:07,505 [WARNING] csv_loader: [Line 7] Skipping team SIH-046 due to validation error: 1 validation error for TeamData
+leader_email
+  value is not a valid email address: An email address must have an @-sign. [type=value_error, input_value='not-a-valid-email', input_type=str]
+2026-08-15 17:37:07,507 [INFO] app: Successfully loaded 4 valid team rows from CSV.
+2026-08-15 17:37:07,508 [INFO] app: Found 0 teams already successfully emailed in log.
+2026-08-15 17:37:07,516 [INFO] app: [1/4] Processing team SIH-042 (CodeCrafters) -> test@example.com
+2026-08-15 17:37:07,527 [INFO] mailer: [DRY RUN] Generated preview for team SIH-042 at: preview\team_SIH-042.html
+2026-08-15 17:37:07,527 [INFO] mailer: [DRY RUN] Redirecting email to test address: test@example.com
+2026-08-15 17:37:10,279 [WARNING] mailer: SMTP send attempt 1/3 failed for test@example.com: (530, b'5.7.0 Authentication Required. For more information, go to\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5a478bee46e88-320e9df03f9sm14922674eec.19 - gsmtp', 'sih-automator@iiitbhopal.ac.in')
+2026-08-15 17:37:15,319 [WARNING] mailer: SMTP send attempt 2/3 failed for test@example.com: (530, b'5.7.0 Authentication Required. For more information, go to\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5a478bee46e88-320d5bd9fd3sm14420336eec.4 - gsmtp', 'sih-automator@iiitbhopal.ac.in')
+2026-08-15 17:37:21,132 [WARNING] mailer: SMTP send attempt 3/3 failed for test@example.com: (530, b'5.7.0 Authentication Required. For more information, go to\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5a478bee46e88-320d5bd9679sm15631217eec.3 - gsmtp', 'sih-automator@iiitbhopal.ac.in')
+2026-08-15 17:37:21,132 [ERROR] mailer: Failed to send email to test@example.com after 3 attempts.
+2026-08-15 17:37:21,134 [INFO] app: Throttling for 3.0 seconds...
+2026-08-15 17:37:24,136 [INFO] app: [2/4] Processing team SIH-043 (ElectroWaves) -> test@example.com
+2026-08-15 17:37:24,137 [INFO] mailer: [DRY RUN] Generated preview for team SIH-043 at: preview\team_SIH-043.html
+2026-08-15 17:37:24,138 [INFO] mailer: [DRY RUN] Redirecting email to test address: test@example.com
+2026-08-15 17:37:26,865 [WARNING] mailer: SMTP send attempt 1/3 failed for test@example.com: (530, b'5.7.0 Authentication Required. For more information, go to\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5a478bee46e88-320d5bd9fd3sm14421590eec.4 - gsmtp', 'sih-automator@iiitbhopal.ac.in')
+2026-08-15 17:37:31,892 [WARNING] mailer: SMTP send attempt 2/3 failed for test@example.com: (530, b'5.7.0 Authentication Required. For more information, go to\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5a478bee46e88-320d5bd9679sm15632591eec.3 - gsmtp', 'sih-automator@iiitbhopal.ac.in')
+2026-08-15 17:37:36,890 [WARNING] mailer: SMTP send attempt 3/3 failed for test@example.com: (530, b'5.7.0 Authentication Required. For more information, go to\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5a478bee46e88-320d5bd9fe0sm24128211eec.1 - gsmtp', 'sih-automator@iiitbhopal.ac.in')
+2026-08-15 17:37:36,890 [ERROR] mailer: Failed to send email to test@example.com after 3 attempts.
+2026-08-15 17:37:36,891 [INFO] app: Throttling for 3.0 seconds...
+2026-08-15 17:37:39,892 [INFO] app: [3/4] Processing team SIH-044 (DevDynasty) -> test@example.com
+2026-08-15 17:37:39,894 [INFO] mailer: [DRY RUN] Generated preview for team SIH-044 at: preview\team_SIH-044.html
+2026-08-15 17:37:39,894 [INFO] mailer: [DRY RUN] Redirecting email to test address: test@example.com
+2026-08-15 17:37:42,533 [WARNING] mailer: SMTP send attempt 1/3 failed for test@example.com: (530, b'5.7.0 Authentication Required. For more information, go to\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. a92af1059eb24-1413887ee70sm19021891c88.11 - gsmtp', 'sih-automator@iiitbhopal.ac.in')
+2026-08-15 17:37:47,559 [WARNING] mailer: SMTP send attempt 2/3 failed for test@example.com: (530, b'5.7.0 Authentication Required. For more information, go to\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5a478bee46e88-323050db573sm9656949eec.9 - gsmtp', 'sih-automator@iiitbhopal.ac.in')
+2026-08-15 17:37:52,770 [WARNING] mailer: SMTP send attempt 3/3 failed for test@example.com: (530, b'5.7.0 Authentication Required. For more information, go to\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5a478bee46e88-3218d3f398dsm15484350eec.22 - gsmtp', 'sih-automator@iiitbhopal.ac.in')
+2026-08-15 17:37:52,770 [ERROR] mailer: Failed to send email to test@example.com after 3 attempts.
+2026-08-15 17:37:52,770 [INFO] app: Throttling for 3.0 seconds...
+2026-08-15 17:37:55,775 [INFO] app: [4/4] Processing team SIH-047 (QuickCoders) -> test@example.com
+2026-08-15 17:37:55,777 [INFO] mailer: [DRY RUN] Generated preview for team SIH-047 at: preview\team_SIH-047.html
+2026-08-15 17:37:55,777 [INFO] mailer: [DRY RUN] Redirecting email to test address: test@example.com
+2026-08-15 17:37:58,712 [WARNING] mailer: SMTP send attempt 1/3 failed for test@example.com: (530, b'5.7.0 Authentication Required. For more information, go to\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5a478bee46e88-320ea90010bsm15704684eec.30 - gsmtp', 'sih-automator@iiitbhopal.ac.in')
+2026-08-15 17:38:03,818 [WARNING] mailer: SMTP send attempt 2/3 failed for test@example.com: (530, b'5.7.0 Authentication Required. For more information, go to\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5a478bee46e88-320d5bdc5c4sm15724039eec.5 - gsmtp', 'sih-automator@iiitbhopal.ac.in')
+2026-08-15 17:38:08,796 [WARNING] mailer: SMTP send attempt 3/3 failed for test@example.com: (530, b'5.7.0 Authentication Required. For more information, go to\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5a478bee46e88-320ea2fe8f1sm15290965eec.23 - gsmtp', 'sih-automator@iiitbhopal.ac.in')
+2026-08-15 17:38:08,798 [ERROR] mailer: Failed to send email to test@example.com after 3 attempts.
+2026-08-15 17:38:08,801 [INFO] app: ====================================================
+2026-08-15 17:38:08,801 [INFO] app:                 EXECUTION SUMMARY                   
+2026-08-15 17:38:08,801 [INFO] app: ====================================================
+2026-08-15 17:38:08,801 [INFO] app: Total teams loaded: 4
+2026-08-15 17:38:08,801 [INFO] app: Skipped (already sent): 0
+2026-08-15 17:38:08,801 [INFO] app: Successfully processed: 0
+2026-08-15 17:38:08,801 [INFO] app: Failed to process:      4
+2026-08-15 17:38:08,801 [INFO] app: ====================================================
+2026-08-15 17:47:15,623 [INFO] app: ====================================================
+2026-08-15 17:47:15,624 [INFO] app:                 !!! LIVE MODE !!!                  
+2026-08-15 17:47:15,625 [INFO] app: ====================================================
+2026-08-15 17:47:15,625 [INFO] app: Targeting real team leaders with CC to: ['sourabh.jain@iiitbhopal.ac.in', 'rekhakaushik@iiitbhopal.ac.in']
+2026-08-15 17:47:15,625 [INFO] app: ====================================================
+2026-08-15 17:47:15,625 [INFO] app: Loading teams from: data/test_run.csv
+2026-08-15 17:47:15,633 [INFO] app: Successfully loaded 3 valid team rows from CSV.
+2026-08-15 17:47:15,633 [INFO] app: Found 0 teams already successfully emailed in log.
+2026-08-15 17:47:15,639 [INFO] app: [1/3] Processing team SIH-TEST-01 (AlphaTeam) -> urvik819@gmail.com
+2026-08-15 17:47:18,859 [WARNING] mailer: SMTP send attempt 1/3 failed for urvik819@gmail.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-320ea2fe8f1sm15371181eec.23 - gsmtp')
+2026-08-15 17:47:23,771 [WARNING] mailer: SMTP send attempt 2/3 failed for urvik819@gmail.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1413889d914sm19374381c88.13 - gsmtp')
+2026-08-15 17:47:28,691 [WARNING] mailer: SMTP send attempt 3/3 failed for urvik819@gmail.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-141387ac9b1sm21300615c88.2 - gsmtp')
+2026-08-15 17:47:28,692 [ERROR] mailer: Failed to send email to urvik819@gmail.com after 3 attempts.
+2026-08-15 17:47:28,693 [INFO] app: Throttling for 3.0 seconds...
+2026-08-15 17:47:31,694 [INFO] app: [2/3] Processing team SIH-TEST-02 (BetaTeam) -> jkritik894@gmail.com
+2026-08-15 17:47:34,921 [WARNING] mailer: SMTP send attempt 1/3 failed for jkritik894@gmail.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-320ea2f787fsm14439423eec.20 - gsmtp')
+2026-08-15 17:47:40,019 [WARNING] mailer: SMTP send attempt 2/3 failed for jkritik894@gmail.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-320ea2f787fsm14440299eec.20 - gsmtp')
+2026-08-15 17:47:44,970 [WARNING] mailer: SMTP send attempt 3/3 failed for jkritik894@gmail.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-320e9df03e1sm14684427eec.16 - gsmtp')
+2026-08-15 17:47:44,974 [ERROR] mailer: Failed to send email to jkritik894@gmail.com after 3 attempts.
+2026-08-15 17:47:44,980 [INFO] app: Throttling for 3.0 seconds...
+2026-08-15 17:47:47,981 [INFO] app: [3/3] Processing team SIH-TEST-03 (GammaTeam) -> kritikj894@gmail.com
+2026-08-15 17:47:51,322 [WARNING] mailer: SMTP send attempt 1/3 failed for kritikj894@gmail.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5a478bee46e88-323050db573sm9734527eec.9 - gsmtp')
+2026-08-15 17:47:56,443 [WARNING] mailer: SMTP send attempt 2/3 failed for kritikj894@gmail.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-1413887ee65sm18148992c88.10 - gsmtp')
+2026-08-15 17:48:01,968 [WARNING] mailer: SMTP send attempt 3/3 failed for kritikj894@gmail.com: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a92af1059eb24-141387ed5b1sm32556665c88.8 - gsmtp')
+2026-08-15 17:48:01,973 [ERROR] mailer: Failed to send email to kritikj894@gmail.com after 3 attempts.
+2026-08-15 17:48:01,974 [INFO] app: ====================================================
+2026-08-15 17:48:01,974 [INFO] app:                 EXECUTION SUMMARY                   
+2026-08-15 17:48:01,974 [INFO] app: ====================================================
+2026-08-15 17:48:01,974 [INFO] app: Total teams loaded: 3
+2026-08-15 17:48:01,974 [INFO] app: Skipped (already sent): 0
+2026-08-15 17:48:01,974 [INFO] app: Successfully processed: 0
+2026-08-15 17:48:01,975 [INFO] app: Failed to process:      3
+2026-08-15 17:48:01,975 [INFO] app: ====================================================
+2026-08-15 17:48:33,216 [INFO] app: ====================================================
+2026-08-15 17:48:33,223 [INFO] app:                 !!! LIVE MODE !!!                  
+2026-08-15 17:48:33,223 [INFO] app: ====================================================
+2026-08-15 17:48:33,223 [INFO] app: Targeting real team leaders with CC to: ['sourabh.jain@iiitbhopal.ac.in', 'rekhakaushik@iiitbhopal.ac.in']
+2026-08-15 17:48:33,223 [INFO] app: ====================================================
+2026-08-15 17:48:33,223 [INFO] app: Loading teams from: data/test_run.csv
+2026-08-15 17:48:33,230 [INFO] app: Successfully loaded 3 valid team rows from CSV.
+2026-08-15 17:48:33,230 [INFO] app: Found 0 teams already successfully emailed in log.
+2026-08-15 17:48:33,235 [INFO] app: [1/3] Processing team SIH-TEST-01 (AlphaTeam) -> urvik819@gmail.com
+2026-08-15 17:48:39,312 [INFO] mailer: Successfully sent email to urvik819@gmail.com (Attempt 1)
+2026-08-15 17:48:39,313 [INFO] app: Throttling for 3.0 seconds...
+2026-08-15 17:48:42,314 [INFO] app: [2/3] Processing team SIH-TEST-02 (BetaTeam) -> jkritik894@gmail.com
+2026-08-15 17:48:48,052 [INFO] mailer: Successfully sent email to jkritik894@gmail.com (Attempt 1)
+2026-08-15 17:48:48,056 [INFO] app: Throttling for 3.0 seconds...
+2026-08-15 17:48:51,057 [INFO] app: [3/3] Processing team SIH-TEST-03 (GammaTeam) -> kritikj894@gmail.com
+2026-08-15 17:48:57,220 [INFO] mailer: Successfully sent email to kritikj894@gmail.com (Attempt 1)
+2026-08-15 17:48:57,234 [INFO] app: ====================================================
+2026-08-15 17:48:57,234 [INFO] app:                 EXECUTION SUMMARY                   
+2026-08-15 17:48:57,234 [INFO] app: ====================================================
+2026-08-15 17:48:57,234 [INFO] app: Total teams loaded: 3
+2026-08-15 17:48:57,234 [INFO] app: Skipped (already sent): 0
+2026-08-15 17:48:57,234 [INFO] app: Successfully processed: 3
+2026-08-15 17:48:57,234 [INFO] app: Failed to process:      0
+2026-08-15 17:48:57,234 [INFO] app: ====================================================
+2026-08-15 18:01:57,322 [INFO] app: ====================================================
+2026-08-15 18:01:57,328 [INFO] app:                   DRY RUN ACTIVE                    
+2026-08-15 18:01:57,328 [INFO] app: ====================================================
+2026-08-15 18:01:57,328 [INFO] app: Emails will only be rendered and saved to preview/
+2026-08-15 18:01:57,329 [INFO] app: ====================================================
+2026-08-15 18:01:57,329 [INFO] app: Loading teams from: data/sample_teams_test.csv
+2026-08-15 18:01:57,330 [WARNING] csv_loader: [Line 5] Skipping row: 'team_number' is empty.
+2026-08-15 18:01:57,330 [WARNING] csv_loader: [Line 6] Skipping row: Leader name or email is empty or invalid.
+2026-08-15 18:01:57,330 [WARNING] csv_loader: [Line 7] Skipping team SIH-046: Leader email 'not-a-valid-email' is invalid.
+2026-08-15 18:01:57,330 [INFO] app: Successfully loaded 3 valid team rows from CSV.
+2026-08-15 18:01:57,331 [INFO] app: Found 3 teams already successfully emailed in log.
+2026-08-15 18:01:57,337 [INFO] app: [1/3] Processing team SIH-042 (CodeCrafters) -> aditi.test@example.com
+2026-08-15 18:01:57,347 [INFO] mailer: [DRY RUN] Generated preview for team SIH-042 at: preview\team_SIH-042.html
+2026-08-15 18:01:57,349 [INFO] app: [2/3] Processing team SIH-043 (ElectroWaves) -> vikram.test@example.com
+2026-08-15 18:01:57,352 [INFO] mailer: [DRY RUN] Generated preview for team SIH-043 at: preview\team_SIH-043.html
+2026-08-15 18:01:57,353 [INFO] app: [3/3] Processing team SIH-044 (DevDynasty) -> kunal.test@example.com
+2026-08-15 18:01:57,355 [INFO] mailer: [DRY RUN] Generated preview for team SIH-044 at: preview\team_SIH-044.html
+2026-08-15 18:01:57,356 [INFO] app: ====================================================
+2026-08-15 18:01:57,356 [INFO] app:                 EXECUTION SUMMARY                   
+2026-08-15 18:01:57,356 [INFO] app: ====================================================
+2026-08-15 18:01:57,356 [INFO] app: Total teams loaded: 3
+2026-08-15 18:01:57,356 [INFO] app: Skipped (already sent): 0
+2026-08-15 18:01:57,356 [INFO] app: Successfully processed: 3
+2026-08-15 18:01:57,356 [INFO] app: Failed to process:      0
+2026-08-15 18:01:57,356 [INFO] app: ====================================================
+2026-08-15 18:04:10,453 [INFO] app: ====================================================
+2026-08-15 18:04:10,454 [INFO] app:                 !!! LIVE MODE !!!                  
+2026-08-15 18:04:10,454 [INFO] app: ====================================================
+2026-08-15 18:04:10,454 [INFO] app: Targeting real team leaders with CC to: ['sourabh.jain@iiitbhopal.ac.in', 'rekhakaushik@iiitbhopal.ac.in']
+2026-08-15 18:04:10,454 [INFO] app: ====================================================
+2026-08-15 18:04:10,454 [INFO] app: Loading teams from: data/single_test.csv
+2026-08-15 18:04:10,456 [INFO] app: Successfully loaded 1 valid team rows from CSV.
+2026-08-15 18:04:10,456 [INFO] app: Found 3 teams already successfully emailed in log.
+2026-08-15 18:04:10,463 [INFO] app: [1/1] Processing team SIH-TEST-SINGLE (CodeCrafters) -> jkritik894@gmail.com
+2026-08-15 18:04:16,636 [INFO] mailer: Successfully sent email to jkritik894@gmail.com (Attempt 1)
+2026-08-15 18:04:16,639 [INFO] app: ====================================================
+2026-08-15 18:04:16,639 [INFO] app:                 EXECUTION SUMMARY                   
+2026-08-15 18:04:16,639 [INFO] app: ====================================================
+2026-08-15 18:04:16,639 [INFO] app: Total teams loaded: 1
+2026-08-15 18:04:16,639 [INFO] app: Skipped (already sent): 0
+2026-08-15 18:04:16,639 [INFO] app: Successfully processed: 1
+2026-08-15 18:04:16,639 [INFO] app: Failed to process:      0
+2026-08-15 18:04:16,639 [INFO] app: ====================================================
