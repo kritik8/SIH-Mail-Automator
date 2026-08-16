@@ -295,3 +295,77 @@ leader_email
 2026-08-16 18:03:11,754 [INFO] app: Successfully processed: 3
 2026-08-16 18:03:11,754 [INFO] app: Failed to process:      0
 2026-08-16 18:03:11,754 [INFO] app: ====================================================
+2026-08-16 18:06:33,998 [INFO] app: ====================================================
+2026-08-16 18:06:34,001 [INFO] app:              TEST MODE - SANDBOX RUN                
+2026-08-16 18:06:34,001 [INFO] app: ====================================================
+2026-08-16 18:06:34,001 [INFO] app: Targeting sandbox CSV: test/test_teams.csv
+2026-08-16 18:06:34,001 [INFO] app: Coordinators CC list has been completely REMOVED for safety.
+2026-08-16 18:06:34,001 [INFO] app: ====================================================
+2026-08-16 18:06:34,001 [INFO] app: Loading teams from: test/test_teams.csv
+2026-08-16 18:06:34,001 [INFO] app: Loaded 2 valid team rows from CSV.
+2026-08-16 18:06:34,001 [INFO] app: Found 0 teams already successfully processed in test_send_log.csv.
+2026-08-16 18:06:34,004 [INFO] app: [1/2] Sending 'invitation' email to team 01 -> urvik819@gmail.com
+2026-08-16 18:06:38,560 [INFO] mailer: Successfully sent email to urvik819@gmail.com (Attempt 1)
+2026-08-16 18:06:38,563 [INFO] app: Throttling for 3.0 seconds...
+2026-08-16 18:06:41,564 [INFO] app: [2/2] Sending 'invitation' email to team 02 -> jkritik894@gmail.com
+2026-08-16 18:06:46,556 [INFO] mailer: Successfully sent email to jkritik894@gmail.com (Attempt 1)
+2026-08-16 18:06:46,558 [INFO] app: ====================================================
+2026-08-16 18:06:46,558 [INFO] app:                 EXECUTION SUMMARY                   
+2026-08-16 18:06:46,558 [INFO] app: ====================================================
+2026-08-16 18:06:46,558 [INFO] app: Template:               invitation
+2026-08-16 18:06:46,558 [INFO] app: Mode:                   test
+2026-08-16 18:06:46,558 [INFO] app: Total teams loaded:     2
+2026-08-16 18:06:46,558 [INFO] app: Skipped (already sent): 0
+2026-08-16 18:06:46,559 [INFO] app: Successfully processed: 2
+2026-08-16 18:06:46,559 [INFO] app: Failed to process:      0
+2026-08-16 18:06:46,559 [INFO] app: ====================================================
+2026-08-16 18:06:47,394 [INFO] app: ====================================================
+2026-08-16 18:06:47,406 [INFO] app:              TEST MODE - SANDBOX RUN                
+2026-08-16 18:06:47,406 [INFO] app: ====================================================
+2026-08-16 18:06:47,406 [INFO] app: Targeting sandbox CSV: test/test_teams.csv
+2026-08-16 18:06:47,406 [INFO] app: Coordinators CC list has been completely REMOVED for safety.
+2026-08-16 18:06:47,406 [INFO] app: ====================================================
+2026-08-16 18:06:47,406 [INFO] app: Loading teams from: test/test_teams.csv
+2026-08-16 18:06:47,407 [INFO] app: Loaded 2 valid team rows from CSV.
+2026-08-16 18:06:47,425 [INFO] app: Found 2 teams already successfully processed in test_send_log.csv.
+2026-08-16 18:06:47,427 [INFO] app: [1/2] Sending 'reminder' email to team 01 -> urvik819@gmail.com
+2026-08-16 18:06:52,098 [INFO] mailer: Successfully sent email to urvik819@gmail.com (Attempt 1)
+2026-08-16 18:06:52,101 [INFO] app: Throttling for 3.0 seconds...
+2026-08-16 18:06:55,102 [INFO] app: [2/2] Sending 'reminder' email to team 02 -> jkritik894@gmail.com
+2026-08-16 18:06:59,459 [INFO] mailer: Successfully sent email to jkritik894@gmail.com (Attempt 1)
+2026-08-16 18:06:59,461 [INFO] app: ====================================================
+2026-08-16 18:06:59,462 [INFO] app:                 EXECUTION SUMMARY                   
+2026-08-16 18:06:59,462 [INFO] app: ====================================================
+2026-08-16 18:06:59,462 [INFO] app: Template:               reminder
+2026-08-16 18:06:59,462 [INFO] app: Mode:                   test
+2026-08-16 18:06:59,462 [INFO] app: Total teams loaded:     2
+2026-08-16 18:06:59,462 [INFO] app: Skipped (already sent): 0
+2026-08-16 18:06:59,462 [INFO] app: Successfully processed: 2
+2026-08-16 18:06:59,462 [INFO] app: Failed to process:      0
+2026-08-16 18:06:59,462 [INFO] app: ====================================================
+2026-08-16 18:07:00,361 [INFO] app: ====================================================
+2026-08-16 18:07:00,365 [INFO] app:              TEST MODE - SANDBOX RUN                
+2026-08-16 18:07:00,365 [INFO] app: ====================================================
+2026-08-16 18:07:00,365 [INFO] app: Targeting sandbox CSV: test/test_teams.csv
+2026-08-16 18:07:00,365 [INFO] app: Coordinators CC list has been completely REMOVED for safety.
+2026-08-16 18:07:00,365 [INFO] app: ====================================================
+2026-08-16 18:07:00,366 [INFO] app: Loading teams from: test/test_teams.csv
+2026-08-16 18:07:00,367 [INFO] app: Loaded 2 valid team rows from CSV.
+2026-08-16 18:07:00,387 [INFO] app: Found 2 teams already successfully processed in test_send_log.csv.
+2026-08-16 18:07:00,388 [INFO] app: [1/2] Sending 'thankyou' email to team 01 -> urvik819@gmail.com
+2026-08-16 18:07:00,388 [INFO] app:    Attached certificates: 001.png, 002.png, 003.png, 004.png, 005.png, 006.png
+2026-08-16 18:07:06,033 [INFO] mailer: Successfully sent email to urvik819@gmail.com (Attempt 1)
+2026-08-16 18:07:06,043 [INFO] app: Throttling for 3.0 seconds...
+2026-08-16 18:07:09,044 [INFO] app: [2/2] Sending 'thankyou' email to team 02 -> jkritik894@gmail.com
+2026-08-16 18:07:09,044 [INFO] app:    Attached certificates: 007.png, 008.png, 009.png, 010.png, 011.png, 012.png
+2026-08-16 18:07:14,824 [INFO] mailer: Successfully sent email to jkritik894@gmail.com (Attempt 1)
+2026-08-16 18:07:14,826 [INFO] app: ====================================================
+2026-08-16 18:07:14,827 [INFO] app:                 EXECUTION SUMMARY                   
+2026-08-16 18:07:14,827 [INFO] app: ====================================================
+2026-08-16 18:07:14,827 [INFO] app: Template:               thankyou
+2026-08-16 18:07:14,827 [INFO] app: Mode:                   test
+2026-08-16 18:07:14,827 [INFO] app: Total teams loaded:     2
+2026-08-16 18:07:14,827 [INFO] app: Skipped (already sent): 0
+2026-08-16 18:07:14,827 [INFO] app: Successfully processed: 2
+2026-08-16 18:07:14,827 [INFO] app: Failed to process:      0
+2026-08-16 18:07:14,827 [INFO] app: ====================================================
