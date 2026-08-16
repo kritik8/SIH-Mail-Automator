@@ -179,3 +179,119 @@ leader_email
 2026-08-15 18:04:16,639 [INFO] app: Successfully processed: 1
 2026-08-15 18:04:16,639 [INFO] app: Failed to process:      0
 2026-08-15 18:04:16,639 [INFO] app: ====================================================
+2026-08-16 17:58:56,359 [INFO] app: ====================================================
+2026-08-16 17:58:56,360 [INFO] app:              TEST MODE - SANDBOX RUN                
+2026-08-16 17:58:56,361 [INFO] app: ====================================================
+2026-08-16 17:58:56,361 [INFO] app: Targeting sandbox CSV: test/test_teams.csv
+2026-08-16 17:58:56,361 [INFO] app: Coordinators CC list has been completely REMOVED for safety.
+2026-08-16 17:58:56,361 [INFO] app: ====================================================
+2026-08-16 17:58:56,363 [INFO] app: Loading teams from: test/test_teams.csv
+2026-08-16 17:58:56,364 [INFO] app: Loaded 2 valid team rows from CSV.
+2026-08-16 17:58:56,381 [INFO] app: Found 0 teams already successfully processed in test_send_log.csv.
+2026-08-16 17:58:56,383 [INFO] app: [1/2] Sending 'thankyou' email to team 01 -> urvik819@gmail.com
+2026-08-16 17:58:56,383 [INFO] app:    Attached certificates: 001.png, 002.png, 003.png, 004.png, 005.png, 006.png
+2026-08-16 17:58:58,913 [WARNING] mailer: SMTP send attempt 1/3 failed for urvik819@gmail.com: (530, b'5.7.0 Authentication Required. For more information, go to\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. a92af1059eb24-141387af4adsm28661846c88.1 - gsmtp', 'jkritik8@gmail.com')
+2026-08-16 17:59:03,263 [WARNING] mailer: SMTP send attempt 2/3 failed for urvik819@gmail.com: (530, b'5.7.0 Authentication Required. For more information, go to\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. a92af1059eb24-141387ac9b1sm33620765c88.2 - gsmtp', 'jkritik8@gmail.com')
+2026-08-16 17:59:07,888 [WARNING] mailer: SMTP send attempt 3/3 failed for urvik819@gmail.com: (530, b'5.7.0 Authentication Required. For more information, go to\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5a478bee46e88-320e9df03f9sm26078979eec.19 - gsmtp', 'jkritik8@gmail.com')
+2026-08-16 17:59:07,888 [ERROR] mailer: Failed to send email to urvik819@gmail.com after 3 attempts.
+2026-08-16 17:59:07,891 [INFO] app: Throttling for 3.0 seconds...
+2026-08-16 17:59:10,892 [INFO] app: [2/2] Sending 'thankyou' email to team 02 -> jkritik894@gmail.com
+2026-08-16 17:59:10,892 [INFO] app:    Attached certificates: 007.png, 008.png, 009.png, 010.png, 011.png, 012.png
+2026-08-16 17:59:13,442 [WARNING] mailer: SMTP send attempt 1/3 failed for jkritik894@gmail.com: (530, b'5.7.0 Authentication Required. For more information, go to\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. a92af1059eb24-141388bd5a7sm39785473c88.15 - gsmtp', 'jkritik8@gmail.com')
+2026-08-16 17:59:17,952 [WARNING] mailer: SMTP send attempt 2/3 failed for jkritik894@gmail.com: (530, b'5.7.0 Authentication Required. For more information, go to\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5a478bee46e88-320d66e52d2sm26333110eec.13 - gsmtp', 'jkritik8@gmail.com')
+2026-08-16 17:59:22,325 [WARNING] mailer: SMTP send attempt 3/3 failed for jkritik894@gmail.com: (530, b'5.7.0 Authentication Required. For more information, go to\n5.7.0  https://support.google.com/accounts/troubleshooter/2402620. 5a478bee46e88-320d5bd9679sm27179156eec.3 - gsmtp', 'jkritik8@gmail.com')
+2026-08-16 17:59:22,325 [ERROR] mailer: Failed to send email to jkritik894@gmail.com after 3 attempts.
+2026-08-16 17:59:22,327 [INFO] app: ====================================================
+2026-08-16 17:59:22,328 [INFO] app:                 EXECUTION SUMMARY                   
+2026-08-16 17:59:22,329 [INFO] app: ====================================================
+2026-08-16 17:59:22,329 [INFO] app: Template:               thankyou
+2026-08-16 17:59:22,329 [INFO] app: Mode:                   test
+2026-08-16 17:59:22,329 [INFO] app: Total teams loaded:     2
+2026-08-16 17:59:22,336 [INFO] app: Skipped (already sent): 0
+2026-08-16 17:59:22,336 [INFO] app: Successfully processed: 0
+2026-08-16 17:59:22,336 [INFO] app: Failed to process:      2
+2026-08-16 17:59:22,336 [INFO] app: ====================================================
+2026-08-16 18:03:04,522 [INFO] app: ====================================================
+2026-08-16 18:03:04,523 [INFO] app:                  DRY RUN ACTIVE                     
+2026-08-16 18:03:04,523 [INFO] app: ====================================================
+2026-08-16 18:03:04,523 [INFO] app: Writing rendered HTML files to preview/invitation/
+2026-08-16 18:03:04,523 [INFO] app: ====================================================
+2026-08-16 18:03:04,523 [INFO] app: Loading teams from: data/sample_teams_test.csv
+2026-08-16 18:03:04,525 [WARNING] csv_loader: [Line 5] Skipping row: 'team_number' is empty.
+2026-08-16 18:03:04,525 [WARNING] csv_loader: [Line 6] Skipping row: Leader name or email is empty or invalid.
+2026-08-16 18:03:04,525 [WARNING] csv_loader: [Line 7] Skipping team 05: Leader email 'not-a-valid-email' is invalid.
+2026-08-16 18:03:04,525 [INFO] app: Loaded 3 valid team rows from CSV.
+2026-08-16 18:03:04,540 [INFO] app: Found 0 teams already successfully processed in send_log_invitation.csv.
+2026-08-16 18:03:04,541 [INFO] app: [1/3] Sending 'invitation' email to team 01 -> aditi.test@example.com
+2026-08-16 18:03:04,585 [INFO] mailer: [DRY RUN] Generated preview for team 01 (invitation) at: preview\invitation\team_01.html
+2026-08-16 18:03:04,588 [INFO] app: [2/3] Sending 'invitation' email to team 02 -> vikram.test@example.com
+2026-08-16 18:03:04,612 [INFO] mailer: [DRY RUN] Generated preview for team 02 (invitation) at: preview\invitation\team_02.html
+2026-08-16 18:03:04,614 [INFO] app: [3/3] Sending 'invitation' email to team 03 -> kunal.test@example.com
+2026-08-16 18:03:04,626 [INFO] mailer: [DRY RUN] Generated preview for team 03 (invitation) at: preview\invitation\team_03.html
+2026-08-16 18:03:04,631 [INFO] app: ====================================================
+2026-08-16 18:03:04,632 [INFO] app:                 EXECUTION SUMMARY                   
+2026-08-16 18:03:04,632 [INFO] app: ====================================================
+2026-08-16 18:03:04,632 [INFO] app: Template:               invitation
+2026-08-16 18:03:04,632 [INFO] app: Mode:                   dry-run
+2026-08-16 18:03:04,632 [INFO] app: Total teams loaded:     3
+2026-08-16 18:03:04,632 [INFO] app: Skipped (already sent): 0
+2026-08-16 18:03:04,632 [INFO] app: Successfully processed: 3
+2026-08-16 18:03:04,632 [INFO] app: Failed to process:      0
+2026-08-16 18:03:04,632 [INFO] app: ====================================================
+2026-08-16 18:03:07,786 [INFO] app: ====================================================
+2026-08-16 18:03:07,789 [INFO] app:                  DRY RUN ACTIVE                     
+2026-08-16 18:03:07,789 [INFO] app: ====================================================
+2026-08-16 18:03:07,790 [INFO] app: Writing rendered HTML files to preview/reminder/
+2026-08-16 18:03:07,790 [INFO] app: ====================================================
+2026-08-16 18:03:07,791 [INFO] app: Loading teams from: data/sample_teams_test.csv
+2026-08-16 18:03:07,792 [WARNING] csv_loader: [Line 5] Skipping row: 'team_number' is empty.
+2026-08-16 18:03:07,793 [WARNING] csv_loader: [Line 6] Skipping row: Leader name or email is empty or invalid.
+2026-08-16 18:03:07,793 [WARNING] csv_loader: [Line 7] Skipping team 05: Leader email 'not-a-valid-email' is invalid.
+2026-08-16 18:03:07,837 [INFO] app: Loaded 3 valid team rows from CSV.
+2026-08-16 18:03:07,860 [INFO] app: Found 0 teams already successfully processed in send_log_reminder.csv.
+2026-08-16 18:03:07,862 [INFO] app: [1/3] Sending 'reminder' email to team 01 -> aditi.test@example.com
+2026-08-16 18:03:07,903 [INFO] mailer: [DRY RUN] Generated preview for team 01 (reminder) at: preview\reminder\team_01.html
+2026-08-16 18:03:07,909 [INFO] app: [2/3] Sending 'reminder' email to team 02 -> vikram.test@example.com
+2026-08-16 18:03:07,948 [INFO] mailer: [DRY RUN] Generated preview for team 02 (reminder) at: preview\reminder\team_02.html
+2026-08-16 18:03:07,962 [INFO] app: [3/3] Sending 'reminder' email to team 03 -> kunal.test@example.com
+2026-08-16 18:03:07,968 [INFO] mailer: [DRY RUN] Generated preview for team 03 (reminder) at: preview\reminder\team_03.html
+2026-08-16 18:03:07,970 [INFO] app: ====================================================
+2026-08-16 18:03:07,970 [INFO] app:                 EXECUTION SUMMARY                   
+2026-08-16 18:03:07,970 [INFO] app: ====================================================
+2026-08-16 18:03:07,970 [INFO] app: Template:               reminder
+2026-08-16 18:03:07,970 [INFO] app: Mode:                   dry-run
+2026-08-16 18:03:07,970 [INFO] app: Total teams loaded:     3
+2026-08-16 18:03:07,970 [INFO] app: Skipped (already sent): 0
+2026-08-16 18:03:07,970 [INFO] app: Successfully processed: 3
+2026-08-16 18:03:07,970 [INFO] app: Failed to process:      0
+2026-08-16 18:03:07,972 [INFO] app: ====================================================
+2026-08-16 18:03:11,633 [INFO] app: ====================================================
+2026-08-16 18:03:11,633 [INFO] app:                  DRY RUN ACTIVE                     
+2026-08-16 18:03:11,633 [INFO] app: ====================================================
+2026-08-16 18:03:11,633 [INFO] app: Writing rendered HTML files to preview/thankyou/
+2026-08-16 18:03:11,633 [INFO] app: ====================================================
+2026-08-16 18:03:11,635 [INFO] app: Loading teams from: data/sample_teams_test.csv
+2026-08-16 18:03:11,635 [WARNING] csv_loader: [Line 5] Skipping row: 'team_number' is empty.
+2026-08-16 18:03:11,636 [WARNING] csv_loader: [Line 6] Skipping row: Leader name or email is empty or invalid.
+2026-08-16 18:03:11,636 [WARNING] csv_loader: [Line 7] Skipping team 05: Leader email 'not-a-valid-email' is invalid.
+2026-08-16 18:03:11,636 [INFO] app: Loaded 3 valid team rows from CSV.
+2026-08-16 18:03:11,662 [INFO] app: Found 0 teams already successfully processed in send_log_thankyou.csv.
+2026-08-16 18:03:11,665 [INFO] app: [1/3] Sending 'thankyou' email to team 01 -> aditi.test@example.com
+2026-08-16 18:03:11,665 [INFO] app:    Attached certificates: 001.png, 002.png, 003.png, 004.png, 005.png, 006.png
+2026-08-16 18:03:11,698 [INFO] mailer: [DRY RUN] Generated preview for team 01 (thankyou) at: preview\thankyou\team_01.html
+2026-08-16 18:03:11,701 [INFO] app: [2/3] Sending 'thankyou' email to team 02 -> vikram.test@example.com
+2026-08-16 18:03:11,701 [INFO] app:    Attached certificates: 007.png, 008.png, 009.png, 010.png, 011.png, 012.png
+2026-08-16 18:03:11,709 [INFO] mailer: [DRY RUN] Generated preview for team 02 (thankyou) at: preview\thankyou\team_02.html
+2026-08-16 18:03:11,713 [INFO] app: [3/3] Sending 'thankyou' email to team 03 -> kunal.test@example.com
+2026-08-16 18:03:11,715 [INFO] app:    Attached certificates: 013.png, 014.png, 015.png, 016.png, 017.png, 018.png
+2026-08-16 18:03:11,745 [INFO] mailer: [DRY RUN] Generated preview for team 03 (thankyou) at: preview\thankyou\team_03.html
+2026-08-16 18:03:11,749 [INFO] app: ====================================================
+2026-08-16 18:03:11,749 [INFO] app:                 EXECUTION SUMMARY                   
+2026-08-16 18:03:11,749 [INFO] app: ====================================================
+2026-08-16 18:03:11,749 [INFO] app: Template:               thankyou
+2026-08-16 18:03:11,749 [INFO] app: Mode:                   dry-run
+2026-08-16 18:03:11,749 [INFO] app: Total teams loaded:     3
+2026-08-16 18:03:11,753 [INFO] app: Skipped (already sent): 0
+2026-08-16 18:03:11,754 [INFO] app: Successfully processed: 3
+2026-08-16 18:03:11,754 [INFO] app: Failed to process:      0
+2026-08-16 18:03:11,754 [INFO] app: ====================================================

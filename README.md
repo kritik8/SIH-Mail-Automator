@@ -2,75 +2,45 @@
 
 A production-quality bulk email automation tool developed for the Internal Smart India Hackathon (SIH) selection round at IIIT Bhopal.
 
-This tool compiles student details from a CSV file, validates team compositions, and dispatches rich, responsive HTML emails to team leaders with a text fallback. It features:
-- **Dry-run mode** (default) to locally render and preview emails before sending.
-- **Test redirection** to forward mock emails to a single test address.
-- **State-aware idempotency** to automatically resume runs, skipping already emailed recipients.
-- **SMTP connection resilience** with automatic retry backoff for transient issues.
-- **Throttling/Rate Limiting** to prevent SMTP blockages and filter flags.
+This tool compiles student details from a CSV file, validates team compositions, and dispatches rich, responsive HTML emails to team leaders with a text fallback. It supports three lifecycle templates, sequential certificate attachment loops, and includes an isolated sandbox environment.
 
 ---
 
-## 🛠️ Setup & Installation
+## 🛠️ CLI Arguments and Usage
 
-### 1. Prerequisites
-Ensure you have Python 3.8+ installed.
+The entry-point is `src/send_mails.py` which takes two mandatory flags:
 
-### 2. Install Dependencies
-Clone the repository, then install requirements:
 ```bash
-pip install -r requirements.txt
+python -m src.send_mails --template {invitation|reminder|thankyou} --mode {test|dry-run|live} [--force] [--csv CUSTOM_PATH]
 ```
 
-### 3. Configure Credentials (`.env`)
-Create a `.env` file from the example template:
-```bash
-cp .env.example .env
-```
-Fill in the configuration details inside `.env`:
-```env
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_USERNAME=your-institutional-email@iiitbhopal.ac.in
-SMTP_PASSWORD=your-gmail-app-password
-DRY_RUN=true
-TEST_RECIPIENT=your-personal-test-email@example.com
-```
+### 1. Templates (`--template`)
+* **`invitation`**: Dispatches the initial team details, event schedule, and condensed guidelines (Template 1).
+* **`reminder`**: Nudges teams the day before the event with checklists and coordinates (Template 2).
+* **`thankyou`**: Sends participation appreciation and automatically attaches 6 individual certificates per team (Template 3).
 
-> 💡 **App Password Setup:** If using a Gmail or Google Workspace institutional account, you must generate an **App Password** from your Google Account settings under Security (ensure 2-Step Verification is enabled). Use this App Password instead of your regular password.
-
-### 4. Event Configuration (`config.yaml`)
-Edit `config.yaml` to specify the event date, venue, single point of contact (SPOC), and CC lists:
-```yaml
-event_date: "September 20, 2026" # Fill in the actual date of the Internal Hackathon
-event_venue: "NTB, IIIT Bhopal"
-spoc_name: "Dr. Sourabh Jain"
-spoc_email: "sourabh.jain@iiitbhopal.ac.in"
-cc_emails:
-  - "sourabh.jain@iiitbhopal.ac.in"
-  - "rekhakaushik@iiitbhopal.ac.in"
-rate_limit_delay_seconds: 3.0
-```
+### 2. Execution Modes (`--mode`)
+* **`test`**: Runs real sends against sandbox data `/test/test_teams.csv` and `/test/certificates/`. **Enforces NO coordinator CCs for safety.**
+* **`dry-run`**: Compiles preview HTML emails to disk (`/preview/{template_name}/`) without sending actual emails.
+* **`live`**: Production mode using real CSV data and certificate pools, with CCs to Dr. Sourabh Jain and Rekha Kaushik.
 
 ---
 
-## 📊 Data Source Schema (CSV)
+## 📊 Roster Data Schema (CSV)
 
-The loader parses a comma-separated file. Malformed email addresses or rows missing critical identifiers (`team_number` or `leader_email`) are skipped automatically with a warnings log, without halting the application.
+Each row in the CSV contains:
 
 | Column | Status | Description / Notes |
 |---|---|---|
-| `team_number` | **Required** | Unique team identifier (e.g., `SIH-042`) |
-| `leader_email` | **Required** | Primary recipient address for the team invitation |
-| `team_name` | Optional | Team name (defaults to "Unnamed Team") |
-| `leader_name` | Optional | Greeting name (defaults to "Team Leader") |
-| `member_2_name` ... `member_6_name` | Optional | Names of other student members (dynamically listed in the template) |
-| `problem_statement_id` | Optional | Official SIH problem statement code (e.g., `PS-1234`) |
-| `problem_statement_title` | Optional | Title of the problem statement |
-| `track` | Optional | Track/Category (e.g., `Software` or `Hardware`) |
+| `team_number` | **Required** | Sequential, zero-padded integer string (e.g. `01`, `02`, `03`...) |
+| `team_name` | Optional | Team Name (defaults to "Unnamed Team") |
+| `leader_details` | **Required** | Formatted string: `Name, Scholar ID, Phone, Email, Gender` |
+| `member_2_details` ... `member_6_details` | Optional | Student details matching leader's format for other members |
+| `problem_theme` | Optional | Problem theme selected by the team |
+| `track` | Optional | Track/Category (e.g. `Software` / `Hardware`) |
 
-### Generate Mock Test Data
-To create a realistic test dataset containing 4 valid teams and 3 invalid rows (to verify safety skipping):
+### Generate Mock Production CSV
+To regenerate a mock test CSV dataset containing 3 valid teams and 3 invalid rows:
 ```bash
 python src/csv_loader.py
 ```
@@ -78,37 +48,42 @@ This generates mock data at `data/sample_teams_test.csv`.
 
 ---
 
-## 🚀 Usage Guide
+## 📜 Certificate Assignment Rules
 
-### 1. Perform a Local Dry Run (Recommended First Step)
-By default, the script runs in dry-run mode and writes rendered HTML preview emails to the `preview/` directory:
-```bash
-python -m src.send_mails --csv data/sample_teams_test.csv
-```
-Open files inside `preview/` in your browser to inspect alignment, typography, and content.
+For Template 3 (`thankyou`), certificates are stored in `/data/certificates/` (or `/test/certificates/` in test mode) using 3-digit zero-padded filenames (`001.png`, `002.png`, ...).
 
-### 2. Send Redirection Previews to a Test Mailbox
-To test actual SMTP sending without emailing real team leaders, keep `DRY_RUN=true` in your `.env` but specify a `TEST_RECIPIENT`:
-```bash
-python -m src.send_mails --csv data/sample_teams_test.csv --test-email your-test-address@example.com
-```
-This sends all generated team invitations solely to `your-test-address@example.com` (and strips the CC list to prevent spamming coordinators during testing).
-
-### 3. Go Live
-When you are ready to send invites to all real team leaders (and CC coordinators):
-1. Ensure the event date in `config.yaml` is correct.
-2. Run the script with the `--live` flag (this overrides `.env` dry-run values):
-```bash
-python -m src.send_mails --csv data/real_teams.csv --live
-```
+* **Assignment formula**: For a team at sequential integer position `n` (parsed from `team_number`), the files attached are `((n-1)*6 + 1)` through `(n*6)`.
+  * Team `01` ➔ `001.png` to `006.png`
+  * Team `02` ➔ `007.png` to `012.png`
+  * Team `n` ➔ `((n-1)*6+1)` to `(n*6)`
+* **Validation**: The tool checks file existence on disk before attempting to email. If any certificate is missing, it logs a warning/error and skips that team to avoid partial or incorrect delivery.
 
 ---
 
-## 🔄 Idempotency, Resuming, and Forcing Resends
+## 🧪 Isolated Sandbox Testing (`--mode test`)
 
-- **Tracking Progress:** Every time an email is successfully sent (or previewed with redirection), a record is appended to `send_log.csv`.
-- **Resuming:** If the script stops due to network loss, running it again will automatically skip team numbers marked `SUCCESS` in `send_log.csv`.
-- **Resending:** To force the automator to re-email everyone regardless of what is logged:
-  ```bash
-  python -m src.send_mails --csv data/real_teams.csv --live --force
-  ```
+To ensure development changes never accidentally email coordinators or pollute production records, we run inside a sandbox environment:
+
+1. **Test Data**: Reads from `test/test_teams.csv` (exactly 2 rows, pointing to test inboxes) and `test/certificates/`.
+2. **Generate Test Certificates**: To compile the 12 placeholder PNG files (`001.png`–`012.png`):
+   ```bash
+   python test/generate_test_certificates.py
+   ```
+3. **Run Test Send**:
+   ```bash
+   python -m src.send_mails --mode test --template thankyou
+   ```
+   * Enforces `cc = []` in the code, guaranteeing coordinators are not CC'd.
+   * Outputs logging records to `test_send_log.csv`.
+
+---
+
+## 🔒 Security & SMTP setup
+
+1. Copy `.env.example` to `.env`:
+   ```bash
+   cp .env.example .env
+   ```
+2. Configure credentials in `.env`:
+   * Set `SMTP_USERNAME=your-username@gmail.com` and `SMTP_PASSWORD=your-google-app-password`.
+3. Set `DRY_RUN=true` to preview HTML, or specify `TEST_RECIPIENT` to redirect dry-run SMTP sends to a safe mailbox.

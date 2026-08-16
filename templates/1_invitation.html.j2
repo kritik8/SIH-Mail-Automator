@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart India Hackathon 2026 - Internal Invitation</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #333333; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; line-height: 1.6;">
+
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff; padding: 40px 0;">
+    <tr>
+      <td align="center">
+        <!-- Main Container -->
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; background-color: #ffffff; border: 1px solid #eeeeee; border-radius: 4px;">
+          
+          <!-- Navy Header Bar -->
+          <tr>
+            <td style="background-color: #1e3a8a; padding: 24px; text-align: center;">
+              <h1 style="margin: 0; color: #ffffff; font-size: 20px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;">
+                Smart India Hackathon 2026
+              </h1>
+            </td>
+          </tr>
+
+          <!-- Content Body -->
+          <tr>
+            <td style="padding: 40px 32px;">
+              <!-- Greeting -->
+              <p style="margin: 0 0 16px 0; font-size: 16px; font-weight: 600; color: #333333;">
+                Dear {{ leader_name }},
+              </p>
+              
+              <p style="margin: 0 0 32px 0; font-size: 15px; color: #333333;">
+                Your team has been shortlisted for the <strong>Internal SIH Invitation</strong> at Indian Institute of Information Technology (IIIT) Bhopal. Below are your assigned team details and the event schedule.
+              </p>
+
+              <!-- Team Info Section -->
+              <h2 style="margin: 0 0 12px 0; font-size: 14px; font-weight: 600; color: #1e3a8a; text-transform: uppercase; letter-spacing: 0.05em;">
+                Team Information
+              </h2>
+              
+              <table border="0" cellpadding="12" cellspacing="0" width="100%" style="background-color: #fafafa; border: 1px solid #eeeeee; border-radius: 4px; margin-bottom: 32px;">
+                <tr>
+                  <td style="padding: 16px 20px;">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr style="vertical-align: top;">
+                        <td width="35%" style="padding: 6px 0; font-size: 14px; font-weight: 600; color: #1e3a8a;">Team Number:</td>
+                        <td style="padding: 6px 0; font-size: 14px; font-weight: bold; color: #333333;">{{ team_number }}</td>
+                      </tr>
+                      <tr style="vertical-align: top;">
+                        <td style="padding: 6px 0; font-size: 14px; font-weight: 600; color: #1e3a8a;">Team Name:</td>
+                        <td style="padding: 6px 0; font-size: 14px; color: #333333;">{{ team_name }}</td>
+                      </tr>
+                      {% if track %}
+                      <tr style="vertical-align: top;">
+                        <td style="padding: 6px 0; font-size: 14px; font-weight: 600; color: #1e3a8a;">Category / Track:</td>
+                        <td style="padding: 6px 0; font-size: 14px; color: #333333;">{{ track }}</td>
+                      </tr>
+                      {% endif %}
+                      {% if problem_theme %}
+                      <tr style="vertical-align: top;">
+                        <td style="padding: 6px 0; font-size: 14px; font-weight: 600; color: #1e3a8a;">Problem Theme:</td>
+                        <td style="padding: 6px 0; font-size: 14px; color: #333333;">{{ problem_theme }}</td>
+                      </tr>
+                      {% endif %}
+                      <tr style="vertical-align: top;">
+                        <td colspan="2" style="padding: 16px 0 0 0; font-size: 14px; font-weight: 600; color: #1e3a8a;">
+                          Team Members:
+                          <table border="0" cellpadding="6" cellspacing="0" width="100%" style="font-size: 13px; border-collapse: collapse; margin-top: 8px; background-color: #ffffff; border: 1px solid #eeeeee;">
+                            <thead>
+                              <tr style="background-color: #fafafa; border-bottom: 1px solid #eeeeee; text-align: left; color: #1e3a8a; font-weight: 600;">
+                                <th style="padding: 8px;">Name</th>
+                                <th style="padding: 8px;">Scholar ID</th>
+                                <th style="padding: 8px;">Phone</th>
+                                <th style="padding: 8px; text-align: center;">Gen</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr style="border-bottom: 1px solid #eeeeee;">
+                                <td style="padding: 8px; font-weight: 600; color: #333333;">{{ leader.name }} (L)</td>
+                                <td style="padding: 8px; color: #333333;">{{ leader.scholar_id }}</td>
+                                <td style="padding: 8px; color: #333333;">{{ leader.phone }}</td>
+                                <td style="padding: 8px; color: #333333; text-align: center;">{{ leader.gender }}</td>
+                              </tr>
+                              {% for m in members %}
+                              <tr style="border-bottom: 1px solid #eeeeee;">
+                                <td style="padding: 8px; color: #333333;">{{ m.name }}</td>
+                                <td style="padding: 8px; color: #333333;">{{ m.scholar_id }}</td>
+                                <td style="padding: 8px; color: #333333;">{{ m.phone }}</td>
+                                <td style="padding: 8px; color: #333333; text-align: center;">{{ m.gender }}</td>
+                              </tr>
+                              {% endfor %}
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Event Details -->
+              <h2 style="margin: 0 0 12px 0; font-size: 14px; font-weight: 600; color: #1e3a8a; text-transform: uppercase; letter-spacing: 0.05em;">
+                Event Schedule
+              </h2>
+              <table border="0" cellpadding="16" cellspacing="0" width="100%" style="background-color: #fafafa; border: 1px solid #eeeeee; border-radius: 4px; margin-bottom: 32px;">
+                <tr>
+                  <td>
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr style="vertical-align: top;">
+                        <td width="20%" style="padding: 4px 0; font-size: 14px; font-weight: 600; color: #1e3a8a;">Date:</td>
+                        <td style="padding: 4px 0; font-size: 14px; font-weight: bold; color: #333333;">{{ event_date }}</td>
+                      </tr>
+                      <tr style="vertical-align: top;">
+                        <td width="20%" style="padding: 4px 0; font-size: 14px; font-weight: 600; color: #1e3a8a;">Venue:</td>
+                        <td style="padding: 4px 0; font-size: 14px; color: #333333;">{{ event_venue }}</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Guidelines Section -->
+              <h2 style="margin: 0 0 12px 0; font-size: 14px; font-weight: 600; color: #1e3a8a; text-transform: uppercase; letter-spacing: 0.05em;">
+                Participant Guidelines
+              </h2>
+              <ul style="margin: 0 0 32px 0; padding-left: 20px; font-size: 14px; color: #333333;">
+                <li style="margin-bottom: 8px;">Each team must consist of exactly 6 members from the same institution.</li>
+                <li style="margin-bottom: 8px;">At least one female member is mandatory in every team.</li>
+                <li style="margin-bottom: 8px;">Registrations are processed solely via College SPOC nomination on the national portal.</li>
+                <li style="margin-bottom: 8px;">Nominated teams must submit their project ideas under the selected problem theme.</li>
+                <li style="margin-bottom: 8px;">The final rounds are conducted as a physical 36-hour hackathon at designated national centers.</li>
+              </ul>
+              
+              <p style="margin: 0 0 24px 0; font-size: 14px; color: #333333;">
+                Please ensure all team members arrive on time with their registration forms and required development equipment.
+              </p>
+
+              <!-- SPOC Info -->
+              <p style="margin: 0; font-size: 14px; color: #333333; border-top: 1px solid #eeeeee; padding-top: 24px;">
+                For any queries, please contact the institutional SPOC:
+                <br>
+                <strong>{{ spoc_name }}</strong> ({{ spoc_role }})
+                <br>
+                Email: <a href="mailto:{{ spoc_email }}" style="color: #1e3a8a; text-decoration: none; font-weight: 600;">{{ spoc_email }}</a>
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer Area -->
+          <tr>
+            <td style="background-color: #fafafa; border-top: 1px solid #eeeeee; padding: 24px; text-align: center; font-size: 11px; color: #777777;">
+              <p style="margin: 0 0 4px 0;">
+                This email was sent to notify you about the Smart India Hackathon internal processes.
+              </p>
+              <p style="margin: 0;">
+                &copy; 2026 Indian Institute of Information Technology, Bhopal. All rights reserved.
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

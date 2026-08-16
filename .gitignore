@@ -6,6 +6,10 @@
 # Runtime Output
 preview/
 send_log.csv
+send_log_*.csv
+test_send_log.csv
+mail_automator_debug.log
+data/certificates/
 
 # Python environment and caches
 __pycache__/

@@ -6,13 +6,14 @@ import logging
 from datetime import datetime
 import time
 from pathlib import Path
-from typing import Set
+from typing import Set, List
 
 from src.config import AppConfig, ConfigError
 from src.csv_loader import load_teams_from_csv, TeamData
 from src.mailer import EmailRenderer, Mailer
+from src.certificates import get_certificate_files, CertificateError
 
-# Set up logging format
+# Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
@@ -23,24 +24,26 @@ logging.basicConfig(
 )
 logger = logging.getLogger("app")
 
-LOG_FILE_PATH = "send_log.csv"
+def get_log_path(mode: str, template: str) -> Path:
+    """Returns the correct log file path based on mode and template type."""
+    if mode == "test":
+        return Path("test_send_log.csv")
+    return Path(f"send_log_{template}.csv")
 
-def init_send_log_file() -> None:
-    """Creates the send log CSV file with headers if it does not already exist."""
-    path = Path(LOG_FILE_PATH)
-    if not path.exists():
-        with open(path, mode="w", newline="", encoding="utf-8") as f:
+def init_send_log_file(log_path: Path) -> None:
+    """Creates the log CSV file with headers if it does not already exist."""
+    if not log_path.exists():
+        with open(log_path, mode="w", newline="", encoding="utf-8") as f:
             writer = csv.writer(f)
-            writer.writerow(["timestamp", "team_number", "recipient", "status", "error"])
+            writer.writerow(["timestamp", "team_number", "recipient", "status", "error", "attachments"])
 
-def get_already_sent_teams() -> Set[str]:
-    """Reads the send log CSV file and returns a set of team numbers that were successfully sent."""
+def get_already_sent_teams(log_path: Path) -> Set[str]:
+    """Reads the log file and returns a set of team numbers that were successfully sent."""
     sent_teams = set()
-    path = Path(LOG_FILE_PATH)
-    if not path.exists():
+    if not log_path.exists():
         return sent_teams
         
-    with open(path, mode="r", newline="", encoding="utf-8") as f:
+    with open(log_path, mode="r", newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
             if row.get("status") == "SUCCESS":
@@ -49,40 +52,44 @@ def get_already_sent_teams() -> Set[str]:
                     sent_teams.add(team_num.strip())
     return sent_teams
 
-def append_to_send_log(team_number: str, recipient: str, status: str, error: str = "") -> None:
-    """Appends a new sending result row to the send log CSV file."""
+def append_to_send_log(log_path: Path, team_number: str, recipient: str, status: str, error: str = "", attachments: List[Path] = None) -> None:
+    """Appends a new sending result row to the log CSV file."""
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with open(LOG_FILE_PATH, mode="a", newline="", encoding="utf-8") as f:
+    attach_str = ";".join([p.name for p in attachments]) if attachments else ""
+    with open(log_path, mode="a", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
-        writer.writerow([timestamp, team_number, recipient, status, error])
+        writer.writerow([timestamp, team_number, recipient, status, error, attach_str])
 
 def main() -> None:
-    # 1. Setup CLI argument parsing
+    # 1. Parse CLI arguments
     parser = argparse.ArgumentParser(
-        description="SIH Internal Selection Bulk Mail Automator",
+        description="SIH Internal Hackathon Bulk Mail Automator",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter
+    )
+    parser.add_argument(
+        "--template",
+        type=str,
+        required=True,
+        choices=["invitation", "reminder", "thankyou"],
+        help="Select the lifecycle email template to send"
+    )
+    parser.add_argument(
+        "--mode",
+        type=str,
+        required=True,
+        choices=["test", "dry-run", "live"],
+        help="Execution mode: 'test' runs real sends against sandbox; 'dry-run' compiles previews; 'live' runs production sends."
     )
     parser.add_argument(
         "--csv",
         type=str,
-        default="data/sample_teams_test.csv",
-        help="Path to the teams CSV data file"
-    )
-    parser.add_argument(
-        "--live",
-        action="store_true",
-        help="Disable dry-run mode and send actual emails to recipients"
+        default="",
+        help="Override path to the CSV data file (ignored in 'test' mode)"
     )
     parser.add_argument(
         "--force",
         action="store_true",
-        help="Resend emails to teams even if they are marked as successfully sent in the log"
-    )
-    parser.add_argument(
-        "--test-email",
-        type=str,
-        default="",
-        help="Override/set test email address to redirect all emails to during dry-run"
+        help="Ignore sending logs and force resend emails to all targets"
     )
     args = parser.parse_args()
 
@@ -93,57 +100,80 @@ def main() -> None:
         logger.error(f"Configuration error: {ce}")
         sys.exit(1)
 
-    # 3. Apply CLI command overrides to config
-    if args.live:
+    # 3. Apply mode overrides
+    if args.mode == "test":
+        # Sandbox paths
+        csv_path = "test/test_teams.csv"
+        certs_dir = Path("test/certificates")
+        
+        # Test mode defaults: enforce NO CCs and trigger real sends to test recipients
+        config.cc_emails = []
         config.dry_run = False
-    if args.test_email:
-        config.test_recipient = args.test_email
-
-    # Print current mode
-    if config.dry_run:
+        
         logger.info("====================================================")
-        logger.info("                  DRY RUN ACTIVE                    ")
+        logger.info("             TEST MODE - SANDBOX RUN                ")
         logger.info("====================================================")
-        if config.test_recipient:
-            logger.info(f"Emails will be redirect-sent to test: {config.test_recipient}")
-        else:
-            logger.info("Emails will only be rendered and saved to preview/")
+        logger.info(f"Targeting sandbox CSV: {csv_path}")
+        logger.info("Coordinators CC list has been completely REMOVED for safety.")
         logger.info("====================================================")
-    else:
+        
+    elif args.mode == "dry-run":
+        csv_path = args.csv if args.csv else "data/sample_teams_test.csv"
+        certs_dir = Path("data/certificates")
+        config.dry_run = True
+        
         logger.info("====================================================")
-        logger.info("                !!! LIVE MODE !!!                  ")
+        logger.info("                 DRY RUN ACTIVE                     ")
+        logger.info("====================================================")
+        logger.info(f"Writing rendered HTML files to preview/{args.template}/")
+        logger.info("====================================================")
+        
+    else:  # live
+        csv_path = args.csv if args.csv else "data/sample_teams_test.csv" # Real CSV goes here
+        certs_dir = Path("data/certificates")
+        config.dry_run = False
+        
+        logger.info("====================================================")
+        logger.info("                !!! LIVE RUN !!!                    ")
         logger.info("====================================================")
         try:
             config.validate_for_live()
         except ConfigError as ce:
             logger.error(f"Cannot run in LIVE mode: {ce}")
             sys.exit(1)
-        logger.info(f"Targeting real team leaders with CC to: {config.cc_emails}")
+        logger.info(f"Targeting real recipients with CC to: {config.cc_emails}")
         logger.info("====================================================")
 
-    # 4. Load & Parse CSV data
-    logger.info(f"Loading teams from: {args.csv}")
+    # Verify certificates directory exists if template is thankyou
+    if args.template == "thankyou":
+        if not certs_dir.exists():
+            logger.error(f"Certificates directory does not exist: {certs_dir.absolute()}")
+            sys.exit(1)
+
+    # 4. Load CSV data
+    logger.info(f"Loading teams from: {csv_path}")
     try:
-        teams = load_teams_from_csv(args.csv)
+        teams = load_teams_from_csv(csv_path)
     except FileNotFoundError:
-        logger.error(f"CSV file not found at: {args.csv}")
+        logger.error(f"CSV file not found: {csv_path}")
         sys.exit(1)
     except Exception as e:
-        logger.error(f"Error reading CSV: {e}")
+        logger.error(f"Error loading CSV data: {e}")
         sys.exit(1)
 
-    logger.info(f"Successfully loaded {len(teams)} valid team rows from CSV.")
+    logger.info(f"Loaded {len(teams)} valid team rows from CSV.")
 
-    # 5. Initialize logs and load sending state for idempotency
-    init_send_log_file()
-    sent_teams = get_already_sent_teams()
-    logger.info(f"Found {len(sent_teams)} teams already successfully emailed in log.")
+    # 5. Initialize tracking log and fetch sent states
+    log_path = get_log_path(args.mode, args.template)
+    init_send_log_file(log_path)
+    already_sent = get_already_sent_teams(log_path)
+    logger.info(f"Found {len(already_sent)} teams already successfully processed in {log_path.name}.")
 
     # 6. Initialize Mailer components
     renderer = EmailRenderer()
     mailer = Mailer(config, renderer)
 
-    # Metrics
+    # Progress stats
     total = len(teams)
     skipped_sent = 0
     success_count = 0
@@ -152,42 +182,54 @@ def main() -> None:
     # 7. Processing Loop
     for idx, team in enumerate(teams, 1):
         # Idempotency check
-        if team.team_number in sent_teams and not args.force:
+        if team.team_number in already_sent and not args.force:
             logger.info(f"[{idx}/{total}] Skipping team {team.team_number}: Already sent in previous run.")
             skipped_sent += 1
             continue
 
-        # Print progress
-        recipient_display = config.test_recipient if (config.dry_run and config.test_recipient) else team.leader_email
-        logger.info(f"[{idx}/{total}] Processing team {team.team_number} ({team.team_name}) -> {recipient_display}")
+        # Certificate mapping (Only for Thank You emails)
+        attachments = []
+        if args.template == "thankyou":
+            try:
+                attachments = get_certificate_files(team.team_number, certs_dir)
+            except (CertificateError, FileNotFoundError) as err:
+                logger.error(f"[{idx}/{total}] Skipping team {team.team_number} due to certificate error: {err}")
+                append_to_send_log(log_path, team.team_number, team.leader_email, "FAILED", f"Certificate error: {err}")
+                failed_count += 1
+                continue
 
-        # Send mail
-        success = mailer.send_email(team)
+        # Print progress info
+        recipient_display = config.test_recipient if (config.dry_run and config.test_recipient) else team.leader_email
+        logger.info(f"[{idx}/{total}] Sending '{args.template}' email to team {team.team_number} -> {recipient_display}")
+        if attachments:
+            logger.info(f"   Attached certificates: {', '.join([p.name for p in attachments])}")
+
+        # Send email
+        success = mailer.send_email(team, args.template, attachments)
 
         if success:
             success_count += 1
-            # Record success in log (only if not a preview-only dry run without email delivery)
-            # If it is a dry run with NO test email set, it's just saving previews. We log it as PREVIEW.
             if config.dry_run and not config.test_recipient:
-                append_to_send_log(team.team_number, "PREVIEW", "PREVIEW", "")
+                append_to_send_log(log_path, team.team_number, "PREVIEW", "PREVIEW", "", attachments)
             else:
-                append_to_send_log(team.team_number, recipient_display, "SUCCESS", "")
+                append_to_send_log(log_path, team.team_number, recipient_display, "SUCCESS", "", attachments)
         else:
             failed_count += 1
-            append_to_send_log(team.team_number, recipient_display, "FAILED", "SMTP or Render error")
+            append_to_send_log(log_path, team.team_number, recipient_display, "FAILED", "SMTP/Render failure", attachments)
 
         # Rate limiting: wait if there are more emails left to send
-        # We only throttle when sending actual emails (live mode or test-directed dry-run)
         need_throttle = (not config.dry_run) or (config.dry_run and config.test_recipient)
         if need_throttle and idx < total:
             logger.info(f"Throttling for {config.rate_limit_delay} seconds...")
             time.sleep(config.rate_limit_delay)
 
-    # 8. Render summary report
+    # 8. Report final metrics
     logger.info("====================================================")
     logger.info("                EXECUTION SUMMARY                   ")
     logger.info("====================================================")
-    logger.info(f"Total teams loaded: {total}")
+    logger.info(f"Template:               {args.template}")
+    logger.info(f"Mode:                   {args.mode}")
+    logger.info(f"Total teams loaded:     {total}")
     logger.info(f"Skipped (already sent): {skipped_sent}")
     logger.info(f"Successfully processed: {success_count}")
     logger.info(f"Failed to process:      {failed_count}")

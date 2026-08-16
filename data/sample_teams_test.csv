@@ -1,7 +1,7 @@
 team_number,team_name,leader_details,member_2_details,member_3_details,member_4_details,member_5_details,member_6_details,problem_theme,track
-SIH-042,CodeCrafters,"Aditi Sharma, 23U01001, 9876543210, aditi.test@example.com, F","Amit Patel, 23U01002, 9876543211, amit.patel@example.com, M","Sneha Reddy, 23U01003, 9876543212, sneha.r@example.com, F","Rajesh Kumar, 23U01004, 9876543213, rajesh.k@example.com, M","Priya Singh, 23U01005, 9876543214, priya.s@example.com, F","Rohan Verma, 23U01006, 9876543215, rohan.v@example.com, M",Smart Waste Management,Software
-SIH-043,ElectroWaves,"Vikram Rathore, 23U02001, 9876543220, vikram.test@example.com, M","Karan Malhotra, 23U02002, 9876543221, karan.m@example.com, M","Anjali Gupta, 23U02003, 9876543222, anjali.g@example.com, F",,,,AI Powered Solar Panel Alignment,Hardware
-SIH-044,DevDynasty,"Kunal Sen, 23U03001, 9876543230, kunal.test@example.com, M",,,,,,Blockchain land registry,Software
+01,CodeCrafters,"Aditi Sharma, 23U01001, 9876543210, aditi.test@example.com, F","Amit Patel, 23U01002, 9876543211, amit.patel@example.com, M","Sneha Reddy, 23U01003, 9876543212, sneha.r@example.com, F","Rajesh Kumar, 23U01004, 9876543213, rajesh.k@example.com, M","Priya Singh, 23U01005, 9876543214, priya.s@example.com, F","Rohan Verma, 23U01006, 9876543215, rohan.v@example.com, M",Smart Waste Management,Software
+02,ElectroWaves,"Vikram Rathore, 23U02001, 9876543220, vikram.test@example.com, M","Karan Malhotra, 23U02002, 9876543221, karan.m@example.com, M","Anjali Gupta, 23U02003, 9876543222, anjali.g@example.com, F",,,,AI Powered Solar Panel Alignment,Hardware
+03,DevDynasty,"Kunal Sen, 23U03001, 9876543230, kunal.test@example.com, M",,,,,,Blockchain land registry,Software
 ,GhostTeam,"Rahul Mehra, 23U04001, 9876543240, rahul.test@example.com, M",,,,,,Some Theme,Software
-SIH-045,ErrorTeam,,,,,,,Some Theme,Software
-SIH-046,BadEmailTeam,"Jack Ryan, 23U05001, 9876543250, not-a-valid-email, M",,,,,,Some Theme,Software
+04,ErrorTeam,,,,,,,Some Theme,Software
+05,BadEmailTeam,"Jack Ryan, 23U05001, 9876543250, not-a-valid-email, M",,,,,,Some Theme,Software

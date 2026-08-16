@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You for Participating</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #333333; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; line-height: 1.6;">
+
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff; padding: 40px 0;">
+    <tr>
+      <td align="center">
+        <!-- Main Container -->
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; background-color: #ffffff; border: 1px solid #eeeeee; border-radius: 4px;">
+          
+          <!-- Navy Header Bar -->
+          <tr>
+            <td style="background-color: #1e3a8a; padding: 20px 24px; text-align: center;">
+              <h1 style="margin: 0; color: #ffffff; font-size: 18px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;">
+                SIH Internal Hackathon &bull; Thank You
+              </h1>
+            </td>
+          </tr>
+
+          <!-- Content Body -->
+          <tr>
+            <td style="padding: 32px 32px 40px 32px;">
+              <!-- Greeting -->
+              <p style="margin: 0 0 16px 0; font-size: 16px; font-weight: 600; color: #333333;">
+                Dear {{ leader_name }},
+              </p>
+              
+              <p style="margin: 0 0 16px 0; font-size: 15px; color: #333333;">
+                Thank you for participating in the Smart India Hackathon 2026 Internal Selection Round at IIIT Bhopal. 
+                We sincerely appreciate the hard work, creativity, and dedication that your team, <strong>{{ team_name }}</strong>, demonstrated throughout the event.
+              </p>
+
+              <p style="margin: 0 0 24px 0; font-size: 15px; color: #333333;">
+                Participation certificates for all 6 of your registered team members have been compiled and are attached to this email.
+              </p>
+
+              <p style="margin: 0 0 24px 0; font-size: 14px; color: #666666; font-style: italic;">
+                Note: Shortlisted teams for nomination on the national portal will be announced soon. Keep monitoring official communications.
+              </p>
+
+              <!-- SPOC Info -->
+              <p style="margin: 0; font-size: 14px; color: #333333; border-top: 1px solid #eeeeee; padding-top: 24px;">
+                For any questions regarding results or next steps, contact the institutional SPOC:
+                <br>
+                <strong>{{ spoc_name }}</strong> ({{ spoc_role }})
+                <br>
+                Email: <a href="mailto:{{ spoc_email }}" style="color: #1e3a8a; text-decoration: none; font-weight: 600;">{{ spoc_email }}</a>
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer Area -->
+          <tr>
+            <td style="background-color: #fafafa; border-top: 1px solid #eeeeee; padding: 24px; text-align: center; font-size: 11px; color: #777777;">
+              <p style="margin: 0;">
+                &copy; 2026 Indian Institute of Information Technology, Bhopal. All rights reserved.
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

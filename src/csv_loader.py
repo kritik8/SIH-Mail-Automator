@@ -90,7 +90,7 @@ def generate_sample_csv(target_path: str = "data/sample_teams_test.csv") -> None
     rows = [
         # Valid Row 1 - Full Team
         [
-            "SIH-042", "CodeCrafters", 
+            "01", "CodeCrafters", 
             "Aditi Sharma, 23U01001, 9876543210, aditi.test@example.com, F",
             "Amit Patel, 23U01002, 9876543211, amit.patel@example.com, M", 
             "Sneha Reddy, 23U01003, 9876543212, sneha.r@example.com, F", 
@@ -101,7 +101,7 @@ def generate_sample_csv(target_path: str = "data/sample_teams_test.csv") -> None
         ],
         # Valid Row 2 - Hardware, partial team (3 members total)
         [
-            "SIH-043", "ElectroWaves", 
+            "02", "ElectroWaves", 
             "Vikram Rathore, 23U02001, 9876543220, vikram.test@example.com, M",
             "Karan Malhotra, 23U02002, 9876543221, karan.m@example.com, M", 
             "Anjali Gupta, 23U02003, 9876543222, anjali.g@example.com, F", 
@@ -110,7 +110,7 @@ def generate_sample_csv(target_path: str = "data/sample_teams_test.csv") -> None
         ],
         # Valid Row 3 - Software, leader only
         [
-            "SIH-044", "DevDynasty", 
+            "03", "DevDynasty", 
             "Kunal Sen, 23U03001, 9876543230, kunal.test@example.com, M",
             "", "", "", "", "",
             "Blockchain land registry", "Software"
@@ -124,14 +124,14 @@ def generate_sample_csv(target_path: str = "data/sample_teams_test.csv") -> None
         ],
         # Invalid Row 5 - Missing leader email or invalid format (Should be skipped due to empty leader details)
         [
-            "SIH-045", "ErrorTeam", 
+            "04", "ErrorTeam", 
             "",
             "", "", "", "", "",
             "Some Theme", "Software"
         ],
         # Invalid Row 6 - Malformed email in leader details (Should be skipped)
         [
-            "SIH-046", "BadEmailTeam", 
+            "05", "BadEmailTeam", 
             "Jack Ryan, 23U05001, 9876543250, not-a-valid-email, M",
             "", "", "", "", "",
             "Some Theme", "Software"
@@ -217,6 +217,34 @@ def load_teams_from_csv(csv_path: str) -> List[TeamData]:
                 members=members
             )
             valid_teams.append(team)
+            
+    # Validate that team numbers are sequential and gapless
+    if valid_teams:
+        try:
+            team_indices = []
+            for t in valid_teams:
+                # Strip and convert to int to validate it's numeric
+                team_indices.append(int(t.team_number.strip()))
+            
+            # Check for duplicates
+            if len(team_indices) != len(set(team_indices)):
+                dups = sorted(list(set([x for x in team_indices if team_indices.count(x) > 1])))
+                logger.error(f"LOUD WARNING: Duplicate team numbers found in CSV: {dups}")
+            
+            # Check for gaps/sequence starting at 1
+            team_indices_sorted = sorted(team_indices)
+            expected = list(range(1, len(valid_teams) + 1))
+            if team_indices_sorted != expected:
+                missing = sorted(list(set(expected) - set(team_indices)))
+                out_of_bounds = sorted(list(set(team_indices) - set(expected)))
+                logger.error(
+                    f"LOUD WARNING: Team numbers are not sequential and gapless!\n"
+                    f"Expected sequence: 1 to {len(valid_teams)}\n"
+                    f"Missing expected team numbers: {missing}\n"
+                    f"Unexpected/Out-of-bounds numbers: {out_of_bounds}"
+                )
+        except ValueError as e:
+            logger.error(f"LOUD WARNING: Could not validate team number sequence (non-integer detected): {e}")
                 
     return valid_teams
 

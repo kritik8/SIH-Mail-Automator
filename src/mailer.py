@@ -5,6 +5,8 @@ import logging
 from pathlib import Path
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
 from typing import List, Optional
 from jinja2 import Environment, FileSystemLoader, TemplateError
 from src.config import AppConfig
@@ -13,50 +15,89 @@ from src.csv_loader import TeamData
 logger = logging.getLogger("mailer")
 
 class EmailRenderer:
-    def __init__(self, templates_dir: str = "templates", template_name: str = "team_invite.html.j2"):
+    def __init__(self, templates_dir: str = "templates"):
         self.templates_dir = Path(templates_dir)
-        self.template_name = template_name
         self.env = Environment(loader=FileSystemLoader(self.templates_dir))
         
-        # Plain text template string
-        self.text_template_str = (
-            "Smart India Hackathon - Internal Invitation\n"
-            "Indian Institute of Information Technology, Bhopal\n\n"
-            "Dear {{ leader_name }},\n\n"
-            "Congratulations! Your team has been shortlisted for the Internal SIH Invitation at IIIT Bhopal.\n\n"
-            "--- Team Details ---\n"
-            "Team Number: {{ team_number }}\n"
-            "Team Name: {{ team_name }}\n"
-            "{% if track %}Category / Track: {{ track }}\n{% endif %}"
-            "{% if problem_theme %}Problem Theme: {{ problem_theme }}\n{% endif %}\n"
-            "--- Team Roster & Contact Details ---\n"
-            "  - {{ leader.name }} (Leader) | Scholar ID: {{ leader.scholar_id }} | Phone: {{ leader.phone }} | Email: {{ leader.email }} | Gen: {{ leader.gender }}\n"
-            "{% for m in members %}"
-            "  - {{ m.name }} | Scholar ID: {{ m.scholar_id }} | Phone: {{ m.phone }} | Email: {{ m.email }} | Gen: {{ m.gender }}\n"
-            "{% endfor %}\n"
-            "--- Event Schedule ---\n"
-            "Date: {{ event_date }}\n"
-            "Venue: {{ event_venue }}\n\n"
-            "--- Participant Guidelines (SIH Official) ---\n"
-            "1. Team Composition: Each team must consist of exactly 6 members (including the leader) from the same college.\n"
-            "2. Female Representation: At least one female member is mandatory in every team.\n"
-            "3. SPOC Registration Only: Individual registrations are not allowed on the national portal. Nomination is handled by the SPOC.\n"
-            "4. Idea Submission: Nominated teams must submit their proposals under their selected problem theme.\n"
-            "5. Grand Finale Format: Selected teams are invited to a 36-hour physical hackathon at national nodal centers.\n\n"
-            "For queries, contact the institutional SPOC:\n"
-            "{{ spoc_name }} ({{ spoc_role }})\n"
-            "Email: {{ spoc_email }}\n\n"
-            "Regards,\n"
-            "SIH Organizing Committee, IIIT Bhopal"
-        )
-        self.text_template = self.env.from_string(self.text_template_str)
+        # Plain text template structures for fallbacks
+        self.text_templates = {
+            "invitation": (
+                "Smart India Hackathon 2026 - Internal Invitation\n"
+                "Indian Institute of Information Technology, Bhopal\n\n"
+                "Dear {{ leader_name }},\n\n"
+                "Your team has been shortlisted for the Internal SIH Invitation at IIIT Bhopal.\n\n"
+                "--- Team Information ---\n"
+                "Team Number: {{ team_number }}\n"
+                "Team Name: {{ team_name }}\n"
+                "{% if track %}Category / Track: {{ track }}\n{% endif %}"
+                "{% if problem_theme %}Problem Theme: {{ problem_theme }}\n{% endif %}\n"
+                "Team Members:\n"
+                "  - {{ leader.name }} (Leader) | Scholar ID: {{ leader.scholar_id }} | Phone: {{ leader.phone }} | Gen: {{ leader.gender }}\n"
+                "{% for m in members %}"
+                "  - {{ m.name }} | Scholar ID: {{ m.scholar_id }} | Phone: {{ m.phone }} | Gen: {{ m.gender }}\n"
+                "{% endfor %}\n"
+                "--- Event Schedule ---\n"
+                "Date: {{ event_date }}\n"
+                "Venue: {{ event_venue }}\n\n"
+                "--- Participant Guidelines ---\n"
+                "1. Each team must consist of exactly 6 members from the same institution.\n"
+                "2. At least one female member is mandatory in every team.\n"
+                "3. Registrations are processed solely via College SPOC nomination.\n"
+                "4. Nominated teams must submit their project ideas under the selected problem theme.\n"
+                "5. The final rounds are conducted as a physical 36-hour hackathon.\n\n"
+                "For any queries, contact the institutional SPOC:\n"
+                "{{ spoc_name }} ({{ spoc_role }})\n"
+                "Email: {{ spoc_email }}\n\n"
+                "Regards,\n"
+                "SIH Organizing Committee, IIIT Bhopal"
+            ),
+            "reminder": (
+                "SIH Internal Hackathon - Tomorrow!\n"
+                "Indian Institute of Information Technology, Bhopal\n\n"
+                "Dear {{ leader_name }},\n\n"
+                "This is a quick final reminder that the Internal SIH Selection Round begins tomorrow.\n"
+                "Your team, {{ team_name }} (Team Number: {{ team_number }}), is scheduled to participate at:\n\n"
+                "--- Event Schedule ---\n"
+                "Date/Time: {{ event_date }}\n"
+                "Venue: {{ event_venue }}\n\n"
+                "--- Quick Checklist ---\n"
+                "- Arrive at the NTB registration desk by 8:30 AM.\n"
+                "- Bring your college student ID cards (mandatory).\n"
+                "- Bring your laptops, power strips, and required chargers.\n"
+                "- Ensure all development tools and IDEs are configured.\n\n"
+                "Best of luck, Team {{ team_name }}!\n\n"
+                "Regards,\n"
+                "SIH Organizing Committee, IIIT Bhopal"
+            ),
+            "thankyou": (
+                "SIH Internal Hackathon - Thank You\n"
+                "Indian Institute of Information Technology, Bhopal\n\n"
+                "Dear {{ leader_name }},\n\n"
+                "Thank you for participating in the Smart India Hackathon 2026 Internal Selection Round at IIIT Bhopal. "
+                "We appreciate the hard work, creativity, and dedication that your team, {{ team_name }}, demonstrated.\n\n"
+                "Participation certificates for all 6 of your registered team members are attached to this email.\n\n"
+                "Regards,\n"
+                "SIH Organizing Committee, IIIT Bhopal"
+            )
+        }
 
-    def render(self, team: TeamData, config: AppConfig) -> tuple[str, str]:
-        """Renders both HTML and plain-text versions of the email invitation."""
+    def render(self, team: TeamData, config: AppConfig, template_type: str) -> tuple[str, str]:
+        """Renders both HTML and plain-text versions of the selected invitation type."""
+        template_files = {
+            "invitation": "1_invitation.html.j2",
+            "reminder": "2_reminder.html.j2",
+            "thankyou": "3_thankyou.html.j2"
+        }
+        
+        if template_type not in template_files:
+            raise ValueError(f"Unknown template type: '{template_type}'")
+            
+        template_name = template_files[template_type]
+        
         try:
-            html_template = self.env.get_template(self.template_name)
+            html_template = self.env.get_template(template_name)
         except TemplateError as e:
-            raise RuntimeError(f"Failed to load HTML template '{self.template_name}': {e}")
+            raise RuntimeError(f"Failed to load HTML template '{template_name}': {e}")
             
         render_context = {
             "team_number": team.team_number,
@@ -75,10 +116,12 @@ class EmailRenderer:
         
         try:
             html_content = html_template.render(**render_context)
-            text_content = self.text_template.render(**render_context)
+            text_str = self.text_templates[template_type]
+            text_template = self.env.from_string(text_str)
+            text_content = text_template.render(**render_context)
             return html_content, text_content
         except TemplateError as e:
-            raise RuntimeError(f"Failed to render templates: {e}")
+            raise RuntimeError(f"Failed to render templates for {template_type}: {e}")
 
 
 class Mailer:
@@ -86,26 +129,35 @@ class Mailer:
         self.config = config
         self.renderer = renderer
         self.preview_dir = Path("preview")
-        self.preview_dir.mkdir(exist_ok=True)
 
-    def send_email(self, team: TeamData) -> bool:
+    def send_email(self, team: TeamData, template_type: str, attachments: List[Path] = None) -> bool:
         """
-        Sends the personalized invitation email. 
-        Supports dry-run preview saving/redirecting and live SMTP transmission with retries.
+        Sends the personalized email with the selected template type.
+        Supports attachments for post-event certificates.
         """
         try:
-            html_body, text_body = self.renderer.render(team, self.config)
+            html_body, text_body = self.renderer.render(team, self.config, template_type)
         except Exception as e:
-            logger.error(f"Error rendering email for team {team.team_number}: {e}")
+            logger.error(f"Error rendering email for team {team.team_number} ({template_type}): {e}")
             return False
+
+        # Build subject line
+        subject_prefixes = {
+            "invitation": "Internal Invitation",
+            "reminder": "Internal Hackathon - Tomorrow!",
+            "thankyou": "Thank You for Participating"
+        }
+        subject = f"Smart India Hackathon 2026 - {subject_prefixes[template_type]} (Team: {team.team_number})"
 
         # If dry-run, save preview to file
         if self.config.dry_run:
-            preview_file = self.preview_dir / f"team_{team.team_number}.html"
+            tmpl_preview_dir = self.preview_dir / template_type
+            tmpl_preview_dir.mkdir(parents=True, exist_ok=True)
+            preview_file = tmpl_preview_dir / f"team_{team.team_number}.html"
             try:
                 with open(preview_file, "w", encoding="utf-8") as f:
                     f.write(html_body)
-                logger.info(f"[DRY RUN] Generated preview for team {team.team_number} at: {preview_file}")
+                logger.info(f"[DRY RUN] Generated preview for team {team.team_number} ({template_type}) at: {preview_file}")
             except Exception as e:
                 logger.error(f"[DRY RUN] Failed to write preview file for team {team.team_number}: {e}")
             
@@ -115,46 +167,70 @@ class Mailer:
                 return self._transmit_smtp(
                     to_email=self.config.test_recipient,
                     cc_emails=[], # Don't spam CCs during test
-                    subject=f"[DRY RUN] SIH Internal Invitation - Team {team.team_number}",
+                    subject=f"[DRY RUN] {subject}",
                     html_body=html_body,
-                    text_body=text_body
+                    text_body=text_body,
+                    attachments=attachments
                 )
             return True
             
         else:
             # Live run
-            subject = f"Smart India Hackathon 2026 - Internal Invitation (Team: {team.team_number})"
+            # Note: CC addresses are supplied from config. In sandbox test mode, they are stripped upstream.
+            cc_list = self.config.cc_emails
             return self._transmit_smtp(
                 to_email=team.leader_email,
-                cc_emails=self.config.cc_emails,
+                cc_emails=cc_list,
                 subject=subject,
                 html_body=html_body,
-                text_body=text_body
+                text_body=text_body,
+                attachments=attachments
             )
 
-    def _transmit_smtp(self, to_email: str, cc_emails: List[str], subject: str, html_body: str, text_body: str) -> bool:
+    def _transmit_smtp(self, to_email: str, cc_emails: List[str], subject: str, html_body: str, text_body: str, attachments: List[Path] = None) -> bool:
         """Handles low-level SMTP message creation and transmission with retry-backoff logic."""
-        msg = MIMEMultipart("alternative")
+        msg = MIMEMultipart("mixed")  # Use mixed to support both alternative bodies and attachments
         msg["From"] = f"SIH IIIT Bhopal Invitation <{self.config.smtp_username}>"
         msg["To"] = to_email
         if cc_emails:
             msg["Cc"] = ", ".join(cc_emails)
         msg["Subject"] = subject
 
-        # Attach alternative bodies
-        msg.attach(MIMEText(text_body, "plain", "utf-8"))
-        msg.attach(MIMEText(html_body, "html", "utf-8"))
+        # Create alternative body part for text/html
+        alt_part = MIMEMultipart("alternative")
+        alt_part.attach(MIMEText(text_body, "plain", "utf-8"))
+        alt_part.attach(MIMEText(html_body, "html", "utf-8"))
+        msg.attach(alt_part)
+
+        # Attach certificate files
+        if attachments:
+            for filepath in attachments:
+                if not filepath.exists():
+                    logger.warning(f"Attachment path '{filepath}' does not exist, skipping.")
+                    continue
+                try:
+                    with open(filepath, "rb") as f:
+                        part = MIMEBase("application", "octet-stream")
+                        part.set_payload(f.read())
+                    encoders.encode_base64(part)
+                    part.add_header(
+                        "Content-Disposition",
+                        f'attachment; filename="{filepath.name}"'
+                    )
+                    msg.attach(part)
+                except Exception as e:
+                    logger.error(f"Failed to attach file '{filepath.name}': {e}")
+                    return False
 
         all_recipients = [to_email] + cc_emails
 
         # Retry loop
         for attempt in range(1, self.config.retry_attempts + 1):
             try:
-                # Setup SMTP client connection
                 if self.config.smtp_port == 465:
-                    server = smtplib.SMTP_SSL(self.config.smtp_host, self.config.smtp_port, timeout=10)
+                    server = smtplib.SMTP_SSL(self.config.smtp_host, self.config.smtp_port, timeout=15)
                 else:
-                    server = smtplib.SMTP(self.config.smtp_host, self.config.smtp_port, timeout=10)
+                    server = smtplib.SMTP(self.config.smtp_host, self.config.smtp_port, timeout=15)
                     server.starttls()
                 
                 # Authenticate if username/password are set
