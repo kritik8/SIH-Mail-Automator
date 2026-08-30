@@ -16,8 +16,11 @@ def get_certificate_files(team_number: str, certs_dir: Path) -> List[Path]:
       Files mapped are ((n-1)*6 + 1) to (n*6), zero-padded to 3 digits (e.g. 001.png).
     """
     try:
-        # Convert team number to integer (e.g., "01" -> 1, "02" -> 2)
-        n = int(team_number.strip())
+        # Convert team number to integer (e.g., "01" -> 1, "SIH-64" -> 64)
+        num_str = team_number.strip()
+        if num_str.upper().startswith("SIH-"):
+            num_str = num_str[4:]
+        n = int(num_str)
     except ValueError:
         raise CertificateError(f"Invalid team_number format: '{team_number}'. Must be a sequential integer string.")
 

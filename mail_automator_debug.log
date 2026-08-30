@@ -369,3 +369,1070 @@ leader_email
 2026-08-16 18:07:14,827 [INFO] app: Successfully processed: 2
 2026-08-16 18:07:14,827 [INFO] app: Failed to process:      0
 2026-08-16 18:07:14,827 [INFO] app: ====================================================
+2026-08-30 11:44:33,165 [INFO] app: ====================================================
+2026-08-30 11:44:33,167 [INFO] app:                  DRY RUN ACTIVE                     
+2026-08-30 11:44:33,168 [INFO] app: ====================================================
+2026-08-30 11:44:33,168 [INFO] app: Writing rendered HTML files to preview/invitation/
+2026-08-30 11:44:33,168 [INFO] app: ====================================================
+2026-08-30 11:44:33,168 [INFO] app: Loading teams from: SIH 2026 Registrations (Responses) - Complete teams with Mentor alloc.csv
+2026-08-30 11:44:33,179 [INFO] app: Loaded 69 valid team rows from CSV.
+2026-08-30 11:44:33,193 [INFO] app: Found 0 teams already successfully processed in send_log_invitation.csv.
+2026-08-30 11:44:33,195 [INFO] app: [1/69] Sending 'invitation' email to team SIH-1 -> buildwithvrit@gmail.com
+2026-08-30 11:44:33,207 [INFO] mailer: [DRY RUN] Generated preview for team SIH-1 (invitation) at: preview\invitation\team_SIH-1.html
+2026-08-30 11:44:33,210 [INFO] app: [2/69] Sending 'invitation' email to team SIH-2 -> tanishhs01@gmail.com
+2026-08-30 11:44:33,216 [INFO] mailer: [DRY RUN] Generated preview for team SIH-2 (invitation) at: preview\invitation\team_SIH-2.html
+2026-08-30 11:44:33,217 [INFO] app: [3/69] Sending 'invitation' email to team SIH-3 -> piyushgohil6302@gmail.com
+2026-08-30 11:44:33,223 [INFO] mailer: [DRY RUN] Generated preview for team SIH-3 (invitation) at: preview\invitation\team_SIH-3.html
+2026-08-30 11:44:33,224 [INFO] app: [4/69] Sending 'invitation' email to team SIH-4 -> abhigyanjha2007@gmail.com
+2026-08-30 11:44:33,231 [INFO] mailer: [DRY RUN] Generated preview for team SIH-4 (invitation) at: preview\invitation\team_SIH-4.html
+2026-08-30 11:44:33,233 [INFO] app: [5/69] Sending 'invitation' email to team SIH-5 -> amandubeyjiiuo@gmail.com
+2026-08-30 11:44:33,238 [INFO] mailer: [DRY RUN] Generated preview for team SIH-5 (invitation) at: preview\invitation\team_SIH-5.html
+2026-08-30 11:44:33,239 [INFO] app: [6/69] Sending 'invitation' email to team SIH-6 -> shiv.shambhu010199@gmail.com
+2026-08-30 11:44:33,246 [INFO] mailer: [DRY RUN] Generated preview for team SIH-6 (invitation) at: preview\invitation\team_SIH-6.html
+2026-08-30 11:44:33,248 [INFO] app: [7/69] Sending 'invitation' email to team SIH-7 -> vanshjain10a2@gmail.com
+2026-08-30 11:44:33,251 [INFO] mailer: [DRY RUN] Generated preview for team SIH-7 (invitation) at: preview\invitation\team_SIH-7.html
+2026-08-30 11:44:33,255 [INFO] app: [8/69] Sending 'invitation' email to team SIH-8 -> praveshkumar16062005@gmail.com
+2026-08-30 11:44:33,257 [INFO] mailer: [DRY RUN] Generated preview for team SIH-8 (invitation) at: preview\invitation\team_SIH-8.html
+2026-08-30 11:44:33,257 [INFO] app: [9/69] Sending 'invitation' email to team SIH-9 -> pratyakshdwivedi563@gmail.com
+2026-08-30 11:44:33,267 [INFO] mailer: [DRY RUN] Generated preview for team SIH-9 (invitation) at: preview\invitation\team_SIH-9.html
+2026-08-30 11:44:33,271 [INFO] app: [10/69] Sending 'invitation' email to team SIH-10 -> aviraltrivedi.007@gmail.com
+2026-08-30 11:44:33,277 [INFO] mailer: [DRY RUN] Generated preview for team SIH-10 (invitation) at: preview\invitation\team_SIH-10.html
+2026-08-30 11:44:33,281 [INFO] app: [11/69] Sending 'invitation' email to team SIH-11 -> satyamkr1677@gmail.com
+2026-08-30 11:44:33,286 [INFO] mailer: [DRY RUN] Generated preview for team SIH-11 (invitation) at: preview\invitation\team_SIH-11.html
+2026-08-30 11:44:33,288 [INFO] app: [12/69] Sending 'invitation' email to team SIH-12 -> ishagupta5645@gmail.com
+2026-08-30 11:44:33,294 [INFO] mailer: [DRY RUN] Generated preview for team SIH-12 (invitation) at: preview\invitation\team_SIH-12.html
+2026-08-30 11:44:33,295 [INFO] app: [13/69] Sending 'invitation' email to team SIH-13 -> yashu210209@gmail.com
+2026-08-30 11:44:33,302 [INFO] mailer: [DRY RUN] Generated preview for team SIH-13 (invitation) at: preview\invitation\team_SIH-13.html
+2026-08-30 11:44:33,303 [INFO] app: [14/69] Sending 'invitation' email to team SIH-14 -> yalok2372@gmail.com
+2026-08-30 11:44:33,310 [INFO] mailer: [DRY RUN] Generated preview for team SIH-14 (invitation) at: preview\invitation\team_SIH-14.html
+2026-08-30 11:44:33,311 [INFO] app: [15/69] Sending 'invitation' email to team SIH-15 -> nishanty0809@gmail.com
+2026-08-30 11:44:33,317 [INFO] mailer: [DRY RUN] Generated preview for team SIH-15 (invitation) at: preview\invitation\team_SIH-15.html
+2026-08-30 11:44:33,318 [INFO] app: [16/69] Sending 'invitation' email to team SIH-16 -> saumysahu613@gmail.com
+2026-08-30 11:44:33,324 [INFO] mailer: [DRY RUN] Generated preview for team SIH-16 (invitation) at: preview\invitation\team_SIH-16.html
+2026-08-30 11:44:33,324 [INFO] app: [17/69] Sending 'invitation' email to team SIH-17 -> vt30trivedi@gmail.com
+2026-08-30 11:44:33,329 [INFO] mailer: [DRY RUN] Generated preview for team SIH-17 (invitation) at: preview\invitation\team_SIH-17.html
+2026-08-30 11:44:33,329 [INFO] app: [18/69] Sending 'invitation' email to team SIH-18 -> vedantgoyal67@gmail.com
+2026-08-30 11:44:33,339 [INFO] mailer: [DRY RUN] Generated preview for team SIH-18 (invitation) at: preview\invitation\team_SIH-18.html
+2026-08-30 11:44:33,341 [INFO] app: [19/69] Sending 'invitation' email to team SIH-19 -> jayanthsaimuvva@gmail.com
+2026-08-30 11:44:33,346 [INFO] mailer: [DRY RUN] Generated preview for team SIH-19 (invitation) at: preview\invitation\team_SIH-19.html
+2026-08-30 11:44:33,346 [INFO] app: [20/69] Sending 'invitation' email to team SIH-20 -> abhaykrd11@gmail.com
+2026-08-30 11:44:33,356 [INFO] mailer: [DRY RUN] Generated preview for team SIH-20 (invitation) at: preview\invitation\team_SIH-20.html
+2026-08-30 11:44:33,358 [INFO] app: [21/69] Sending 'invitation' email to team SIH-21 -> ojasvsoni@gmail.com
+2026-08-30 11:44:33,364 [INFO] mailer: [DRY RUN] Generated preview for team SIH-21 (invitation) at: preview\invitation\team_SIH-21.html
+2026-08-30 11:44:33,365 [INFO] app: [22/69] Sending 'invitation' email to team SIH-22 -> pranjalkhandelwal46@gmail.com
+2026-08-30 11:44:33,371 [INFO] mailer: [DRY RUN] Generated preview for team SIH-22 (invitation) at: preview\invitation\team_SIH-22.html
+2026-08-30 11:44:33,372 [INFO] app: [23/69] Sending 'invitation' email to team SIH-23 -> singhtomarsunil8@gmail.com
+2026-08-30 11:44:33,378 [INFO] mailer: [DRY RUN] Generated preview for team SIH-23 (invitation) at: preview\invitation\team_SIH-23.html
+2026-08-30 11:44:33,379 [INFO] app: [24/69] Sending 'invitation' email to team SIH-24 -> namansr07@gmail.com
+2026-08-30 11:44:33,384 [INFO] mailer: [DRY RUN] Generated preview for team SIH-24 (invitation) at: preview\invitation\team_SIH-24.html
+2026-08-30 11:44:33,386 [INFO] app: [25/69] Sending 'invitation' email to team SIH-25 -> prashastmathur@gmail.com
+2026-08-30 11:44:33,390 [INFO] mailer: [DRY RUN] Generated preview for team SIH-25 (invitation) at: preview\invitation\team_SIH-25.html
+2026-08-30 11:44:33,390 [INFO] app: [26/69] Sending 'invitation' email to team SIH-26 -> prekshitdave@gmail.com
+2026-08-30 11:44:33,395 [INFO] mailer: [DRY RUN] Generated preview for team SIH-26 (invitation) at: preview\invitation\team_SIH-26.html
+2026-08-30 11:44:33,395 [INFO] app: [27/69] Sending 'invitation' email to team SIH-27 -> manaskumar20056@gmail.com
+2026-08-30 11:44:33,399 [INFO] mailer: [DRY RUN] Generated preview for team SIH-27 (invitation) at: preview\invitation\team_SIH-27.html
+2026-08-30 11:44:33,399 [INFO] app: [28/69] Sending 'invitation' email to team SIH-28 -> samadhiyarudra123@gmail.com
+2026-08-30 11:44:33,409 [INFO] mailer: [DRY RUN] Generated preview for team SIH-28 (invitation) at: preview\invitation\team_SIH-28.html
+2026-08-30 11:44:33,409 [INFO] app: [29/69] Sending 'invitation' email to team SIH-29 -> itsnishant444@gmail.com
+2026-08-30 11:44:33,417 [INFO] mailer: [DRY RUN] Generated preview for team SIH-29 (invitation) at: preview\invitation\team_SIH-29.html
+2026-08-30 11:44:33,417 [INFO] app: [30/69] Sending 'invitation' email to team SIH-30 -> pranjaltamr99@gmail.com
+2026-08-30 11:44:33,422 [INFO] mailer: [DRY RUN] Generated preview for team SIH-30 (invitation) at: preview\invitation\team_SIH-30.html
+2026-08-30 11:44:33,426 [INFO] app: [31/69] Sending 'invitation' email to team SIH-31 -> forwebdevelopment59@gmail.com
+2026-08-30 11:44:33,432 [INFO] mailer: [DRY RUN] Generated preview for team SIH-31 (invitation) at: preview\invitation\team_SIH-31.html
+2026-08-30 11:44:33,433 [INFO] app: [32/69] Sending 'invitation' email to team SIH-32 -> pranavpolawar123@gmail.com
+2026-08-30 11:44:33,439 [INFO] mailer: [DRY RUN] Generated preview for team SIH-32 (invitation) at: preview\invitation\team_SIH-32.html
+2026-08-30 11:44:33,440 [INFO] app: [33/69] Sending 'invitation' email to team SIH-33 -> upasnap03@gmail.com
+2026-08-30 11:44:33,447 [INFO] mailer: [DRY RUN] Generated preview for team SIH-33 (invitation) at: preview\invitation\team_SIH-33.html
+2026-08-30 11:44:33,448 [INFO] app: [34/69] Sending 'invitation' email to team SIH-34 -> saurabhpal4567@gmail.com
+2026-08-30 11:44:33,454 [INFO] mailer: [DRY RUN] Generated preview for team SIH-34 (invitation) at: preview\invitation\team_SIH-34.html
+2026-08-30 11:44:33,455 [INFO] app: [35/69] Sending 'invitation' email to team SIH-35 -> deepakgoyal201204@gmail.com
+2026-08-30 11:44:33,461 [INFO] mailer: [DRY RUN] Generated preview for team SIH-35 (invitation) at: preview\invitation\team_SIH-35.html
+2026-08-30 11:44:33,462 [INFO] app: [36/69] Sending 'invitation' email to team SIH-36 -> mriduixb7454@gmail.com
+2026-08-30 11:44:33,467 [INFO] mailer: [DRY RUN] Generated preview for team SIH-36 (invitation) at: preview\invitation\team_SIH-36.html
+2026-08-30 11:44:33,468 [INFO] app: [37/69] Sending 'invitation' email to team SIH-37 -> dharuvbhola@gmail.com
+2026-08-30 11:44:33,474 [INFO] mailer: [DRY RUN] Generated preview for team SIH-37 (invitation) at: preview\invitation\team_SIH-37.html
+2026-08-30 11:44:33,475 [INFO] app: [38/69] Sending 'invitation' email to team SIH-38 -> shatakshichowksey.01@gmail.com
+2026-08-30 11:44:33,481 [INFO] mailer: [DRY RUN] Generated preview for team SIH-38 (invitation) at: preview\invitation\team_SIH-38.html
+2026-08-30 11:44:33,481 [INFO] app: [39/69] Sending 'invitation' email to team SIH-39 -> vkmac119@gmail.com
+2026-08-30 11:44:33,487 [INFO] mailer: [DRY RUN] Generated preview for team SIH-39 (invitation) at: preview\invitation\team_SIH-39.html
+2026-08-30 11:44:33,488 [INFO] app: [40/69] Sending 'invitation' email to team SIH-40 -> shawprem217@gmail.com
+2026-08-30 11:44:33,494 [INFO] mailer: [DRY RUN] Generated preview for team SIH-40 (invitation) at: preview\invitation\team_SIH-40.html
+2026-08-30 11:44:33,495 [INFO] app: [41/69] Sending 'invitation' email to team SIH-41 -> siddhant10022008@gmail.com
+2026-08-30 11:44:33,501 [INFO] mailer: [DRY RUN] Generated preview for team SIH-41 (invitation) at: preview\invitation\team_SIH-41.html
+2026-08-30 11:44:33,502 [INFO] app: [42/69] Sending 'invitation' email to team SIH-42 -> roshanbano8795@gmail.com
+2026-08-30 11:44:33,506 [INFO] mailer: [DRY RUN] Generated preview for team SIH-42 (invitation) at: preview\invitation\team_SIH-42.html
+2026-08-30 11:44:33,510 [INFO] app: [43/69] Sending 'invitation' email to team SIH-43 -> devjain191207@gmail.com
+2026-08-30 11:44:33,512 [INFO] mailer: [DRY RUN] Generated preview for team SIH-43 (invitation) at: preview\invitation\team_SIH-43.html
+2026-08-30 11:44:33,518 [INFO] app: [44/69] Sending 'invitation' email to team SIH-44 -> pavitrasahu251218@gmail.com
+2026-08-30 11:44:33,524 [INFO] mailer: [DRY RUN] Generated preview for team SIH-44 (invitation) at: preview\invitation\team_SIH-44.html
+2026-08-30 11:44:33,524 [INFO] app: [45/69] Sending 'invitation' email to team SIH-45 -> thakurarya1710@gmail.com
+2026-08-30 11:44:33,531 [INFO] mailer: [DRY RUN] Generated preview for team SIH-45 (invitation) at: preview\invitation\team_SIH-45.html
+2026-08-30 11:44:33,533 [INFO] app: [46/69] Sending 'invitation' email to team SIH-46 -> rahulverma945717@gmail.com
+2026-08-30 11:44:33,539 [INFO] mailer: [DRY RUN] Generated preview for team SIH-46 (invitation) at: preview\invitation\team_SIH-46.html
+2026-08-30 11:44:33,540 [INFO] app: [47/69] Sending 'invitation' email to team SIH-47 -> tshaswat32@gmail.com
+2026-08-30 11:44:33,546 [INFO] mailer: [DRY RUN] Generated preview for team SIH-47 (invitation) at: preview\invitation\team_SIH-47.html
+2026-08-30 11:44:33,548 [INFO] app: [48/69] Sending 'invitation' email to team SIH-48 -> aryanag818@gmail.com
+2026-08-30 11:44:33,553 [INFO] mailer: [DRY RUN] Generated preview for team SIH-48 (invitation) at: preview\invitation\team_SIH-48.html
+2026-08-30 11:44:33,554 [INFO] app: [49/69] Sending 'invitation' email to team SIH-49 -> anikaryan476@gmail.com
+2026-08-30 11:44:33,559 [INFO] mailer: [DRY RUN] Generated preview for team SIH-49 (invitation) at: preview\invitation\team_SIH-49.html
+2026-08-30 11:44:33,561 [INFO] app: [50/69] Sending 'invitation' email to team SIH-50 -> atuljoshi85117@gmail.com
+2026-08-30 11:44:33,566 [INFO] mailer: [DRY RUN] Generated preview for team SIH-50 (invitation) at: preview\invitation\team_SIH-50.html
+2026-08-30 11:44:33,566 [INFO] app: [51/69] Sending 'invitation' email to team SIH-51 -> eshanm19@gmail.com
+2026-08-30 11:44:33,575 [INFO] mailer: [DRY RUN] Generated preview for team SIH-51 (invitation) at: preview\invitation\team_SIH-51.html
+2026-08-30 11:44:33,576 [INFO] app: [52/69] Sending 'invitation' email to team SIH-52 -> 25U020061@iiitbhopal.ac.in
+2026-08-30 11:44:33,581 [INFO] mailer: [DRY RUN] Generated preview for team SIH-52 (invitation) at: preview\invitation\team_SIH-52.html
+2026-08-30 11:44:33,582 [INFO] app: [53/69] Sending 'invitation' email to team SIH-53 -> mauryajay10125@gmail.com
+2026-08-30 11:44:33,588 [INFO] mailer: [DRY RUN] Generated preview for team SIH-53 (invitation) at: preview\invitation\team_SIH-53.html
+2026-08-30 11:44:33,589 [INFO] app: [54/69] Sending 'invitation' email to team SIH-54 -> nitinshu29@gmail.com
+2026-08-30 11:44:33,594 [INFO] mailer: [DRY RUN] Generated preview for team SIH-54 (invitation) at: preview\invitation\team_SIH-54.html
+2026-08-30 11:44:33,595 [INFO] app: [55/69] Sending 'invitation' email to team SIH-55 -> aayush.varshney.9c@gmail.com
+2026-08-30 11:44:33,601 [INFO] mailer: [DRY RUN] Generated preview for team SIH-55 (invitation) at: preview\invitation\team_SIH-55.html
+2026-08-30 11:44:33,603 [INFO] app: [56/69] Sending 'invitation' email to team SIH-56 -> guptaansh1209@gmail.com
+2026-08-30 11:44:33,609 [INFO] mailer: [DRY RUN] Generated preview for team SIH-56 (invitation) at: preview\invitation\team_SIH-56.html
+2026-08-30 11:44:33,609 [INFO] app: [57/69] Sending 'invitation' email to team SIH-57 -> anujprjt22@gmail.com
+2026-08-30 11:44:33,615 [INFO] mailer: [DRY RUN] Generated preview for team SIH-57 (invitation) at: preview\invitation\team_SIH-57.html
+2026-08-30 11:44:33,618 [INFO] app: [58/69] Sending 'invitation' email to team SIH-58 -> pratyakshdwivedi563@gmail.com
+2026-08-30 11:44:33,624 [INFO] mailer: [DRY RUN] Generated preview for team SIH-58 (invitation) at: preview\invitation\team_SIH-58.html
+2026-08-30 11:44:33,624 [INFO] app: [59/69] Sending 'invitation' email to team SIH-59 -> ravindramilieus545@gmail.com
+2026-08-30 11:44:33,630 [INFO] mailer: [DRY RUN] Generated preview for team SIH-59 (invitation) at: preview\invitation\team_SIH-59.html
+2026-08-30 11:44:33,632 [INFO] app: [60/69] Sending 'invitation' email to team SIH-60 -> vigneshmurarkar@gmail.com
+2026-08-30 11:44:33,637 [INFO] mailer: [DRY RUN] Generated preview for team SIH-60 (invitation) at: preview\invitation\team_SIH-60.html
+2026-08-30 11:44:33,639 [INFO] app: [61/69] Sending 'invitation' email to team SIH-61 -> anupambichpuria5@gmail.com
+2026-08-30 11:44:33,641 [INFO] mailer: [DRY RUN] Generated preview for team SIH-61 (invitation) at: preview\invitation\team_SIH-61.html
+2026-08-30 11:44:33,641 [INFO] app: [62/69] Sending 'invitation' email to team SIH-62 -> 408akshat@gmail.com
+2026-08-30 11:44:33,652 [INFO] mailer: [DRY RUN] Generated preview for team SIH-62 (invitation) at: preview\invitation\team_SIH-62.html
+2026-08-30 11:44:33,653 [INFO] app: [63/69] Sending 'invitation' email to team SIH-63 -> rohitpatelgurjar@gmail.com
+2026-08-30 11:44:33,657 [INFO] mailer: [DRY RUN] Generated preview for team SIH-63 (invitation) at: preview\invitation\team_SIH-63.html
+2026-08-30 11:44:33,659 [INFO] app: [64/69] Sending 'invitation' email to team SIH-64 -> jkritik8@gmail.com
+2026-08-30 11:44:33,662 [INFO] mailer: [DRY RUN] Generated preview for team SIH-64 (invitation) at: preview\invitation\team_SIH-64.html
+2026-08-30 11:44:33,666 [INFO] app: [65/69] Sending 'invitation' email to team SIH-65 -> soumyashekharjha30@gmail.com
+2026-08-30 11:44:33,672 [INFO] mailer: [DRY RUN] Generated preview for team SIH-65 (invitation) at: preview\invitation\team_SIH-65.html
+2026-08-30 11:44:33,674 [INFO] app: [66/69] Sending 'invitation' email to team SIH-66 -> vivekprajapati8839@gmail.com
+2026-08-30 11:44:33,678 [INFO] mailer: [DRY RUN] Generated preview for team SIH-66 (invitation) at: preview\invitation\team_SIH-66.html
+2026-08-30 11:44:33,680 [INFO] app: [67/69] Sending 'invitation' email to team SIH-67 -> vishnuvats171@gmail.com
+2026-08-30 11:44:33,684 [INFO] mailer: [DRY RUN] Generated preview for team SIH-67 (invitation) at: preview\invitation\team_SIH-67.html
+2026-08-30 11:44:33,687 [INFO] app: [68/69] Sending 'invitation' email to team SIH-68 -> amansharma.krmr@gmail.com
+2026-08-30 11:44:33,692 [INFO] mailer: [DRY RUN] Generated preview for team SIH-68 (invitation) at: preview\invitation\team_SIH-68.html
+2026-08-30 11:44:33,695 [INFO] app: [69/69] Sending 'invitation' email to team SIH-69 -> aadarshwork2007@gmail.com
+2026-08-30 11:44:33,700 [INFO] mailer: [DRY RUN] Generated preview for team SIH-69 (invitation) at: preview\invitation\team_SIH-69.html
+2026-08-30 11:44:33,702 [INFO] app: ====================================================
+2026-08-30 11:44:33,702 [INFO] app:                 EXECUTION SUMMARY                   
+2026-08-30 11:44:33,702 [INFO] app: ====================================================
+2026-08-30 11:44:33,702 [INFO] app: Template:               invitation
+2026-08-30 11:44:33,702 [INFO] app: Mode:                   dry-run
+2026-08-30 11:44:33,703 [INFO] app: Total teams loaded:     69
+2026-08-30 11:44:33,703 [INFO] app: Skipped (already sent): 0
+2026-08-30 11:44:33,703 [INFO] app: Successfully processed: 69
+2026-08-30 11:44:33,703 [INFO] app: Failed to process:      0
+2026-08-30 11:44:33,703 [INFO] app: ====================================================
+2026-08-30 11:44:56,607 [INFO] app: ====================================================
+2026-08-30 11:44:56,607 [INFO] app:                  DRY RUN ACTIVE                     
+2026-08-30 11:44:56,607 [INFO] app: ====================================================
+2026-08-30 11:44:56,607 [INFO] app: Writing rendered HTML files to preview/invitation/
+2026-08-30 11:44:56,607 [INFO] app: ====================================================
+2026-08-30 11:44:56,608 [INFO] app: Loading teams from: SIH 2026 Registrations (Responses) - Complete teams with Mentor alloc.csv
+2026-08-30 11:44:56,619 [INFO] app: Loaded 69 valid team rows from CSV.
+2026-08-30 11:44:56,646 [INFO] app: Found 0 teams already successfully processed in send_log_invitation.csv.
+2026-08-30 11:44:56,646 [INFO] app: [1/69] Sending 'invitation' email to team SIH-1 -> buildwithvrit@gmail.com
+2026-08-30 11:44:56,659 [INFO] mailer: [DRY RUN] Generated preview for team SIH-1 (invitation) at: preview\invitation\team_SIH-1.html
+2026-08-30 11:44:56,660 [INFO] app: [2/69] Sending 'invitation' email to team SIH-2 -> tanishhs01@gmail.com
+2026-08-30 11:44:56,665 [INFO] mailer: [DRY RUN] Generated preview for team SIH-2 (invitation) at: preview\invitation\team_SIH-2.html
+2026-08-30 11:44:56,667 [INFO] app: [3/69] Sending 'invitation' email to team SIH-3 -> piyushgohil6302@gmail.com
+2026-08-30 11:44:56,672 [INFO] mailer: [DRY RUN] Generated preview for team SIH-3 (invitation) at: preview\invitation\team_SIH-3.html
+2026-08-30 11:44:56,673 [INFO] app: [4/69] Sending 'invitation' email to team SIH-4 -> abhigyanjha2007@gmail.com
+2026-08-30 11:44:56,678 [INFO] mailer: [DRY RUN] Generated preview for team SIH-4 (invitation) at: preview\invitation\team_SIH-4.html
+2026-08-30 11:44:56,680 [INFO] app: [5/69] Sending 'invitation' email to team SIH-5 -> amandubeyjiiuo@gmail.com
+2026-08-30 11:44:56,688 [INFO] mailer: [DRY RUN] Generated preview for team SIH-5 (invitation) at: preview\invitation\team_SIH-5.html
+2026-08-30 11:44:56,689 [INFO] app: [6/69] Sending 'invitation' email to team SIH-6 -> shiv.shambhu010199@gmail.com
+2026-08-30 11:44:56,694 [INFO] mailer: [DRY RUN] Generated preview for team SIH-6 (invitation) at: preview\invitation\team_SIH-6.html
+2026-08-30 11:44:56,696 [INFO] app: [7/69] Sending 'invitation' email to team SIH-7 -> vanshjain10a2@gmail.com
+2026-08-30 11:44:56,700 [INFO] mailer: [DRY RUN] Generated preview for team SIH-7 (invitation) at: preview\invitation\team_SIH-7.html
+2026-08-30 11:44:56,702 [INFO] app: [8/69] Sending 'invitation' email to team SIH-8 -> praveshkumar16062005@gmail.com
+2026-08-30 11:44:56,707 [INFO] mailer: [DRY RUN] Generated preview for team SIH-8 (invitation) at: preview\invitation\team_SIH-8.html
+2026-08-30 11:44:56,708 [INFO] app: [9/69] Sending 'invitation' email to team SIH-9 -> pratyakshdwivedi563@gmail.com
+2026-08-30 11:44:56,714 [INFO] mailer: [DRY RUN] Generated preview for team SIH-9 (invitation) at: preview\invitation\team_SIH-9.html
+2026-08-30 11:44:56,714 [INFO] app: [10/69] Sending 'invitation' email to team SIH-10 -> aviraltrivedi.007@gmail.com
+2026-08-30 11:44:56,720 [INFO] mailer: [DRY RUN] Generated preview for team SIH-10 (invitation) at: preview\invitation\team_SIH-10.html
+2026-08-30 11:44:56,720 [INFO] app: [11/69] Sending 'invitation' email to team SIH-11 -> satyamkr1677@gmail.com
+2026-08-30 11:44:56,725 [INFO] mailer: [DRY RUN] Generated preview for team SIH-11 (invitation) at: preview\invitation\team_SIH-11.html
+2026-08-30 11:44:56,726 [INFO] app: [12/69] Sending 'invitation' email to team SIH-12 -> ishagupta5645@gmail.com
+2026-08-30 11:44:56,732 [INFO] mailer: [DRY RUN] Generated preview for team SIH-12 (invitation) at: preview\invitation\team_SIH-12.html
+2026-08-30 11:44:56,733 [INFO] app: [13/69] Sending 'invitation' email to team SIH-13 -> yashu210209@gmail.com
+2026-08-30 11:44:56,737 [INFO] mailer: [DRY RUN] Generated preview for team SIH-13 (invitation) at: preview\invitation\team_SIH-13.html
+2026-08-30 11:44:56,739 [INFO] app: [14/69] Sending 'invitation' email to team SIH-14 -> yalok2372@gmail.com
+2026-08-30 11:44:56,744 [INFO] mailer: [DRY RUN] Generated preview for team SIH-14 (invitation) at: preview\invitation\team_SIH-14.html
+2026-08-30 11:44:56,745 [INFO] app: [15/69] Sending 'invitation' email to team SIH-15 -> nishanty0809@gmail.com
+2026-08-30 11:44:56,750 [INFO] mailer: [DRY RUN] Generated preview for team SIH-15 (invitation) at: preview\invitation\team_SIH-15.html
+2026-08-30 11:44:56,752 [INFO] app: [16/69] Sending 'invitation' email to team SIH-16 -> saumysahu613@gmail.com
+2026-08-30 11:44:56,757 [INFO] mailer: [DRY RUN] Generated preview for team SIH-16 (invitation) at: preview\invitation\team_SIH-16.html
+2026-08-30 11:44:56,758 [INFO] app: [17/69] Sending 'invitation' email to team SIH-17 -> vt30trivedi@gmail.com
+2026-08-30 11:44:56,763 [INFO] mailer: [DRY RUN] Generated preview for team SIH-17 (invitation) at: preview\invitation\team_SIH-17.html
+2026-08-30 11:44:56,765 [INFO] app: [18/69] Sending 'invitation' email to team SIH-18 -> vedantgoyal67@gmail.com
+2026-08-30 11:44:56,770 [INFO] mailer: [DRY RUN] Generated preview for team SIH-18 (invitation) at: preview\invitation\team_SIH-18.html
+2026-08-30 11:44:56,772 [INFO] app: [19/69] Sending 'invitation' email to team SIH-19 -> jayanthsaimuvva@gmail.com
+2026-08-30 11:44:56,777 [INFO] mailer: [DRY RUN] Generated preview for team SIH-19 (invitation) at: preview\invitation\team_SIH-19.html
+2026-08-30 11:44:56,778 [INFO] app: [20/69] Sending 'invitation' email to team SIH-20 -> abhaykrd11@gmail.com
+2026-08-30 11:44:56,784 [INFO] mailer: [DRY RUN] Generated preview for team SIH-20 (invitation) at: preview\invitation\team_SIH-20.html
+2026-08-30 11:44:56,784 [INFO] app: [21/69] Sending 'invitation' email to team SIH-21 -> ojasvsoni@gmail.com
+2026-08-30 11:44:56,790 [INFO] mailer: [DRY RUN] Generated preview for team SIH-21 (invitation) at: preview\invitation\team_SIH-21.html
+2026-08-30 11:44:56,791 [INFO] app: [22/69] Sending 'invitation' email to team SIH-22 -> pranjalkhandelwal46@gmail.com
+2026-08-30 11:44:56,797 [INFO] mailer: [DRY RUN] Generated preview for team SIH-22 (invitation) at: preview\invitation\team_SIH-22.html
+2026-08-30 11:44:56,798 [INFO] app: [23/69] Sending 'invitation' email to team SIH-23 -> singhtomarsunil8@gmail.com
+2026-08-30 11:44:56,803 [INFO] mailer: [DRY RUN] Generated preview for team SIH-23 (invitation) at: preview\invitation\team_SIH-23.html
+2026-08-30 11:44:56,805 [INFO] app: [24/69] Sending 'invitation' email to team SIH-24 -> namansr07@gmail.com
+2026-08-30 11:44:56,811 [INFO] mailer: [DRY RUN] Generated preview for team SIH-24 (invitation) at: preview\invitation\team_SIH-24.html
+2026-08-30 11:44:56,811 [INFO] app: [25/69] Sending 'invitation' email to team SIH-25 -> prashastmathur@gmail.com
+2026-08-30 11:44:56,817 [INFO] mailer: [DRY RUN] Generated preview for team SIH-25 (invitation) at: preview\invitation\team_SIH-25.html
+2026-08-30 11:44:56,819 [INFO] app: [26/69] Sending 'invitation' email to team SIH-26 -> prekshitdave@gmail.com
+2026-08-30 11:44:56,823 [INFO] mailer: [DRY RUN] Generated preview for team SIH-26 (invitation) at: preview\invitation\team_SIH-26.html
+2026-08-30 11:44:56,825 [INFO] app: [27/69] Sending 'invitation' email to team SIH-27 -> manaskumar20056@gmail.com
+2026-08-30 11:44:56,830 [INFO] mailer: [DRY RUN] Generated preview for team SIH-27 (invitation) at: preview\invitation\team_SIH-27.html
+2026-08-30 11:44:56,832 [INFO] app: [28/69] Sending 'invitation' email to team SIH-28 -> samadhiyarudra123@gmail.com
+2026-08-30 11:44:56,837 [INFO] mailer: [DRY RUN] Generated preview for team SIH-28 (invitation) at: preview\invitation\team_SIH-28.html
+2026-08-30 11:44:56,837 [INFO] app: [29/69] Sending 'invitation' email to team SIH-29 -> itsnishant444@gmail.com
+2026-08-30 11:44:56,844 [INFO] mailer: [DRY RUN] Generated preview for team SIH-29 (invitation) at: preview\invitation\team_SIH-29.html
+2026-08-30 11:44:56,844 [INFO] app: [30/69] Sending 'invitation' email to team SIH-30 -> pranjaltamr99@gmail.com
+2026-08-30 11:44:56,850 [INFO] mailer: [DRY RUN] Generated preview for team SIH-30 (invitation) at: preview\invitation\team_SIH-30.html
+2026-08-30 11:44:56,852 [INFO] app: [31/69] Sending 'invitation' email to team SIH-31 -> forwebdevelopment59@gmail.com
+2026-08-30 11:44:56,858 [INFO] mailer: [DRY RUN] Generated preview for team SIH-31 (invitation) at: preview\invitation\team_SIH-31.html
+2026-08-30 11:44:56,859 [INFO] app: [32/69] Sending 'invitation' email to team SIH-32 -> pranavpolawar123@gmail.com
+2026-08-30 11:44:56,864 [INFO] mailer: [DRY RUN] Generated preview for team SIH-32 (invitation) at: preview\invitation\team_SIH-32.html
+2026-08-30 11:44:56,865 [INFO] app: [33/69] Sending 'invitation' email to team SIH-33 -> upasnap03@gmail.com
+2026-08-30 11:44:56,870 [INFO] mailer: [DRY RUN] Generated preview for team SIH-33 (invitation) at: preview\invitation\team_SIH-33.html
+2026-08-30 11:44:56,871 [INFO] app: [34/69] Sending 'invitation' email to team SIH-34 -> saurabhpal4567@gmail.com
+2026-08-30 11:44:56,876 [INFO] mailer: [DRY RUN] Generated preview for team SIH-34 (invitation) at: preview\invitation\team_SIH-34.html
+2026-08-30 11:44:56,878 [INFO] app: [35/69] Sending 'invitation' email to team SIH-35 -> deepakgoyal201204@gmail.com
+2026-08-30 11:44:56,882 [INFO] mailer: [DRY RUN] Generated preview for team SIH-35 (invitation) at: preview\invitation\team_SIH-35.html
+2026-08-30 11:44:56,884 [INFO] app: [36/69] Sending 'invitation' email to team SIH-36 -> mriduixb7454@gmail.com
+2026-08-30 11:44:56,890 [INFO] mailer: [DRY RUN] Generated preview for team SIH-36 (invitation) at: preview\invitation\team_SIH-36.html
+2026-08-30 11:44:56,891 [INFO] app: [37/69] Sending 'invitation' email to team SIH-37 -> dharuvbhola@gmail.com
+2026-08-30 11:44:56,897 [INFO] mailer: [DRY RUN] Generated preview for team SIH-37 (invitation) at: preview\invitation\team_SIH-37.html
+2026-08-30 11:44:56,897 [INFO] app: [38/69] Sending 'invitation' email to team SIH-38 -> shatakshichowksey.01@gmail.com
+2026-08-30 11:44:56,902 [INFO] mailer: [DRY RUN] Generated preview for team SIH-38 (invitation) at: preview\invitation\team_SIH-38.html
+2026-08-30 11:44:56,903 [INFO] app: [39/69] Sending 'invitation' email to team SIH-39 -> vkmac119@gmail.com
+2026-08-30 11:44:56,909 [INFO] mailer: [DRY RUN] Generated preview for team SIH-39 (invitation) at: preview\invitation\team_SIH-39.html
+2026-08-30 11:44:56,910 [INFO] app: [40/69] Sending 'invitation' email to team SIH-40 -> shawprem217@gmail.com
+2026-08-30 11:44:56,915 [INFO] mailer: [DRY RUN] Generated preview for team SIH-40 (invitation) at: preview\invitation\team_SIH-40.html
+2026-08-30 11:44:56,916 [INFO] app: [41/69] Sending 'invitation' email to team SIH-41 -> siddhant10022008@gmail.com
+2026-08-30 11:44:56,921 [INFO] mailer: [DRY RUN] Generated preview for team SIH-41 (invitation) at: preview\invitation\team_SIH-41.html
+2026-08-30 11:44:56,923 [INFO] app: [42/69] Sending 'invitation' email to team SIH-42 -> roshanbano8795@gmail.com
+2026-08-30 11:44:56,927 [INFO] mailer: [DRY RUN] Generated preview for team SIH-42 (invitation) at: preview\invitation\team_SIH-42.html
+2026-08-30 11:44:56,929 [INFO] app: [43/69] Sending 'invitation' email to team SIH-43 -> devjain191207@gmail.com
+2026-08-30 11:44:56,933 [INFO] mailer: [DRY RUN] Generated preview for team SIH-43 (invitation) at: preview\invitation\team_SIH-43.html
+2026-08-30 11:44:56,933 [INFO] app: [44/69] Sending 'invitation' email to team SIH-44 -> pavitrasahu251218@gmail.com
+2026-08-30 11:44:56,942 [INFO] mailer: [DRY RUN] Generated preview for team SIH-44 (invitation) at: preview\invitation\team_SIH-44.html
+2026-08-30 11:44:56,943 [INFO] app: [45/69] Sending 'invitation' email to team SIH-45 -> thakurarya1710@gmail.com
+2026-08-30 11:44:56,949 [INFO] mailer: [DRY RUN] Generated preview for team SIH-45 (invitation) at: preview\invitation\team_SIH-45.html
+2026-08-30 11:44:56,950 [INFO] app: [46/69] Sending 'invitation' email to team SIH-46 -> rahulverma945717@gmail.com
+2026-08-30 11:44:56,955 [INFO] mailer: [DRY RUN] Generated preview for team SIH-46 (invitation) at: preview\invitation\team_SIH-46.html
+2026-08-30 11:44:56,957 [INFO] app: [47/69] Sending 'invitation' email to team SIH-47 -> tshaswat32@gmail.com
+2026-08-30 11:44:56,962 [INFO] mailer: [DRY RUN] Generated preview for team SIH-47 (invitation) at: preview\invitation\team_SIH-47.html
+2026-08-30 11:44:56,963 [INFO] app: [48/69] Sending 'invitation' email to team SIH-48 -> aryanag818@gmail.com
+2026-08-30 11:44:56,969 [INFO] mailer: [DRY RUN] Generated preview for team SIH-48 (invitation) at: preview\invitation\team_SIH-48.html
+2026-08-30 11:44:56,970 [INFO] app: [49/69] Sending 'invitation' email to team SIH-49 -> anikaryan476@gmail.com
+2026-08-30 11:44:56,975 [INFO] mailer: [DRY RUN] Generated preview for team SIH-49 (invitation) at: preview\invitation\team_SIH-49.html
+2026-08-30 11:44:56,977 [INFO] app: [50/69] Sending 'invitation' email to team SIH-50 -> atuljoshi85117@gmail.com
+2026-08-30 11:44:56,981 [INFO] mailer: [DRY RUN] Generated preview for team SIH-50 (invitation) at: preview\invitation\team_SIH-50.html
+2026-08-30 11:44:56,982 [INFO] app: [51/69] Sending 'invitation' email to team SIH-51 -> eshanm19@gmail.com
+2026-08-30 11:44:56,987 [INFO] mailer: [DRY RUN] Generated preview for team SIH-51 (invitation) at: preview\invitation\team_SIH-51.html
+2026-08-30 11:44:56,988 [INFO] app: [52/69] Sending 'invitation' email to team SIH-52 -> 25U020061@iiitbhopal.ac.in
+2026-08-30 11:44:56,993 [INFO] mailer: [DRY RUN] Generated preview for team SIH-52 (invitation) at: preview\invitation\team_SIH-52.html
+2026-08-30 11:44:56,995 [INFO] app: [53/69] Sending 'invitation' email to team SIH-53 -> mauryajay10125@gmail.com
+2026-08-30 11:44:57,000 [INFO] mailer: [DRY RUN] Generated preview for team SIH-53 (invitation) at: preview\invitation\team_SIH-53.html
+2026-08-30 11:44:57,001 [INFO] app: [54/69] Sending 'invitation' email to team SIH-54 -> nitinshu29@gmail.com
+2026-08-30 11:44:57,006 [INFO] mailer: [DRY RUN] Generated preview for team SIH-54 (invitation) at: preview\invitation\team_SIH-54.html
+2026-08-30 11:44:57,008 [INFO] app: [55/69] Sending 'invitation' email to team SIH-55 -> aayush.varshney.9c@gmail.com
+2026-08-30 11:44:57,012 [INFO] mailer: [DRY RUN] Generated preview for team SIH-55 (invitation) at: preview\invitation\team_SIH-55.html
+2026-08-30 11:44:57,014 [INFO] app: [56/69] Sending 'invitation' email to team SIH-56 -> guptaansh1209@gmail.com
+2026-08-30 11:44:57,021 [INFO] mailer: [DRY RUN] Generated preview for team SIH-56 (invitation) at: preview\invitation\team_SIH-56.html
+2026-08-30 11:44:57,022 [INFO] app: [57/69] Sending 'invitation' email to team SIH-57 -> anujprjt22@gmail.com
+2026-08-30 11:44:57,029 [INFO] mailer: [DRY RUN] Generated preview for team SIH-57 (invitation) at: preview\invitation\team_SIH-57.html
+2026-08-30 11:44:57,030 [INFO] app: [58/69] Sending 'invitation' email to team SIH-58 -> pratyakshdwivedi563@gmail.com
+2026-08-30 11:44:57,036 [INFO] mailer: [DRY RUN] Generated preview for team SIH-58 (invitation) at: preview\invitation\team_SIH-58.html
+2026-08-30 11:44:57,036 [INFO] app: [59/69] Sending 'invitation' email to team SIH-59 -> ravindramilieus545@gmail.com
+2026-08-30 11:44:57,042 [INFO] mailer: [DRY RUN] Generated preview for team SIH-59 (invitation) at: preview\invitation\team_SIH-59.html
+2026-08-30 11:44:57,044 [INFO] app: [60/69] Sending 'invitation' email to team SIH-60 -> vigneshmurarkar@gmail.com
+2026-08-30 11:44:57,050 [INFO] mailer: [DRY RUN] Generated preview for team SIH-60 (invitation) at: preview\invitation\team_SIH-60.html
+2026-08-30 11:44:57,052 [INFO] app: [61/69] Sending 'invitation' email to team SIH-61 -> anupambichpuria5@gmail.com
+2026-08-30 11:44:57,058 [INFO] mailer: [DRY RUN] Generated preview for team SIH-61 (invitation) at: preview\invitation\team_SIH-61.html
+2026-08-30 11:44:57,060 [INFO] app: [62/69] Sending 'invitation' email to team SIH-62 -> 408akshat@gmail.com
+2026-08-30 11:44:57,066 [INFO] mailer: [DRY RUN] Generated preview for team SIH-62 (invitation) at: preview\invitation\team_SIH-62.html
+2026-08-30 11:44:57,066 [INFO] app: [63/69] Sending 'invitation' email to team SIH-63 -> rohitpatelgurjar@gmail.com
+2026-08-30 11:44:57,073 [INFO] mailer: [DRY RUN] Generated preview for team SIH-63 (invitation) at: preview\invitation\team_SIH-63.html
+2026-08-30 11:44:57,074 [INFO] app: [64/69] Sending 'invitation' email to team SIH-64 -> jkritik8@gmail.com
+2026-08-30 11:44:57,078 [INFO] mailer: [DRY RUN] Generated preview for team SIH-64 (invitation) at: preview\invitation\team_SIH-64.html
+2026-08-30 11:44:57,080 [INFO] app: [65/69] Sending 'invitation' email to team SIH-65 -> soumyashekharjha30@gmail.com
+2026-08-30 11:44:57,085 [INFO] mailer: [DRY RUN] Generated preview for team SIH-65 (invitation) at: preview\invitation\team_SIH-65.html
+2026-08-30 11:44:57,086 [INFO] app: [66/69] Sending 'invitation' email to team SIH-66 -> vivekprajapati8839@gmail.com
+2026-08-30 11:44:57,091 [INFO] mailer: [DRY RUN] Generated preview for team SIH-66 (invitation) at: preview\invitation\team_SIH-66.html
+2026-08-30 11:44:57,093 [INFO] app: [67/69] Sending 'invitation' email to team SIH-67 -> vishnuvats171@gmail.com
+2026-08-30 11:44:57,097 [INFO] mailer: [DRY RUN] Generated preview for team SIH-67 (invitation) at: preview\invitation\team_SIH-67.html
+2026-08-30 11:44:57,099 [INFO] app: [68/69] Sending 'invitation' email to team SIH-68 -> amansharma.krmr@gmail.com
+2026-08-30 11:44:57,104 [INFO] mailer: [DRY RUN] Generated preview for team SIH-68 (invitation) at: preview\invitation\team_SIH-68.html
+2026-08-30 11:44:57,105 [INFO] app: [69/69] Sending 'invitation' email to team SIH-69 -> aadarshwork2007@gmail.com
+2026-08-30 11:44:57,109 [INFO] mailer: [DRY RUN] Generated preview for team SIH-69 (invitation) at: preview\invitation\team_SIH-69.html
+2026-08-30 11:44:57,111 [INFO] app: ====================================================
+2026-08-30 11:44:57,112 [INFO] app:                 EXECUTION SUMMARY                   
+2026-08-30 11:44:57,112 [INFO] app: ====================================================
+2026-08-30 11:44:57,112 [INFO] app: Template:               invitation
+2026-08-30 11:44:57,112 [INFO] app: Mode:                   dry-run
+2026-08-30 11:44:57,112 [INFO] app: Total teams loaded:     69
+2026-08-30 11:44:57,112 [INFO] app: Skipped (already sent): 0
+2026-08-30 11:44:57,112 [INFO] app: Successfully processed: 69
+2026-08-30 11:44:57,112 [INFO] app: Failed to process:      0
+2026-08-30 11:44:57,112 [INFO] app: ====================================================
+2026-08-30 11:45:14,310 [INFO] app: CC list has been explicitly disabled (--no-cc).
+2026-08-30 11:45:14,311 [INFO] app: ====================================================
+2026-08-30 11:45:14,311 [INFO] app:                 !!! LIVE RUN !!!                    
+2026-08-30 11:45:14,311 [INFO] app: ====================================================
+2026-08-30 11:45:14,312 [INFO] app: Targeting real recipients with CC to: []
+2026-08-30 11:45:14,312 [INFO] app: ====================================================
+2026-08-30 11:45:14,312 [INFO] app: Loading teams from: SIH 2026 Registrations (Responses) - Complete teams with Mentor alloc.csv
+2026-08-30 11:45:14,322 [INFO] app: Loaded 69 valid team rows from CSV.
+2026-08-30 11:45:14,322 [INFO] app: Filtered teams list to run only for team: SIH-64
+2026-08-30 11:45:14,341 [INFO] app: Found 0 teams already successfully processed in send_log_invitation.csv.
+2026-08-30 11:45:14,342 [INFO] app: [1/1] Sending 'invitation' email to team SIH-64 -> jkritik8@gmail.com
+2026-08-30 11:45:20,154 [INFO] mailer: Successfully sent email to jkritik8@gmail.com (Attempt 1)
+2026-08-30 11:45:20,154 [INFO] app: ====================================================
+2026-08-30 11:45:20,155 [INFO] app:                 EXECUTION SUMMARY                   
+2026-08-30 11:45:20,155 [INFO] app: ====================================================
+2026-08-30 11:45:20,155 [INFO] app: Template:               invitation
+2026-08-30 11:45:20,155 [INFO] app: Mode:                   live
+2026-08-30 11:45:20,155 [INFO] app: Total teams loaded:     1
+2026-08-30 11:45:20,155 [INFO] app: Skipped (already sent): 0
+2026-08-30 11:45:20,155 [INFO] app: Successfully processed: 1
+2026-08-30 11:45:20,155 [INFO] app: Failed to process:      0
+2026-08-30 11:45:20,155 [INFO] app: ====================================================
+2026-08-30 11:50:18,768 [INFO] app: ====================================================
+2026-08-30 11:50:18,768 [INFO] app:                  DRY RUN ACTIVE                     
+2026-08-30 11:50:18,768 [INFO] app: ====================================================
+2026-08-30 11:50:18,770 [INFO] app: Writing rendered HTML files to preview/invitation/
+2026-08-30 11:50:18,770 [INFO] app: ====================================================
+2026-08-30 11:50:18,770 [INFO] app: Loading teams from: SIH 2026 Registrations (Responses) - Complete teams with Mentor alloc.csv
+2026-08-30 11:50:18,780 [INFO] app: Loaded 69 valid team rows from CSV.
+2026-08-30 11:50:18,799 [INFO] app: Found 1 teams already successfully processed in send_log_invitation.csv.
+2026-08-30 11:50:18,800 [INFO] app: [1/69] Sending 'invitation' email to team SIH-1 -> buildwithvrit@gmail.com
+2026-08-30 11:50:18,815 [INFO] mailer: [DRY RUN] Generated preview for team SIH-1 (invitation) at: preview\invitation\team_SIH-1.html
+2026-08-30 11:50:18,817 [INFO] app: [2/69] Sending 'invitation' email to team SIH-2 -> tanishhs01@gmail.com
+2026-08-30 11:50:18,822 [INFO] mailer: [DRY RUN] Generated preview for team SIH-2 (invitation) at: preview\invitation\team_SIH-2.html
+2026-08-30 11:50:18,824 [INFO] app: [3/69] Sending 'invitation' email to team SIH-3 -> piyushgohil6302@gmail.com
+2026-08-30 11:50:18,829 [INFO] mailer: [DRY RUN] Generated preview for team SIH-3 (invitation) at: preview\invitation\team_SIH-3.html
+2026-08-30 11:50:18,830 [INFO] app: [4/69] Sending 'invitation' email to team SIH-4 -> abhigyanjha2007@gmail.com
+2026-08-30 11:50:18,836 [INFO] mailer: [DRY RUN] Generated preview for team SIH-4 (invitation) at: preview\invitation\team_SIH-4.html
+2026-08-30 11:50:18,838 [INFO] app: [5/69] Sending 'invitation' email to team SIH-5 -> amandubeyjiiuo@gmail.com
+2026-08-30 11:50:18,844 [INFO] mailer: [DRY RUN] Generated preview for team SIH-5 (invitation) at: preview\invitation\team_SIH-5.html
+2026-08-30 11:50:18,844 [INFO] app: [6/69] Sending 'invitation' email to team SIH-6 -> shiv.shambhu010199@gmail.com
+2026-08-30 11:50:18,851 [INFO] mailer: [DRY RUN] Generated preview for team SIH-6 (invitation) at: preview\invitation\team_SIH-6.html
+2026-08-30 11:50:18,853 [INFO] app: [7/69] Sending 'invitation' email to team SIH-7 -> vanshjain10a2@gmail.com
+2026-08-30 11:50:18,856 [INFO] mailer: [DRY RUN] Generated preview for team SIH-7 (invitation) at: preview\invitation\team_SIH-7.html
+2026-08-30 11:50:18,856 [INFO] app: [8/69] Sending 'invitation' email to team SIH-8 -> praveshkumar16062005@gmail.com
+2026-08-30 11:50:18,865 [INFO] mailer: [DRY RUN] Generated preview for team SIH-8 (invitation) at: preview\invitation\team_SIH-8.html
+2026-08-30 11:50:18,868 [INFO] app: [9/69] Sending 'invitation' email to team SIH-9 -> pratyakshdwivedi563@gmail.com
+2026-08-30 11:50:18,873 [INFO] mailer: [DRY RUN] Generated preview for team SIH-9 (invitation) at: preview\invitation\team_SIH-9.html
+2026-08-30 11:50:18,875 [INFO] app: [10/69] Sending 'invitation' email to team SIH-10 -> aviraltrivedi.007@gmail.com
+2026-08-30 11:50:18,881 [INFO] mailer: [DRY RUN] Generated preview for team SIH-10 (invitation) at: preview\invitation\team_SIH-10.html
+2026-08-30 11:50:18,882 [INFO] app: [11/69] Sending 'invitation' email to team SIH-11 -> satyamkr1677@gmail.com
+2026-08-30 11:50:18,888 [INFO] mailer: [DRY RUN] Generated preview for team SIH-11 (invitation) at: preview\invitation\team_SIH-11.html
+2026-08-30 11:50:18,888 [INFO] app: [12/69] Sending 'invitation' email to team SIH-12 -> ishagupta5645@gmail.com
+2026-08-30 11:50:18,894 [INFO] mailer: [DRY RUN] Generated preview for team SIH-12 (invitation) at: preview\invitation\team_SIH-12.html
+2026-08-30 11:50:18,896 [INFO] app: [13/69] Sending 'invitation' email to team SIH-13 -> yashu210209@gmail.com
+2026-08-30 11:50:18,902 [INFO] mailer: [DRY RUN] Generated preview for team SIH-13 (invitation) at: preview\invitation\team_SIH-13.html
+2026-08-30 11:50:18,903 [INFO] app: [14/69] Sending 'invitation' email to team SIH-14 -> yalok2372@gmail.com
+2026-08-30 11:50:18,908 [INFO] mailer: [DRY RUN] Generated preview for team SIH-14 (invitation) at: preview\invitation\team_SIH-14.html
+2026-08-30 11:50:18,910 [INFO] app: [15/69] Sending 'invitation' email to team SIH-15 -> nishanty0809@gmail.com
+2026-08-30 11:50:18,914 [INFO] mailer: [DRY RUN] Generated preview for team SIH-15 (invitation) at: preview\invitation\team_SIH-15.html
+2026-08-30 11:50:18,916 [INFO] app: [16/69] Sending 'invitation' email to team SIH-16 -> saumysahu613@gmail.com
+2026-08-30 11:50:18,922 [INFO] mailer: [DRY RUN] Generated preview for team SIH-16 (invitation) at: preview\invitation\team_SIH-16.html
+2026-08-30 11:50:18,922 [INFO] app: [17/69] Sending 'invitation' email to team SIH-17 -> vt30trivedi@gmail.com
+2026-08-30 11:50:18,926 [INFO] mailer: [DRY RUN] Generated preview for team SIH-17 (invitation) at: preview\invitation\team_SIH-17.html
+2026-08-30 11:50:18,926 [INFO] app: [18/69] Sending 'invitation' email to team SIH-18 -> vedantgoyal67@gmail.com
+2026-08-30 11:50:18,936 [INFO] mailer: [DRY RUN] Generated preview for team SIH-18 (invitation) at: preview\invitation\team_SIH-18.html
+2026-08-30 11:50:18,939 [INFO] app: [19/69] Sending 'invitation' email to team SIH-19 -> jayanthsaimuvva@gmail.com
+2026-08-30 11:50:18,947 [INFO] mailer: [DRY RUN] Generated preview for team SIH-19 (invitation) at: preview\invitation\team_SIH-19.html
+2026-08-30 11:50:18,949 [INFO] app: [20/69] Sending 'invitation' email to team SIH-20 -> abhaykrd11@gmail.com
+2026-08-30 11:50:18,954 [INFO] mailer: [DRY RUN] Generated preview for team SIH-20 (invitation) at: preview\invitation\team_SIH-20.html
+2026-08-30 11:50:18,956 [INFO] app: [21/69] Sending 'invitation' email to team SIH-21 -> ojasvsoni@gmail.com
+2026-08-30 11:50:18,963 [INFO] mailer: [DRY RUN] Generated preview for team SIH-21 (invitation) at: preview\invitation\team_SIH-21.html
+2026-08-30 11:50:18,964 [INFO] app: [22/69] Sending 'invitation' email to team SIH-22 -> pranjalkhandelwal46@gmail.com
+2026-08-30 11:50:18,972 [INFO] mailer: [DRY RUN] Generated preview for team SIH-22 (invitation) at: preview\invitation\team_SIH-22.html
+2026-08-30 11:50:18,973 [INFO] app: [23/69] Sending 'invitation' email to team SIH-23 -> singhtomarsunil8@gmail.com
+2026-08-30 11:50:18,980 [INFO] mailer: [DRY RUN] Generated preview for team SIH-23 (invitation) at: preview\invitation\team_SIH-23.html
+2026-08-30 11:50:18,982 [INFO] app: [24/69] Sending 'invitation' email to team SIH-24 -> namansr07@gmail.com
+2026-08-30 11:50:18,990 [INFO] mailer: [DRY RUN] Generated preview for team SIH-24 (invitation) at: preview\invitation\team_SIH-24.html
+2026-08-30 11:50:18,991 [INFO] app: [25/69] Sending 'invitation' email to team SIH-25 -> prashastmathur@gmail.com
+2026-08-30 11:50:18,999 [INFO] mailer: [DRY RUN] Generated preview for team SIH-25 (invitation) at: preview\invitation\team_SIH-25.html
+2026-08-30 11:50:18,999 [INFO] app: [26/69] Sending 'invitation' email to team SIH-26 -> prekshitdave@gmail.com
+2026-08-30 11:50:19,006 [INFO] mailer: [DRY RUN] Generated preview for team SIH-26 (invitation) at: preview\invitation\team_SIH-26.html
+2026-08-30 11:50:19,007 [INFO] app: [27/69] Sending 'invitation' email to team SIH-27 -> manaskumar20056@gmail.com
+2026-08-30 11:50:19,013 [INFO] mailer: [DRY RUN] Generated preview for team SIH-27 (invitation) at: preview\invitation\team_SIH-27.html
+2026-08-30 11:50:19,013 [INFO] app: [28/69] Sending 'invitation' email to team SIH-28 -> samadhiyarudra123@gmail.com
+2026-08-30 11:50:19,022 [INFO] mailer: [DRY RUN] Generated preview for team SIH-28 (invitation) at: preview\invitation\team_SIH-28.html
+2026-08-30 11:50:19,024 [INFO] app: [29/69] Sending 'invitation' email to team SIH-29 -> itsnishant444@gmail.com
+2026-08-30 11:50:19,032 [INFO] mailer: [DRY RUN] Generated preview for team SIH-29 (invitation) at: preview\invitation\team_SIH-29.html
+2026-08-30 11:50:19,033 [INFO] app: [30/69] Sending 'invitation' email to team SIH-30 -> pranjaltamr99@gmail.com
+2026-08-30 11:50:19,042 [INFO] mailer: [DRY RUN] Generated preview for team SIH-30 (invitation) at: preview\invitation\team_SIH-30.html
+2026-08-30 11:50:19,043 [INFO] app: [31/69] Sending 'invitation' email to team SIH-31 -> forwebdevelopment59@gmail.com
+2026-08-30 11:50:19,050 [INFO] mailer: [DRY RUN] Generated preview for team SIH-31 (invitation) at: preview\invitation\team_SIH-31.html
+2026-08-30 11:50:19,051 [INFO] app: [32/69] Sending 'invitation' email to team SIH-32 -> pranavpolawar123@gmail.com
+2026-08-30 11:50:19,058 [INFO] mailer: [DRY RUN] Generated preview for team SIH-32 (invitation) at: preview\invitation\team_SIH-32.html
+2026-08-30 11:50:19,059 [INFO] app: [33/69] Sending 'invitation' email to team SIH-33 -> upasnap03@gmail.com
+2026-08-30 11:50:19,065 [INFO] mailer: [DRY RUN] Generated preview for team SIH-33 (invitation) at: preview\invitation\team_SIH-33.html
+2026-08-30 11:50:19,066 [INFO] app: [34/69] Sending 'invitation' email to team SIH-34 -> saurabhpal4567@gmail.com
+2026-08-30 11:50:19,073 [INFO] mailer: [DRY RUN] Generated preview for team SIH-34 (invitation) at: preview\invitation\team_SIH-34.html
+2026-08-30 11:50:19,074 [INFO] app: [35/69] Sending 'invitation' email to team SIH-35 -> deepakgoyal201204@gmail.com
+2026-08-30 11:50:19,079 [INFO] mailer: [DRY RUN] Generated preview for team SIH-35 (invitation) at: preview\invitation\team_SIH-35.html
+2026-08-30 11:50:19,079 [INFO] app: [36/69] Sending 'invitation' email to team SIH-36 -> mriduixb7454@gmail.com
+2026-08-30 11:50:19,087 [INFO] mailer: [DRY RUN] Generated preview for team SIH-36 (invitation) at: preview\invitation\team_SIH-36.html
+2026-08-30 11:50:19,089 [INFO] app: [37/69] Sending 'invitation' email to team SIH-37 -> dharuvbhola@gmail.com
+2026-08-30 11:50:19,091 [INFO] mailer: [DRY RUN] Generated preview for team SIH-37 (invitation) at: preview\invitation\team_SIH-37.html
+2026-08-30 11:50:19,091 [INFO] app: [38/69] Sending 'invitation' email to team SIH-38 -> shatakshichowksey.01@gmail.com
+2026-08-30 11:50:19,101 [INFO] mailer: [DRY RUN] Generated preview for team SIH-38 (invitation) at: preview\invitation\team_SIH-38.html
+2026-08-30 11:50:19,104 [INFO] app: [39/69] Sending 'invitation' email to team SIH-39 -> vkmac119@gmail.com
+2026-08-30 11:50:19,109 [INFO] mailer: [DRY RUN] Generated preview for team SIH-39 (invitation) at: preview\invitation\team_SIH-39.html
+2026-08-30 11:50:19,112 [INFO] app: [40/69] Sending 'invitation' email to team SIH-40 -> shawprem217@gmail.com
+2026-08-30 11:50:19,120 [INFO] mailer: [DRY RUN] Generated preview for team SIH-40 (invitation) at: preview\invitation\team_SIH-40.html
+2026-08-30 11:50:19,121 [INFO] app: [41/69] Sending 'invitation' email to team SIH-41 -> siddhant10022008@gmail.com
+2026-08-30 11:50:19,127 [INFO] mailer: [DRY RUN] Generated preview for team SIH-41 (invitation) at: preview\invitation\team_SIH-41.html
+2026-08-30 11:50:19,128 [INFO] app: [42/69] Sending 'invitation' email to team SIH-42 -> roshanbano8795@gmail.com
+2026-08-30 11:50:19,134 [INFO] mailer: [DRY RUN] Generated preview for team SIH-42 (invitation) at: preview\invitation\team_SIH-42.html
+2026-08-30 11:50:19,136 [INFO] app: [43/69] Sending 'invitation' email to team SIH-43 -> devjain191207@gmail.com
+2026-08-30 11:50:19,143 [INFO] mailer: [DRY RUN] Generated preview for team SIH-43 (invitation) at: preview\invitation\team_SIH-43.html
+2026-08-30 11:50:19,145 [INFO] app: [44/69] Sending 'invitation' email to team SIH-44 -> pavitrasahu251218@gmail.com
+2026-08-30 11:50:19,151 [INFO] mailer: [DRY RUN] Generated preview for team SIH-44 (invitation) at: preview\invitation\team_SIH-44.html
+2026-08-30 11:50:19,152 [INFO] app: [45/69] Sending 'invitation' email to team SIH-45 -> thakurarya1710@gmail.com
+2026-08-30 11:50:19,159 [INFO] mailer: [DRY RUN] Generated preview for team SIH-45 (invitation) at: preview\invitation\team_SIH-45.html
+2026-08-30 11:50:19,161 [INFO] app: [46/69] Sending 'invitation' email to team SIH-46 -> rahulverma945717@gmail.com
+2026-08-30 11:50:19,165 [INFO] mailer: [DRY RUN] Generated preview for team SIH-46 (invitation) at: preview\invitation\team_SIH-46.html
+2026-08-30 11:50:19,168 [INFO] app: [47/69] Sending 'invitation' email to team SIH-47 -> tshaswat32@gmail.com
+2026-08-30 11:50:19,175 [INFO] mailer: [DRY RUN] Generated preview for team SIH-47 (invitation) at: preview\invitation\team_SIH-47.html
+2026-08-30 11:50:19,176 [INFO] app: [48/69] Sending 'invitation' email to team SIH-48 -> aryanag818@gmail.com
+2026-08-30 11:50:19,182 [INFO] mailer: [DRY RUN] Generated preview for team SIH-48 (invitation) at: preview\invitation\team_SIH-48.html
+2026-08-30 11:50:19,185 [INFO] app: [49/69] Sending 'invitation' email to team SIH-49 -> anikaryan476@gmail.com
+2026-08-30 11:50:19,190 [INFO] mailer: [DRY RUN] Generated preview for team SIH-49 (invitation) at: preview\invitation\team_SIH-49.html
+2026-08-30 11:50:19,190 [INFO] app: [50/69] Sending 'invitation' email to team SIH-50 -> atuljoshi85117@gmail.com
+2026-08-30 11:50:19,198 [INFO] mailer: [DRY RUN] Generated preview for team SIH-50 (invitation) at: preview\invitation\team_SIH-50.html
+2026-08-30 11:50:19,199 [INFO] app: [51/69] Sending 'invitation' email to team SIH-51 -> eshanm19@gmail.com
+2026-08-30 11:50:19,206 [INFO] mailer: [DRY RUN] Generated preview for team SIH-51 (invitation) at: preview\invitation\team_SIH-51.html
+2026-08-30 11:50:19,207 [INFO] app: [52/69] Sending 'invitation' email to team SIH-52 -> 25U020061@iiitbhopal.ac.in
+2026-08-30 11:50:19,214 [INFO] mailer: [DRY RUN] Generated preview for team SIH-52 (invitation) at: preview\invitation\team_SIH-52.html
+2026-08-30 11:50:19,215 [INFO] app: [53/69] Sending 'invitation' email to team SIH-53 -> mauryajay10125@gmail.com
+2026-08-30 11:50:19,221 [INFO] mailer: [DRY RUN] Generated preview for team SIH-53 (invitation) at: preview\invitation\team_SIH-53.html
+2026-08-30 11:50:19,222 [INFO] app: [54/69] Sending 'invitation' email to team SIH-54 -> nitinshu29@gmail.com
+2026-08-30 11:50:19,227 [INFO] mailer: [DRY RUN] Generated preview for team SIH-54 (invitation) at: preview\invitation\team_SIH-54.html
+2026-08-30 11:50:19,228 [INFO] app: [55/69] Sending 'invitation' email to team SIH-55 -> aayush.varshney.9c@gmail.com
+2026-08-30 11:50:19,234 [INFO] mailer: [DRY RUN] Generated preview for team SIH-55 (invitation) at: preview\invitation\team_SIH-55.html
+2026-08-30 11:50:19,234 [INFO] app: [56/69] Sending 'invitation' email to team SIH-56 -> guptaansh1209@gmail.com
+2026-08-30 11:50:19,240 [INFO] mailer: [DRY RUN] Generated preview for team SIH-56 (invitation) at: preview\invitation\team_SIH-56.html
+2026-08-30 11:50:19,243 [INFO] app: [57/69] Sending 'invitation' email to team SIH-57 -> anujprjt22@gmail.com
+2026-08-30 11:50:19,248 [INFO] mailer: [DRY RUN] Generated preview for team SIH-57 (invitation) at: preview\invitation\team_SIH-57.html
+2026-08-30 11:50:19,249 [INFO] app: [58/69] Sending 'invitation' email to team SIH-58 -> pratyakshdwivedi563@gmail.com
+2026-08-30 11:50:19,255 [INFO] mailer: [DRY RUN] Generated preview for team SIH-58 (invitation) at: preview\invitation\team_SIH-58.html
+2026-08-30 11:50:19,256 [INFO] app: [59/69] Sending 'invitation' email to team SIH-59 -> ravindramilieus545@gmail.com
+2026-08-30 11:50:19,262 [INFO] mailer: [DRY RUN] Generated preview for team SIH-59 (invitation) at: preview\invitation\team_SIH-59.html
+2026-08-30 11:50:19,263 [INFO] app: [60/69] Sending 'invitation' email to team SIH-60 -> vigneshmurarkar@gmail.com
+2026-08-30 11:50:19,269 [INFO] mailer: [DRY RUN] Generated preview for team SIH-60 (invitation) at: preview\invitation\team_SIH-60.html
+2026-08-30 11:50:19,271 [INFO] app: [61/69] Sending 'invitation' email to team SIH-61 -> anupambichpuria5@gmail.com
+2026-08-30 11:50:19,277 [INFO] mailer: [DRY RUN] Generated preview for team SIH-61 (invitation) at: preview\invitation\team_SIH-61.html
+2026-08-30 11:50:19,278 [INFO] app: [62/69] Sending 'invitation' email to team SIH-62 -> 408akshat@gmail.com
+2026-08-30 11:50:19,284 [INFO] mailer: [DRY RUN] Generated preview for team SIH-62 (invitation) at: preview\invitation\team_SIH-62.html
+2026-08-30 11:50:19,285 [INFO] app: [63/69] Sending 'invitation' email to team SIH-63 -> rohitpatelgurjar@gmail.com
+2026-08-30 11:50:19,292 [INFO] mailer: [DRY RUN] Generated preview for team SIH-63 (invitation) at: preview\invitation\team_SIH-63.html
+2026-08-30 11:50:19,294 [INFO] app: [64/69] Skipping team SIH-64: Already sent in previous run.
+2026-08-30 11:50:19,294 [INFO] app: [65/69] Sending 'invitation' email to team SIH-65 -> soumyashekharjha30@gmail.com
+2026-08-30 11:50:19,297 [INFO] mailer: [DRY RUN] Generated preview for team SIH-65 (invitation) at: preview\invitation\team_SIH-65.html
+2026-08-30 11:50:19,301 [INFO] app: [66/69] Sending 'invitation' email to team SIH-66 -> vivekprajapati8839@gmail.com
+2026-08-30 11:50:19,306 [INFO] mailer: [DRY RUN] Generated preview for team SIH-66 (invitation) at: preview\invitation\team_SIH-66.html
+2026-08-30 11:50:19,309 [INFO] app: [67/69] Sending 'invitation' email to team SIH-67 -> vishnuvats171@gmail.com
+2026-08-30 11:50:19,314 [INFO] mailer: [DRY RUN] Generated preview for team SIH-67 (invitation) at: preview\invitation\team_SIH-67.html
+2026-08-30 11:50:19,314 [INFO] app: [68/69] Sending 'invitation' email to team SIH-68 -> amansharma.krmr@gmail.com
+2026-08-30 11:50:19,318 [INFO] mailer: [DRY RUN] Generated preview for team SIH-68 (invitation) at: preview\invitation\team_SIH-68.html
+2026-08-30 11:50:19,318 [INFO] app: [69/69] Sending 'invitation' email to team SIH-69 -> aadarshwork2007@gmail.com
+2026-08-30 11:50:19,328 [INFO] mailer: [DRY RUN] Generated preview for team SIH-69 (invitation) at: preview\invitation\team_SIH-69.html
+2026-08-30 11:50:19,330 [INFO] app: ====================================================
+2026-08-30 11:50:19,330 [INFO] app:                 EXECUTION SUMMARY                   
+2026-08-30 11:50:19,330 [INFO] app: ====================================================
+2026-08-30 11:50:19,330 [INFO] app: Template:               invitation
+2026-08-30 11:50:19,330 [INFO] app: Mode:                   dry-run
+2026-08-30 11:50:19,330 [INFO] app: Total teams loaded:     69
+2026-08-30 11:50:19,330 [INFO] app: Skipped (already sent): 1
+2026-08-30 11:50:19,330 [INFO] app: Successfully processed: 68
+2026-08-30 11:50:19,330 [INFO] app: Failed to process:      0
+2026-08-30 11:50:19,330 [INFO] app: ====================================================
+2026-08-30 11:50:27,063 [INFO] app: ====================================================
+2026-08-30 11:50:27,063 [INFO] app:                  DRY RUN ACTIVE                     
+2026-08-30 11:50:27,065 [INFO] app: ====================================================
+2026-08-30 11:50:27,065 [INFO] app: Writing rendered HTML files to preview/invitation/
+2026-08-30 11:50:27,065 [INFO] app: ====================================================
+2026-08-30 11:50:27,065 [INFO] app: Loading teams from: SIH 2026 Registrations (Responses) - Complete teams with Mentor alloc.csv
+2026-08-30 11:50:27,076 [INFO] app: Loaded 69 valid team rows from CSV.
+2026-08-30 11:50:27,087 [INFO] app: Found 1 teams already successfully processed in send_log_invitation.csv.
+2026-08-30 11:50:27,096 [INFO] app: [1/69] Sending 'invitation' email to team SIH-1 -> buildwithvrit@gmail.com
+2026-08-30 11:50:27,108 [INFO] mailer: [DRY RUN] Generated preview for team SIH-1 (invitation) at: preview\invitation\team_SIH-1.html
+2026-08-30 11:50:27,110 [INFO] app: [2/69] Sending 'invitation' email to team SIH-2 -> tanishhs01@gmail.com
+2026-08-30 11:50:27,118 [INFO] mailer: [DRY RUN] Generated preview for team SIH-2 (invitation) at: preview\invitation\team_SIH-2.html
+2026-08-30 11:50:27,119 [INFO] app: [3/69] Sending 'invitation' email to team SIH-3 -> piyushgohil6302@gmail.com
+2026-08-30 11:50:27,125 [INFO] mailer: [DRY RUN] Generated preview for team SIH-3 (invitation) at: preview\invitation\team_SIH-3.html
+2026-08-30 11:50:27,126 [INFO] app: [4/69] Sending 'invitation' email to team SIH-4 -> abhigyanjha2007@gmail.com
+2026-08-30 11:50:27,131 [INFO] mailer: [DRY RUN] Generated preview for team SIH-4 (invitation) at: preview\invitation\team_SIH-4.html
+2026-08-30 11:50:27,133 [INFO] app: [5/69] Sending 'invitation' email to team SIH-5 -> amandubeyjiiuo@gmail.com
+2026-08-30 11:50:27,139 [INFO] mailer: [DRY RUN] Generated preview for team SIH-5 (invitation) at: preview\invitation\team_SIH-5.html
+2026-08-30 11:50:27,140 [INFO] app: [6/69] Sending 'invitation' email to team SIH-6 -> shiv.shambhu010199@gmail.com
+2026-08-30 11:50:27,142 [INFO] mailer: [DRY RUN] Generated preview for team SIH-6 (invitation) at: preview\invitation\team_SIH-6.html
+2026-08-30 11:50:27,146 [INFO] app: [7/69] Sending 'invitation' email to team SIH-7 -> vanshjain10a2@gmail.com
+2026-08-30 11:50:27,151 [INFO] mailer: [DRY RUN] Generated preview for team SIH-7 (invitation) at: preview\invitation\team_SIH-7.html
+2026-08-30 11:50:27,151 [INFO] app: [8/69] Sending 'invitation' email to team SIH-8 -> praveshkumar16062005@gmail.com
+2026-08-30 11:50:27,156 [INFO] mailer: [DRY RUN] Generated preview for team SIH-8 (invitation) at: preview\invitation\team_SIH-8.html
+2026-08-30 11:50:27,159 [INFO] app: [9/69] Sending 'invitation' email to team SIH-9 -> pratyakshdwivedi563@gmail.com
+2026-08-30 11:50:27,162 [INFO] mailer: [DRY RUN] Generated preview for team SIH-9 (invitation) at: preview\invitation\team_SIH-9.html
+2026-08-30 11:50:27,166 [INFO] app: [10/69] Sending 'invitation' email to team SIH-10 -> aviraltrivedi.007@gmail.com
+2026-08-30 11:50:27,171 [INFO] mailer: [DRY RUN] Generated preview for team SIH-10 (invitation) at: preview\invitation\team_SIH-10.html
+2026-08-30 11:50:27,172 [INFO] app: [11/69] Sending 'invitation' email to team SIH-11 -> satyamkr1677@gmail.com
+2026-08-30 11:50:27,178 [INFO] mailer: [DRY RUN] Generated preview for team SIH-11 (invitation) at: preview\invitation\team_SIH-11.html
+2026-08-30 11:50:27,180 [INFO] app: [12/69] Sending 'invitation' email to team SIH-12 -> ishagupta5645@gmail.com
+2026-08-30 11:50:27,185 [INFO] mailer: [DRY RUN] Generated preview for team SIH-12 (invitation) at: preview\invitation\team_SIH-12.html
+2026-08-30 11:50:27,187 [INFO] app: [13/69] Sending 'invitation' email to team SIH-13 -> yashu210209@gmail.com
+2026-08-30 11:50:27,193 [INFO] mailer: [DRY RUN] Generated preview for team SIH-13 (invitation) at: preview\invitation\team_SIH-13.html
+2026-08-30 11:50:27,194 [INFO] app: [14/69] Sending 'invitation' email to team SIH-14 -> yalok2372@gmail.com
+2026-08-30 11:50:27,199 [INFO] mailer: [DRY RUN] Generated preview for team SIH-14 (invitation) at: preview\invitation\team_SIH-14.html
+2026-08-30 11:50:27,201 [INFO] app: [15/69] Sending 'invitation' email to team SIH-15 -> nishanty0809@gmail.com
+2026-08-30 11:50:27,206 [INFO] mailer: [DRY RUN] Generated preview for team SIH-15 (invitation) at: preview\invitation\team_SIH-15.html
+2026-08-30 11:50:27,207 [INFO] app: [16/69] Sending 'invitation' email to team SIH-16 -> saumysahu613@gmail.com
+2026-08-30 11:50:27,211 [INFO] mailer: [DRY RUN] Generated preview for team SIH-16 (invitation) at: preview\invitation\team_SIH-16.html
+2026-08-30 11:50:27,213 [INFO] app: [17/69] Sending 'invitation' email to team SIH-17 -> vt30trivedi@gmail.com
+2026-08-30 11:50:27,218 [INFO] mailer: [DRY RUN] Generated preview for team SIH-17 (invitation) at: preview\invitation\team_SIH-17.html
+2026-08-30 11:50:27,218 [INFO] app: [18/69] Sending 'invitation' email to team SIH-18 -> vedantgoyal67@gmail.com
+2026-08-30 11:50:27,223 [INFO] mailer: [DRY RUN] Generated preview for team SIH-18 (invitation) at: preview\invitation\team_SIH-18.html
+2026-08-30 11:50:27,223 [INFO] app: [19/69] Sending 'invitation' email to team SIH-19 -> jayanthsaimuvva@gmail.com
+2026-08-30 11:50:27,233 [INFO] mailer: [DRY RUN] Generated preview for team SIH-19 (invitation) at: preview\invitation\team_SIH-19.html
+2026-08-30 11:50:27,235 [INFO] app: [20/69] Sending 'invitation' email to team SIH-20 -> abhaykrd11@gmail.com
+2026-08-30 11:50:27,242 [INFO] mailer: [DRY RUN] Generated preview for team SIH-20 (invitation) at: preview\invitation\team_SIH-20.html
+2026-08-30 11:50:27,243 [INFO] app: [21/69] Sending 'invitation' email to team SIH-21 -> ojasvsoni@gmail.com
+2026-08-30 11:50:27,248 [INFO] mailer: [DRY RUN] Generated preview for team SIH-21 (invitation) at: preview\invitation\team_SIH-21.html
+2026-08-30 11:50:27,249 [INFO] app: [22/69] Sending 'invitation' email to team SIH-22 -> pranjalkhandelwal46@gmail.com
+2026-08-30 11:50:27,254 [INFO] mailer: [DRY RUN] Generated preview for team SIH-22 (invitation) at: preview\invitation\team_SIH-22.html
+2026-08-30 11:50:27,256 [INFO] app: [23/69] Sending 'invitation' email to team SIH-23 -> singhtomarsunil8@gmail.com
+2026-08-30 11:50:27,262 [INFO] mailer: [DRY RUN] Generated preview for team SIH-23 (invitation) at: preview\invitation\team_SIH-23.html
+2026-08-30 11:50:27,263 [INFO] app: [24/69] Sending 'invitation' email to team SIH-24 -> namansr07@gmail.com
+2026-08-30 11:50:27,268 [INFO] mailer: [DRY RUN] Generated preview for team SIH-24 (invitation) at: preview\invitation\team_SIH-24.html
+2026-08-30 11:50:27,270 [INFO] app: [25/69] Sending 'invitation' email to team SIH-25 -> prashastmathur@gmail.com
+2026-08-30 11:50:27,277 [INFO] mailer: [DRY RUN] Generated preview for team SIH-25 (invitation) at: preview\invitation\team_SIH-25.html
+2026-08-30 11:50:27,278 [INFO] app: [26/69] Sending 'invitation' email to team SIH-26 -> prekshitdave@gmail.com
+2026-08-30 11:50:27,283 [INFO] mailer: [DRY RUN] Generated preview for team SIH-26 (invitation) at: preview\invitation\team_SIH-26.html
+2026-08-30 11:50:27,284 [INFO] app: [27/69] Sending 'invitation' email to team SIH-27 -> manaskumar20056@gmail.com
+2026-08-30 11:50:27,289 [INFO] mailer: [DRY RUN] Generated preview for team SIH-27 (invitation) at: preview\invitation\team_SIH-27.html
+2026-08-30 11:50:27,289 [INFO] app: [28/69] Sending 'invitation' email to team SIH-28 -> samadhiyarudra123@gmail.com
+2026-08-30 11:50:27,293 [INFO] mailer: [DRY RUN] Generated preview for team SIH-28 (invitation) at: preview\invitation\team_SIH-28.html
+2026-08-30 11:50:27,293 [INFO] app: [29/69] Sending 'invitation' email to team SIH-29 -> itsnishant444@gmail.com
+2026-08-30 11:50:27,301 [INFO] mailer: [DRY RUN] Generated preview for team SIH-29 (invitation) at: preview\invitation\team_SIH-29.html
+2026-08-30 11:50:27,301 [INFO] app: [30/69] Sending 'invitation' email to team SIH-30 -> pranjaltamr99@gmail.com
+2026-08-30 11:50:27,305 [INFO] mailer: [DRY RUN] Generated preview for team SIH-30 (invitation) at: preview\invitation\team_SIH-30.html
+2026-08-30 11:50:27,308 [INFO] app: [31/69] Sending 'invitation' email to team SIH-31 -> forwebdevelopment59@gmail.com
+2026-08-30 11:50:27,310 [INFO] mailer: [DRY RUN] Generated preview for team SIH-31 (invitation) at: preview\invitation\team_SIH-31.html
+2026-08-30 11:50:27,310 [INFO] app: [32/69] Sending 'invitation' email to team SIH-32 -> pranavpolawar123@gmail.com
+2026-08-30 11:50:27,319 [INFO] mailer: [DRY RUN] Generated preview for team SIH-32 (invitation) at: preview\invitation\team_SIH-32.html
+2026-08-30 11:50:27,321 [INFO] app: [33/69] Sending 'invitation' email to team SIH-33 -> upasnap03@gmail.com
+2026-08-30 11:50:27,326 [INFO] mailer: [DRY RUN] Generated preview for team SIH-33 (invitation) at: preview\invitation\team_SIH-33.html
+2026-08-30 11:50:27,327 [INFO] app: [34/69] Sending 'invitation' email to team SIH-34 -> saurabhpal4567@gmail.com
+2026-08-30 11:50:27,332 [INFO] mailer: [DRY RUN] Generated preview for team SIH-34 (invitation) at: preview\invitation\team_SIH-34.html
+2026-08-30 11:50:27,334 [INFO] app: [35/69] Sending 'invitation' email to team SIH-35 -> deepakgoyal201204@gmail.com
+2026-08-30 11:50:27,339 [INFO] mailer: [DRY RUN] Generated preview for team SIH-35 (invitation) at: preview\invitation\team_SIH-35.html
+2026-08-30 11:50:27,341 [INFO] app: [36/69] Sending 'invitation' email to team SIH-36 -> mriduixb7454@gmail.com
+2026-08-30 11:50:27,346 [INFO] mailer: [DRY RUN] Generated preview for team SIH-36 (invitation) at: preview\invitation\team_SIH-36.html
+2026-08-30 11:50:27,348 [INFO] app: [37/69] Sending 'invitation' email to team SIH-37 -> dharuvbhola@gmail.com
+2026-08-30 11:50:27,354 [INFO] mailer: [DRY RUN] Generated preview for team SIH-37 (invitation) at: preview\invitation\team_SIH-37.html
+2026-08-30 11:50:27,355 [INFO] app: [38/69] Sending 'invitation' email to team SIH-38 -> shatakshichowksey.01@gmail.com
+2026-08-30 11:50:27,360 [INFO] mailer: [DRY RUN] Generated preview for team SIH-38 (invitation) at: preview\invitation\team_SIH-38.html
+2026-08-30 11:50:27,362 [INFO] app: [39/69] Sending 'invitation' email to team SIH-39 -> vkmac119@gmail.com
+2026-08-30 11:50:27,367 [INFO] mailer: [DRY RUN] Generated preview for team SIH-39 (invitation) at: preview\invitation\team_SIH-39.html
+2026-08-30 11:50:27,368 [INFO] app: [40/69] Sending 'invitation' email to team SIH-40 -> shawprem217@gmail.com
+2026-08-30 11:50:27,373 [INFO] mailer: [DRY RUN] Generated preview for team SIH-40 (invitation) at: preview\invitation\team_SIH-40.html
+2026-08-30 11:50:27,374 [INFO] app: [41/69] Sending 'invitation' email to team SIH-41 -> siddhant10022008@gmail.com
+2026-08-30 11:50:27,380 [INFO] mailer: [DRY RUN] Generated preview for team SIH-41 (invitation) at: preview\invitation\team_SIH-41.html
+2026-08-30 11:50:27,382 [INFO] app: [42/69] Sending 'invitation' email to team SIH-42 -> roshanbano8795@gmail.com
+2026-08-30 11:50:27,387 [INFO] mailer: [DRY RUN] Generated preview for team SIH-42 (invitation) at: preview\invitation\team_SIH-42.html
+2026-08-30 11:50:27,388 [INFO] app: [43/69] Sending 'invitation' email to team SIH-43 -> devjain191207@gmail.com
+2026-08-30 11:50:27,393 [INFO] mailer: [DRY RUN] Generated preview for team SIH-43 (invitation) at: preview\invitation\team_SIH-43.html
+2026-08-30 11:50:27,394 [INFO] app: [44/69] Sending 'invitation' email to team SIH-44 -> pavitrasahu251218@gmail.com
+2026-08-30 11:50:27,399 [INFO] mailer: [DRY RUN] Generated preview for team SIH-44 (invitation) at: preview\invitation\team_SIH-44.html
+2026-08-30 11:50:27,401 [INFO] app: [45/69] Sending 'invitation' email to team SIH-45 -> thakurarya1710@gmail.com
+2026-08-30 11:50:27,404 [INFO] mailer: [DRY RUN] Generated preview for team SIH-45 (invitation) at: preview\invitation\team_SIH-45.html
+2026-08-30 11:50:27,409 [INFO] app: [46/69] Sending 'invitation' email to team SIH-46 -> rahulverma945717@gmail.com
+2026-08-30 11:50:27,411 [INFO] mailer: [DRY RUN] Generated preview for team SIH-46 (invitation) at: preview\invitation\team_SIH-46.html
+2026-08-30 11:50:27,411 [INFO] app: [47/69] Sending 'invitation' email to team SIH-47 -> tshaswat32@gmail.com
+2026-08-30 11:50:27,420 [INFO] mailer: [DRY RUN] Generated preview for team SIH-47 (invitation) at: preview\invitation\team_SIH-47.html
+2026-08-30 11:50:27,422 [INFO] app: [48/69] Sending 'invitation' email to team SIH-48 -> aryanag818@gmail.com
+2026-08-30 11:50:27,429 [INFO] mailer: [DRY RUN] Generated preview for team SIH-48 (invitation) at: preview\invitation\team_SIH-48.html
+2026-08-30 11:50:27,430 [INFO] app: [49/69] Sending 'invitation' email to team SIH-49 -> anikaryan476@gmail.com
+2026-08-30 11:50:27,437 [INFO] mailer: [DRY RUN] Generated preview for team SIH-49 (invitation) at: preview\invitation\team_SIH-49.html
+2026-08-30 11:50:27,438 [INFO] app: [50/69] Sending 'invitation' email to team SIH-50 -> atuljoshi85117@gmail.com
+2026-08-30 11:50:27,443 [INFO] mailer: [DRY RUN] Generated preview for team SIH-50 (invitation) at: preview\invitation\team_SIH-50.html
+2026-08-30 11:50:27,444 [INFO] app: [51/69] Sending 'invitation' email to team SIH-51 -> eshanm19@gmail.com
+2026-08-30 11:50:27,451 [INFO] mailer: [DRY RUN] Generated preview for team SIH-51 (invitation) at: preview\invitation\team_SIH-51.html
+2026-08-30 11:50:27,452 [INFO] app: [52/69] Sending 'invitation' email to team SIH-52 -> 25U020061@iiitbhopal.ac.in
+2026-08-30 11:50:27,458 [INFO] mailer: [DRY RUN] Generated preview for team SIH-52 (invitation) at: preview\invitation\team_SIH-52.html
+2026-08-30 11:50:27,459 [INFO] app: [53/69] Sending 'invitation' email to team SIH-53 -> mauryajay10125@gmail.com
+2026-08-30 11:50:27,463 [INFO] mailer: [DRY RUN] Generated preview for team SIH-53 (invitation) at: preview\invitation\team_SIH-53.html
+2026-08-30 11:50:27,463 [INFO] app: [54/69] Sending 'invitation' email to team SIH-54 -> nitinshu29@gmail.com
+2026-08-30 11:50:27,471 [INFO] mailer: [DRY RUN] Generated preview for team SIH-54 (invitation) at: preview\invitation\team_SIH-54.html
+2026-08-30 11:50:27,472 [INFO] app: [55/69] Sending 'invitation' email to team SIH-55 -> aayush.varshney.9c@gmail.com
+2026-08-30 11:50:27,478 [INFO] mailer: [DRY RUN] Generated preview for team SIH-55 (invitation) at: preview\invitation\team_SIH-55.html
+2026-08-30 11:50:27,479 [INFO] app: [56/69] Sending 'invitation' email to team SIH-56 -> guptaansh1209@gmail.com
+2026-08-30 11:50:27,485 [INFO] mailer: [DRY RUN] Generated preview for team SIH-56 (invitation) at: preview\invitation\team_SIH-56.html
+2026-08-30 11:50:27,486 [INFO] app: [57/69] Sending 'invitation' email to team SIH-57 -> anujprjt22@gmail.com
+2026-08-30 11:50:27,491 [INFO] mailer: [DRY RUN] Generated preview for team SIH-57 (invitation) at: preview\invitation\team_SIH-57.html
+2026-08-30 11:50:27,493 [INFO] app: [58/69] Sending 'invitation' email to team SIH-58 -> pratyakshdwivedi563@gmail.com
+2026-08-30 11:50:27,498 [INFO] mailer: [DRY RUN] Generated preview for team SIH-58 (invitation) at: preview\invitation\team_SIH-58.html
+2026-08-30 11:50:27,500 [INFO] app: [59/69] Sending 'invitation' email to team SIH-59 -> ravindramilieus545@gmail.com
+2026-08-30 11:50:27,505 [INFO] mailer: [DRY RUN] Generated preview for team SIH-59 (invitation) at: preview\invitation\team_SIH-59.html
+2026-08-30 11:50:27,506 [INFO] app: [60/69] Sending 'invitation' email to team SIH-60 -> vigneshmurarkar@gmail.com
+2026-08-30 11:50:27,512 [INFO] mailer: [DRY RUN] Generated preview for team SIH-60 (invitation) at: preview\invitation\team_SIH-60.html
+2026-08-30 11:50:27,512 [INFO] app: [61/69] Sending 'invitation' email to team SIH-61 -> anupambichpuria5@gmail.com
+2026-08-30 11:50:27,523 [INFO] mailer: [DRY RUN] Generated preview for team SIH-61 (invitation) at: preview\invitation\team_SIH-61.html
+2026-08-30 11:50:27,525 [INFO] app: [62/69] Sending 'invitation' email to team SIH-62 -> 408akshat@gmail.com
+2026-08-30 11:50:27,530 [INFO] mailer: [DRY RUN] Generated preview for team SIH-62 (invitation) at: preview\invitation\team_SIH-62.html
+2026-08-30 11:50:27,530 [INFO] app: [63/69] Sending 'invitation' email to team SIH-63 -> rohitpatelgurjar@gmail.com
+2026-08-30 11:50:27,536 [INFO] mailer: [DRY RUN] Generated preview for team SIH-63 (invitation) at: preview\invitation\team_SIH-63.html
+2026-08-30 11:50:27,536 [INFO] app: [64/69] Sending 'invitation' email to team SIH-64 -> jkritik8@gmail.com
+2026-08-30 11:50:27,544 [INFO] mailer: [DRY RUN] Generated preview for team SIH-64 (invitation) at: preview\invitation\team_SIH-64.html
+2026-08-30 11:50:27,545 [INFO] app: [65/69] Sending 'invitation' email to team SIH-65 -> soumyashekharjha30@gmail.com
+2026-08-30 11:50:27,550 [INFO] mailer: [DRY RUN] Generated preview for team SIH-65 (invitation) at: preview\invitation\team_SIH-65.html
+2026-08-30 11:50:27,551 [INFO] app: [66/69] Sending 'invitation' email to team SIH-66 -> vivekprajapati8839@gmail.com
+2026-08-30 11:50:27,557 [INFO] mailer: [DRY RUN] Generated preview for team SIH-66 (invitation) at: preview\invitation\team_SIH-66.html
+2026-08-30 11:50:27,558 [INFO] app: [67/69] Sending 'invitation' email to team SIH-67 -> vishnuvats171@gmail.com
+2026-08-30 11:50:27,563 [INFO] mailer: [DRY RUN] Generated preview for team SIH-67 (invitation) at: preview\invitation\team_SIH-67.html
+2026-08-30 11:50:27,564 [INFO] app: [68/69] Sending 'invitation' email to team SIH-68 -> amansharma.krmr@gmail.com
+2026-08-30 11:50:27,570 [INFO] mailer: [DRY RUN] Generated preview for team SIH-68 (invitation) at: preview\invitation\team_SIH-68.html
+2026-08-30 11:50:27,572 [INFO] app: [69/69] Sending 'invitation' email to team SIH-69 -> aadarshwork2007@gmail.com
+2026-08-30 11:50:27,578 [INFO] mailer: [DRY RUN] Generated preview for team SIH-69 (invitation) at: preview\invitation\team_SIH-69.html
+2026-08-30 11:50:27,579 [INFO] app: ====================================================
+2026-08-30 11:50:27,579 [INFO] app:                 EXECUTION SUMMARY                   
+2026-08-30 11:50:27,579 [INFO] app: ====================================================
+2026-08-30 11:50:27,579 [INFO] app: Template:               invitation
+2026-08-30 11:50:27,579 [INFO] app: Mode:                   dry-run
+2026-08-30 11:50:27,579 [INFO] app: Total teams loaded:     69
+2026-08-30 11:50:27,579 [INFO] app: Skipped (already sent): 0
+2026-08-30 11:50:27,579 [INFO] app: Successfully processed: 69
+2026-08-30 11:50:27,579 [INFO] app: Failed to process:      0
+2026-08-30 11:50:27,580 [INFO] app: ====================================================
+2026-08-30 11:50:48,616 [INFO] app: CC list has been explicitly disabled (--no-cc).
+2026-08-30 11:50:48,616 [INFO] app: ====================================================
+2026-08-30 11:50:48,618 [INFO] app:                 !!! LIVE RUN !!!                    
+2026-08-30 11:50:48,618 [INFO] app: ====================================================
+2026-08-30 11:50:48,618 [INFO] app: Targeting real recipients with CC to: []
+2026-08-30 11:50:48,618 [INFO] app: ====================================================
+2026-08-30 11:50:48,619 [INFO] app: Loading teams from: SIH 2026 Registrations (Responses) - Complete teams with Mentor alloc.csv
+2026-08-30 11:50:48,629 [INFO] app: Loaded 69 valid team rows from CSV.
+2026-08-30 11:50:48,630 [INFO] app: Filtered teams list to run only for team: SIH-64
+2026-08-30 11:50:48,647 [INFO] app: Found 1 teams already successfully processed in send_log_invitation.csv.
+2026-08-30 11:50:48,648 [INFO] app: [1/1] Sending 'invitation' email to team SIH-64 -> jkritik8@gmail.com
+2026-08-30 11:50:54,288 [INFO] mailer: Successfully sent email to jkritik8@gmail.com (Attempt 1)
+2026-08-30 11:50:54,293 [INFO] app: ====================================================
+2026-08-30 11:50:54,294 [INFO] app:                 EXECUTION SUMMARY                   
+2026-08-30 11:50:54,294 [INFO] app: ====================================================
+2026-08-30 11:50:54,294 [INFO] app: Template:               invitation
+2026-08-30 11:50:54,294 [INFO] app: Mode:                   live
+2026-08-30 11:50:54,294 [INFO] app: Total teams loaded:     1
+2026-08-30 11:50:54,294 [INFO] app: Skipped (already sent): 0
+2026-08-30 11:50:54,294 [INFO] app: Successfully processed: 1
+2026-08-30 11:50:54,294 [INFO] app: Failed to process:      0
+2026-08-30 11:50:54,294 [INFO] app: ====================================================
+2026-08-30 11:58:36,818 [INFO] app: ====================================================
+2026-08-30 11:58:36,819 [INFO] app:                  DRY RUN ACTIVE                     
+2026-08-30 11:58:36,819 [INFO] app: ====================================================
+2026-08-30 11:58:36,819 [INFO] app: Writing rendered HTML files to preview/invitation/
+2026-08-30 11:58:36,819 [INFO] app: ====================================================
+2026-08-30 11:58:36,820 [INFO] app: Loading teams from: SIH 2026 Registrations (Responses) - Complete teams with Mentor alloc.csv
+2026-08-30 11:58:36,830 [INFO] app: Loaded 69 valid team rows from CSV.
+2026-08-30 11:58:36,853 [INFO] app: Found 1 teams already successfully processed in send_log_invitation.csv.
+2026-08-30 11:58:36,854 [INFO] app: [1/69] Sending 'invitation' email to team SIH-1 -> buildwithvrit@gmail.com
+2026-08-30 11:58:36,867 [INFO] mailer: [DRY RUN] Generated preview for team SIH-1 (invitation) at: preview\invitation\team_SIH-1.html
+2026-08-30 11:58:36,869 [INFO] app: [2/69] Sending 'invitation' email to team SIH-2 -> tanishhs01@gmail.com
+2026-08-30 11:58:36,875 [INFO] mailer: [DRY RUN] Generated preview for team SIH-2 (invitation) at: preview\invitation\team_SIH-2.html
+2026-08-30 11:58:36,876 [INFO] app: [3/69] Sending 'invitation' email to team SIH-3 -> piyushgohil6302@gmail.com
+2026-08-30 11:58:36,882 [INFO] mailer: [DRY RUN] Generated preview for team SIH-3 (invitation) at: preview\invitation\team_SIH-3.html
+2026-08-30 11:58:36,883 [INFO] app: [4/69] Sending 'invitation' email to team SIH-4 -> abhigyanjha2007@gmail.com
+2026-08-30 11:58:36,889 [INFO] mailer: [DRY RUN] Generated preview for team SIH-4 (invitation) at: preview\invitation\team_SIH-4.html
+2026-08-30 11:58:36,890 [INFO] app: [5/69] Sending 'invitation' email to team SIH-5 -> amandubeyjiiuo@gmail.com
+2026-08-30 11:58:36,896 [INFO] mailer: [DRY RUN] Generated preview for team SIH-5 (invitation) at: preview\invitation\team_SIH-5.html
+2026-08-30 11:58:36,897 [INFO] app: [6/69] Sending 'invitation' email to team SIH-6 -> shiv.shambhu010199@gmail.com
+2026-08-30 11:58:36,903 [INFO] mailer: [DRY RUN] Generated preview for team SIH-6 (invitation) at: preview\invitation\team_SIH-6.html
+2026-08-30 11:58:36,903 [INFO] app: [7/69] Sending 'invitation' email to team SIH-7 -> vanshjain10a2@gmail.com
+2026-08-30 11:58:36,906 [INFO] mailer: [DRY RUN] Generated preview for team SIH-7 (invitation) at: preview\invitation\team_SIH-7.html
+2026-08-30 11:58:36,906 [INFO] app: [8/69] Sending 'invitation' email to team SIH-8 -> praveshkumar16062005@gmail.com
+2026-08-30 11:58:36,915 [INFO] mailer: [DRY RUN] Generated preview for team SIH-8 (invitation) at: preview\invitation\team_SIH-8.html
+2026-08-30 11:58:36,915 [INFO] app: [9/69] Sending 'invitation' email to team SIH-9 -> pratyakshdwivedi563@gmail.com
+2026-08-30 11:58:36,920 [INFO] mailer: [DRY RUN] Generated preview for team SIH-9 (invitation) at: preview\invitation\team_SIH-9.html
+2026-08-30 11:58:36,920 [INFO] app: [10/69] Sending 'invitation' email to team SIH-10 -> aviraltrivedi.007@gmail.com
+2026-08-30 11:58:36,928 [INFO] mailer: [DRY RUN] Generated preview for team SIH-10 (invitation) at: preview\invitation\team_SIH-10.html
+2026-08-30 11:58:36,928 [INFO] app: [11/69] Sending 'invitation' email to team SIH-11 -> satyamkr1677@gmail.com
+2026-08-30 11:58:36,935 [INFO] mailer: [DRY RUN] Generated preview for team SIH-11 (invitation) at: preview\invitation\team_SIH-11.html
+2026-08-30 11:58:36,936 [INFO] app: [12/69] Sending 'invitation' email to team SIH-12 -> ishagupta5645@gmail.com
+2026-08-30 11:58:36,941 [INFO] mailer: [DRY RUN] Generated preview for team SIH-12 (invitation) at: preview\invitation\team_SIH-12.html
+2026-08-30 11:58:36,942 [INFO] app: [13/69] Sending 'invitation' email to team SIH-13 -> yashu210209@gmail.com
+2026-08-30 11:58:36,949 [INFO] mailer: [DRY RUN] Generated preview for team SIH-13 (invitation) at: preview\invitation\team_SIH-13.html
+2026-08-30 11:58:36,950 [INFO] app: [14/69] Sending 'invitation' email to team SIH-14 -> yalok2372@gmail.com
+2026-08-30 11:58:36,955 [INFO] mailer: [DRY RUN] Generated preview for team SIH-14 (invitation) at: preview\invitation\team_SIH-14.html
+2026-08-30 11:58:36,956 [INFO] app: [15/69] Sending 'invitation' email to team SIH-15 -> nishanty0809@gmail.com
+2026-08-30 11:58:36,962 [INFO] mailer: [DRY RUN] Generated preview for team SIH-15 (invitation) at: preview\invitation\team_SIH-15.html
+2026-08-30 11:58:36,962 [INFO] app: [16/69] Sending 'invitation' email to team SIH-16 -> saumysahu613@gmail.com
+2026-08-30 11:58:36,968 [INFO] mailer: [DRY RUN] Generated preview for team SIH-16 (invitation) at: preview\invitation\team_SIH-16.html
+2026-08-30 11:58:36,968 [INFO] app: [17/69] Sending 'invitation' email to team SIH-17 -> vt30trivedi@gmail.com
+2026-08-30 11:58:36,974 [INFO] mailer: [DRY RUN] Generated preview for team SIH-17 (invitation) at: preview\invitation\team_SIH-17.html
+2026-08-30 11:58:36,975 [INFO] app: [18/69] Sending 'invitation' email to team SIH-18 -> vedantgoyal67@gmail.com
+2026-08-30 11:58:36,976 [INFO] mailer: [DRY RUN] Generated preview for team SIH-18 (invitation) at: preview\invitation\team_SIH-18.html
+2026-08-30 11:58:36,982 [INFO] app: [19/69] Sending 'invitation' email to team SIH-19 -> jayanthsaimuvva@gmail.com
+2026-08-30 11:58:36,986 [INFO] mailer: [DRY RUN] Generated preview for team SIH-19 (invitation) at: preview\invitation\team_SIH-19.html
+2026-08-30 11:58:36,990 [INFO] app: [20/69] Sending 'invitation' email to team SIH-20 -> abhaykrd11@gmail.com
+2026-08-30 11:58:36,997 [INFO] mailer: [DRY RUN] Generated preview for team SIH-20 (invitation) at: preview\invitation\team_SIH-20.html
+2026-08-30 11:58:36,998 [INFO] app: [21/69] Sending 'invitation' email to team SIH-21 -> ojasvsoni@gmail.com
+2026-08-30 11:58:37,004 [INFO] mailer: [DRY RUN] Generated preview for team SIH-21 (invitation) at: preview\invitation\team_SIH-21.html
+2026-08-30 11:58:37,005 [INFO] app: [22/69] Sending 'invitation' email to team SIH-22 -> pranjalkhandelwal46@gmail.com
+2026-08-30 11:58:37,010 [INFO] mailer: [DRY RUN] Generated preview for team SIH-22 (invitation) at: preview\invitation\team_SIH-22.html
+2026-08-30 11:58:37,012 [INFO] app: [23/69] Sending 'invitation' email to team SIH-23 -> singhtomarsunil8@gmail.com
+2026-08-30 11:58:37,018 [INFO] mailer: [DRY RUN] Generated preview for team SIH-23 (invitation) at: preview\invitation\team_SIH-23.html
+2026-08-30 11:58:37,020 [INFO] app: [24/69] Sending 'invitation' email to team SIH-24 -> namansr07@gmail.com
+2026-08-30 11:58:37,025 [INFO] mailer: [DRY RUN] Generated preview for team SIH-24 (invitation) at: preview\invitation\team_SIH-24.html
+2026-08-30 11:58:37,026 [INFO] app: [25/69] Sending 'invitation' email to team SIH-25 -> prashastmathur@gmail.com
+2026-08-30 11:58:37,031 [INFO] mailer: [DRY RUN] Generated preview for team SIH-25 (invitation) at: preview\invitation\team_SIH-25.html
+2026-08-30 11:58:37,033 [INFO] app: [26/69] Sending 'invitation' email to team SIH-26 -> prekshitdave@gmail.com
+2026-08-30 11:58:37,039 [INFO] mailer: [DRY RUN] Generated preview for team SIH-26 (invitation) at: preview\invitation\team_SIH-26.html
+2026-08-30 11:58:37,040 [INFO] app: [27/69] Sending 'invitation' email to team SIH-27 -> manaskumar20056@gmail.com
+2026-08-30 11:58:37,044 [INFO] mailer: [DRY RUN] Generated preview for team SIH-27 (invitation) at: preview\invitation\team_SIH-27.html
+2026-08-30 11:58:37,046 [INFO] app: [28/69] Sending 'invitation' email to team SIH-28 -> samadhiyarudra123@gmail.com
+2026-08-30 11:58:37,051 [INFO] mailer: [DRY RUN] Generated preview for team SIH-28 (invitation) at: preview\invitation\team_SIH-28.html
+2026-08-30 11:58:37,051 [INFO] app: [29/69] Sending 'invitation' email to team SIH-29 -> itsnishant444@gmail.com
+2026-08-30 11:58:37,057 [INFO] mailer: [DRY RUN] Generated preview for team SIH-29 (invitation) at: preview\invitation\team_SIH-29.html
+2026-08-30 11:58:37,059 [INFO] app: [30/69] Sending 'invitation' email to team SIH-30 -> pranjaltamr99@gmail.com
+2026-08-30 11:58:37,063 [INFO] mailer: [DRY RUN] Generated preview for team SIH-30 (invitation) at: preview\invitation\team_SIH-30.html
+2026-08-30 11:58:37,065 [INFO] app: [31/69] Sending 'invitation' email to team SIH-31 -> forwebdevelopment59@gmail.com
+2026-08-30 11:58:37,071 [INFO] mailer: [DRY RUN] Generated preview for team SIH-31 (invitation) at: preview\invitation\team_SIH-31.html
+2026-08-30 11:58:37,072 [INFO] app: [32/69] Sending 'invitation' email to team SIH-32 -> pranavpolawar123@gmail.com
+2026-08-30 11:58:37,078 [INFO] mailer: [DRY RUN] Generated preview for team SIH-32 (invitation) at: preview\invitation\team_SIH-32.html
+2026-08-30 11:58:37,080 [INFO] app: [33/69] Sending 'invitation' email to team SIH-33 -> upasnap03@gmail.com
+2026-08-30 11:58:37,086 [INFO] mailer: [DRY RUN] Generated preview for team SIH-33 (invitation) at: preview\invitation\team_SIH-33.html
+2026-08-30 11:58:37,087 [INFO] app: [34/69] Sending 'invitation' email to team SIH-34 -> saurabhpal4567@gmail.com
+2026-08-30 11:58:37,093 [INFO] mailer: [DRY RUN] Generated preview for team SIH-34 (invitation) at: preview\invitation\team_SIH-34.html
+2026-08-30 11:58:37,094 [INFO] app: [35/69] Sending 'invitation' email to team SIH-35 -> deepakgoyal201204@gmail.com
+2026-08-30 11:58:37,100 [INFO] mailer: [DRY RUN] Generated preview for team SIH-35 (invitation) at: preview\invitation\team_SIH-35.html
+2026-08-30 11:58:37,100 [INFO] app: [36/69] Sending 'invitation' email to team SIH-36 -> mriduixb7454@gmail.com
+2026-08-30 11:58:37,107 [INFO] mailer: [DRY RUN] Generated preview for team SIH-36 (invitation) at: preview\invitation\team_SIH-36.html
+2026-08-30 11:58:37,107 [INFO] app: [37/69] Sending 'invitation' email to team SIH-37 -> dharuvbhola@gmail.com
+2026-08-30 11:58:37,113 [INFO] mailer: [DRY RUN] Generated preview for team SIH-37 (invitation) at: preview\invitation\team_SIH-37.html
+2026-08-30 11:58:37,113 [INFO] app: [38/69] Sending 'invitation' email to team SIH-38 -> shatakshichowksey.01@gmail.com
+2026-08-30 11:58:37,119 [INFO] mailer: [DRY RUN] Generated preview for team SIH-38 (invitation) at: preview\invitation\team_SIH-38.html
+2026-08-30 11:58:37,121 [INFO] app: [39/69] Sending 'invitation' email to team SIH-39 -> vkmac119@gmail.com
+2026-08-30 11:58:37,126 [INFO] mailer: [DRY RUN] Generated preview for team SIH-39 (invitation) at: preview\invitation\team_SIH-39.html
+2026-08-30 11:58:37,128 [INFO] app: [40/69] Sending 'invitation' email to team SIH-40 -> shawprem217@gmail.com
+2026-08-30 11:58:37,133 [INFO] mailer: [DRY RUN] Generated preview for team SIH-40 (invitation) at: preview\invitation\team_SIH-40.html
+2026-08-30 11:58:37,134 [INFO] app: [41/69] Sending 'invitation' email to team SIH-41 -> siddhant10022008@gmail.com
+2026-08-30 11:58:37,139 [INFO] mailer: [DRY RUN] Generated preview for team SIH-41 (invitation) at: preview\invitation\team_SIH-41.html
+2026-08-30 11:58:37,140 [INFO] app: [42/69] Sending 'invitation' email to team SIH-42 -> roshanbano8795@gmail.com
+2026-08-30 11:58:37,146 [INFO] mailer: [DRY RUN] Generated preview for team SIH-42 (invitation) at: preview\invitation\team_SIH-42.html
+2026-08-30 11:58:37,146 [INFO] app: [43/69] Sending 'invitation' email to team SIH-43 -> devjain191207@gmail.com
+2026-08-30 11:58:37,152 [INFO] mailer: [DRY RUN] Generated preview for team SIH-43 (invitation) at: preview\invitation\team_SIH-43.html
+2026-08-30 11:58:37,153 [INFO] app: [44/69] Sending 'invitation' email to team SIH-44 -> pavitrasahu251218@gmail.com
+2026-08-30 11:58:37,158 [INFO] mailer: [DRY RUN] Generated preview for team SIH-44 (invitation) at: preview\invitation\team_SIH-44.html
+2026-08-30 11:58:37,160 [INFO] app: [45/69] Sending 'invitation' email to team SIH-45 -> thakurarya1710@gmail.com
+2026-08-30 11:58:37,167 [INFO] mailer: [DRY RUN] Generated preview for team SIH-45 (invitation) at: preview\invitation\team_SIH-45.html
+2026-08-30 11:58:37,167 [INFO] app: [46/69] Sending 'invitation' email to team SIH-46 -> rahulverma945717@gmail.com
+2026-08-30 11:58:37,172 [INFO] mailer: [DRY RUN] Generated preview for team SIH-46 (invitation) at: preview\invitation\team_SIH-46.html
+2026-08-30 11:58:37,175 [INFO] app: [47/69] Sending 'invitation' email to team SIH-47 -> tshaswat32@gmail.com
+2026-08-30 11:58:37,180 [INFO] mailer: [DRY RUN] Generated preview for team SIH-47 (invitation) at: preview\invitation\team_SIH-47.html
+2026-08-30 11:58:37,181 [INFO] app: [48/69] Sending 'invitation' email to team SIH-48 -> aryanag818@gmail.com
+2026-08-30 11:58:37,187 [INFO] mailer: [DRY RUN] Generated preview for team SIH-48 (invitation) at: preview\invitation\team_SIH-48.html
+2026-08-30 11:58:37,188 [INFO] app: [49/69] Sending 'invitation' email to team SIH-49 -> anikaryan476@gmail.com
+2026-08-30 11:58:37,194 [INFO] mailer: [DRY RUN] Generated preview for team SIH-49 (invitation) at: preview\invitation\team_SIH-49.html
+2026-08-30 11:58:37,195 [INFO] app: [50/69] Sending 'invitation' email to team SIH-50 -> atuljoshi85117@gmail.com
+2026-08-30 11:58:37,200 [INFO] mailer: [DRY RUN] Generated preview for team SIH-50 (invitation) at: preview\invitation\team_SIH-50.html
+2026-08-30 11:58:37,202 [INFO] app: [51/69] Sending 'invitation' email to team SIH-51 -> eshanm19@gmail.com
+2026-08-30 11:58:37,207 [INFO] mailer: [DRY RUN] Generated preview for team SIH-51 (invitation) at: preview\invitation\team_SIH-51.html
+2026-08-30 11:58:37,207 [INFO] app: [52/69] Sending 'invitation' email to team SIH-52 -> 25U020061@iiitbhopal.ac.in
+2026-08-30 11:58:37,213 [INFO] mailer: [DRY RUN] Generated preview for team SIH-52 (invitation) at: preview\invitation\team_SIH-52.html
+2026-08-30 11:58:37,215 [INFO] app: [53/69] Sending 'invitation' email to team SIH-53 -> mauryajay10125@gmail.com
+2026-08-30 11:58:37,218 [INFO] mailer: [DRY RUN] Generated preview for team SIH-53 (invitation) at: preview\invitation\team_SIH-53.html
+2026-08-30 11:58:37,218 [INFO] app: [54/69] Sending 'invitation' email to team SIH-54 -> nitinshu29@gmail.com
+2026-08-30 11:58:37,227 [INFO] mailer: [DRY RUN] Generated preview for team SIH-54 (invitation) at: preview\invitation\team_SIH-54.html
+2026-08-30 11:58:37,227 [INFO] app: [55/69] Sending 'invitation' email to team SIH-55 -> aayush.varshney.9c@gmail.com
+2026-08-30 11:58:37,234 [INFO] mailer: [DRY RUN] Generated preview for team SIH-55 (invitation) at: preview\invitation\team_SIH-55.html
+2026-08-30 11:58:37,236 [INFO] app: [56/69] Sending 'invitation' email to team SIH-56 -> guptaansh1209@gmail.com
+2026-08-30 11:58:37,241 [INFO] mailer: [DRY RUN] Generated preview for team SIH-56 (invitation) at: preview\invitation\team_SIH-56.html
+2026-08-30 11:58:37,242 [INFO] app: [57/69] Sending 'invitation' email to team SIH-57 -> anujprjt22@gmail.com
+2026-08-30 11:58:37,249 [INFO] mailer: [DRY RUN] Generated preview for team SIH-57 (invitation) at: preview\invitation\team_SIH-57.html
+2026-08-30 11:58:37,249 [INFO] app: [58/69] Sending 'invitation' email to team SIH-58 -> pratyakshdwivedi563@gmail.com
+2026-08-30 11:58:37,255 [INFO] mailer: [DRY RUN] Generated preview for team SIH-58 (invitation) at: preview\invitation\team_SIH-58.html
+2026-08-30 11:58:37,256 [INFO] app: [59/69] Sending 'invitation' email to team SIH-59 -> ravindramilieus545@gmail.com
+2026-08-30 11:58:37,262 [INFO] mailer: [DRY RUN] Generated preview for team SIH-59 (invitation) at: preview\invitation\team_SIH-59.html
+2026-08-30 11:58:37,263 [INFO] app: [60/69] Sending 'invitation' email to team SIH-60 -> vigneshmurarkar@gmail.com
+2026-08-30 11:58:37,268 [INFO] mailer: [DRY RUN] Generated preview for team SIH-60 (invitation) at: preview\invitation\team_SIH-60.html
+2026-08-30 11:58:37,269 [INFO] app: [61/69] Sending 'invitation' email to team SIH-61 -> anupambichpuria5@gmail.com
+2026-08-30 11:58:37,275 [INFO] mailer: [DRY RUN] Generated preview for team SIH-61 (invitation) at: preview\invitation\team_SIH-61.html
+2026-08-30 11:58:37,276 [INFO] app: [62/69] Sending 'invitation' email to team SIH-62 -> 408akshat@gmail.com
+2026-08-30 11:58:37,282 [INFO] mailer: [DRY RUN] Generated preview for team SIH-62 (invitation) at: preview\invitation\team_SIH-62.html
+2026-08-30 11:58:37,283 [INFO] app: [63/69] Sending 'invitation' email to team SIH-63 -> rohitpatelgurjar@gmail.com
+2026-08-30 11:58:37,289 [INFO] mailer: [DRY RUN] Generated preview for team SIH-63 (invitation) at: preview\invitation\team_SIH-63.html
+2026-08-30 11:58:37,290 [INFO] app: [64/69] Sending 'invitation' email to team SIH-64 -> jkritik8@gmail.com
+2026-08-30 11:58:37,295 [INFO] mailer: [DRY RUN] Generated preview for team SIH-64 (invitation) at: preview\invitation\team_SIH-64.html
+2026-08-30 11:58:37,296 [INFO] app: [65/69] Sending 'invitation' email to team SIH-65 -> soumyashekharjha30@gmail.com
+2026-08-30 11:58:37,302 [INFO] mailer: [DRY RUN] Generated preview for team SIH-65 (invitation) at: preview\invitation\team_SIH-65.html
+2026-08-30 11:58:37,304 [INFO] app: [66/69] Sending 'invitation' email to team SIH-66 -> vivekprajapati8839@gmail.com
+2026-08-30 11:58:37,310 [INFO] mailer: [DRY RUN] Generated preview for team SIH-66 (invitation) at: preview\invitation\team_SIH-66.html
+2026-08-30 11:58:37,311 [INFO] app: [67/69] Sending 'invitation' email to team SIH-67 -> vishnuvats171@gmail.com
+2026-08-30 11:58:37,316 [INFO] mailer: [DRY RUN] Generated preview for team SIH-67 (invitation) at: preview\invitation\team_SIH-67.html
+2026-08-30 11:58:37,317 [INFO] app: [68/69] Sending 'invitation' email to team SIH-68 -> amansharma.krmr@gmail.com
+2026-08-30 11:58:37,323 [INFO] mailer: [DRY RUN] Generated preview for team SIH-68 (invitation) at: preview\invitation\team_SIH-68.html
+2026-08-30 11:58:37,323 [INFO] app: [69/69] Sending 'invitation' email to team SIH-69 -> aadarshwork2007@gmail.com
+2026-08-30 11:58:37,327 [INFO] mailer: [DRY RUN] Generated preview for team SIH-69 (invitation) at: preview\invitation\team_SIH-69.html
+2026-08-30 11:58:37,329 [INFO] app: ====================================================
+2026-08-30 11:58:37,329 [INFO] app:                 EXECUTION SUMMARY                   
+2026-08-30 11:58:37,329 [INFO] app: ====================================================
+2026-08-30 11:58:37,329 [INFO] app: Template:               invitation
+2026-08-30 11:58:37,329 [INFO] app: Mode:                   dry-run
+2026-08-30 11:58:37,329 [INFO] app: Total teams loaded:     69
+2026-08-30 11:58:37,329 [INFO] app: Skipped (already sent): 0
+2026-08-30 11:58:37,329 [INFO] app: Successfully processed: 69
+2026-08-30 11:58:37,329 [INFO] app: Failed to process:      0
+2026-08-30 11:58:37,329 [INFO] app: ====================================================
+2026-08-30 11:58:47,925 [INFO] app: CC list has been explicitly disabled (--no-cc).
+2026-08-30 11:58:47,926 [INFO] app: ====================================================
+2026-08-30 11:58:47,926 [INFO] app:                 !!! LIVE RUN !!!                    
+2026-08-30 11:58:47,926 [INFO] app: ====================================================
+2026-08-30 11:58:47,926 [INFO] app: Targeting real recipients with CC to: []
+2026-08-30 11:58:47,926 [INFO] app: ====================================================
+2026-08-30 11:58:47,926 [INFO] app: Loading teams from: SIH 2026 Registrations (Responses) - Complete teams with Mentor alloc.csv
+2026-08-30 11:58:47,939 [INFO] app: Loaded 69 valid team rows from CSV.
+2026-08-30 11:58:47,939 [INFO] app: Filtered teams list to run only for team: SIH-64
+2026-08-30 11:58:47,961 [INFO] app: Found 1 teams already successfully processed in send_log_invitation.csv.
+2026-08-30 11:58:47,962 [INFO] app: [1/1] Sending 'invitation' email to team SIH-64 -> jkritik8@gmail.com
+2026-08-30 11:58:53,741 [INFO] mailer: Successfully sent email to jkritik8@gmail.com (Attempt 1)
+2026-08-30 11:58:53,743 [INFO] app: ====================================================
+2026-08-30 11:58:53,743 [INFO] app:                 EXECUTION SUMMARY                   
+2026-08-30 11:58:53,743 [INFO] app: ====================================================
+2026-08-30 11:58:53,743 [INFO] app: Template:               invitation
+2026-08-30 11:58:53,743 [INFO] app: Mode:                   live
+2026-08-30 11:58:53,743 [INFO] app: Total teams loaded:     1
+2026-08-30 11:58:53,743 [INFO] app: Skipped (already sent): 0
+2026-08-30 11:58:53,743 [INFO] app: Successfully processed: 1
+2026-08-30 11:58:53,743 [INFO] app: Failed to process:      0
+2026-08-30 11:58:53,743 [INFO] app: ====================================================
+2026-08-30 12:01:26,276 [INFO] app: ====================================================
+2026-08-30 12:01:26,277 [INFO] app:                 !!! LIVE RUN !!!                    
+2026-08-30 12:01:26,277 [INFO] app: ====================================================
+2026-08-30 12:01:26,277 [INFO] app: Targeting real recipients with CC to: ['sourabh.jain@iiitbhopal.ac.in', 'rekhakaushik@iiitbhopal.ac.in']
+2026-08-30 12:01:26,277 [INFO] app: ====================================================
+2026-08-30 12:01:26,277 [INFO] app: Loading teams from: SIH 2026 Registrations (Responses) - Complete teams with Mentor alloc.csv
+2026-08-30 12:01:26,288 [INFO] app: Loaded 69 valid team rows from CSV.
+2026-08-30 12:01:26,290 [INFO] app: Found 1 teams already successfully processed in send_log_invitation.csv.
+2026-08-30 12:01:26,291 [INFO] app: [1/69] Sending 'invitation' email to team SIH-1 -> buildwithvrit@gmail.com
+2026-08-30 12:01:32,475 [INFO] mailer: Successfully sent email to buildwithvrit@gmail.com (Attempt 1)
+2026-08-30 12:01:32,476 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:01:35,477 [INFO] app: [2/69] Sending 'invitation' email to team SIH-2 -> tanishhs01@gmail.com
+2026-08-30 12:01:41,477 [INFO] mailer: Successfully sent email to tanishhs01@gmail.com (Attempt 1)
+2026-08-30 12:01:41,488 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:01:44,489 [INFO] app: [3/69] Sending 'invitation' email to team SIH-3 -> piyushgohil6302@gmail.com
+2026-08-30 12:01:50,801 [INFO] mailer: Successfully sent email to piyushgohil6302@gmail.com (Attempt 1)
+2026-08-30 12:01:50,807 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:01:53,809 [INFO] app: [4/69] Sending 'invitation' email to team SIH-4 -> abhigyanjha2007@gmail.com
+2026-08-30 12:01:59,817 [INFO] mailer: Successfully sent email to abhigyanjha2007@gmail.com (Attempt 1)
+2026-08-30 12:01:59,820 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:02:02,821 [INFO] app: [5/69] Sending 'invitation' email to team SIH-5 -> amandubeyjiiuo@gmail.com
+2026-08-30 12:02:08,617 [INFO] mailer: Successfully sent email to amandubeyjiiuo@gmail.com (Attempt 1)
+2026-08-30 12:02:08,624 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:02:11,626 [INFO] app: [6/69] Sending 'invitation' email to team SIH-6 -> shiv.shambhu010199@gmail.com
+2026-08-30 12:02:17,635 [INFO] mailer: Successfully sent email to shiv.shambhu010199@gmail.com (Attempt 1)
+2026-08-30 12:02:17,637 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:02:20,638 [INFO] app: [7/69] Sending 'invitation' email to team SIH-7 -> vanshjain10a2@gmail.com
+2026-08-30 12:02:26,752 [INFO] mailer: Successfully sent email to vanshjain10a2@gmail.com (Attempt 1)
+2026-08-30 12:02:26,753 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:02:29,755 [INFO] app: [8/69] Sending 'invitation' email to team SIH-8 -> praveshkumar16062005@gmail.com
+2026-08-30 12:02:35,462 [INFO] mailer: Successfully sent email to praveshkumar16062005@gmail.com (Attempt 1)
+2026-08-30 12:02:35,465 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:02:38,466 [INFO] app: [9/69] Sending 'invitation' email to team SIH-9 -> pratyakshdwivedi563@gmail.com
+2026-08-30 12:02:44,156 [INFO] mailer: Successfully sent email to pratyakshdwivedi563@gmail.com (Attempt 1)
+2026-08-30 12:02:44,157 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:02:47,158 [INFO] app: [10/69] Sending 'invitation' email to team SIH-10 -> aviraltrivedi.007@gmail.com
+2026-08-30 12:02:53,272 [INFO] mailer: Successfully sent email to aviraltrivedi.007@gmail.com (Attempt 1)
+2026-08-30 12:02:53,274 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:02:56,275 [INFO] app: [11/69] Sending 'invitation' email to team SIH-11 -> satyamkr1677@gmail.com
+2026-08-30 12:03:01,774 [INFO] mailer: Successfully sent email to satyamkr1677@gmail.com (Attempt 1)
+2026-08-30 12:03:01,776 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:03:04,777 [INFO] app: [12/69] Sending 'invitation' email to team SIH-12 -> ishagupta5645@gmail.com
+2026-08-30 12:03:10,681 [INFO] mailer: Successfully sent email to ishagupta5645@gmail.com (Attempt 1)
+2026-08-30 12:03:10,685 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:03:13,686 [INFO] app: [13/69] Sending 'invitation' email to team SIH-13 -> yashu210209@gmail.com
+2026-08-30 12:03:19,594 [INFO] mailer: Successfully sent email to yashu210209@gmail.com (Attempt 1)
+2026-08-30 12:03:19,596 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:03:22,597 [INFO] app: [14/69] Sending 'invitation' email to team SIH-14 -> yalok2372@gmail.com
+2026-08-30 12:03:28,396 [INFO] mailer: Successfully sent email to yalok2372@gmail.com (Attempt 1)
+2026-08-30 12:03:28,398 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:03:31,399 [INFO] app: [15/69] Sending 'invitation' email to team SIH-15 -> nishanty0809@gmail.com
+2026-08-30 12:03:37,129 [INFO] mailer: Successfully sent email to nishanty0809@gmail.com (Attempt 1)
+2026-08-30 12:03:37,135 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:03:40,136 [INFO] app: [16/69] Sending 'invitation' email to team SIH-16 -> saumysahu613@gmail.com
+2026-08-30 12:03:46,116 [INFO] mailer: Successfully sent email to saumysahu613@gmail.com (Attempt 1)
+2026-08-30 12:03:46,118 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:03:49,119 [INFO] app: [17/69] Sending 'invitation' email to team SIH-17 -> vt30trivedi@gmail.com
+2026-08-30 12:03:55,328 [INFO] mailer: Successfully sent email to vt30trivedi@gmail.com (Attempt 1)
+2026-08-30 12:03:55,333 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:03:58,334 [INFO] app: [18/69] Sending 'invitation' email to team SIH-18 -> vedantgoyal67@gmail.com
+2026-08-30 12:04:04,232 [INFO] mailer: Successfully sent email to vedantgoyal67@gmail.com (Attempt 1)
+2026-08-30 12:04:04,240 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:04:07,241 [INFO] app: [19/69] Sending 'invitation' email to team SIH-19 -> jayanthsaimuvva@gmail.com
+2026-08-30 12:04:13,354 [INFO] mailer: Successfully sent email to jayanthsaimuvva@gmail.com (Attempt 1)
+2026-08-30 12:04:13,356 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:04:16,357 [INFO] app: [20/69] Sending 'invitation' email to team SIH-20 -> abhaykrd11@gmail.com
+2026-08-30 12:04:22,876 [INFO] mailer: Successfully sent email to abhaykrd11@gmail.com (Attempt 1)
+2026-08-30 12:04:22,877 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:04:25,879 [INFO] app: [21/69] Sending 'invitation' email to team SIH-21 -> ojasvsoni@gmail.com
+2026-08-30 12:04:31,980 [INFO] mailer: Successfully sent email to ojasvsoni@gmail.com (Attempt 1)
+2026-08-30 12:04:31,986 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:04:34,987 [INFO] app: [22/69] Sending 'invitation' email to team SIH-22 -> pranjalkhandelwal46@gmail.com
+2026-08-30 12:04:41,204 [INFO] mailer: Successfully sent email to pranjalkhandelwal46@gmail.com (Attempt 1)
+2026-08-30 12:04:41,205 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:04:44,206 [INFO] app: [23/69] Sending 'invitation' email to team SIH-23 -> singhtomarsunil8@gmail.com
+2026-08-30 12:04:50,417 [INFO] mailer: Successfully sent email to singhtomarsunil8@gmail.com (Attempt 1)
+2026-08-30 12:04:50,423 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:04:53,424 [INFO] app: [24/69] Sending 'invitation' email to team SIH-24 -> namansr07@gmail.com
+2026-08-30 12:04:59,536 [INFO] mailer: Successfully sent email to namansr07@gmail.com (Attempt 1)
+2026-08-30 12:04:59,537 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:05:02,539 [INFO] app: [25/69] Sending 'invitation' email to team SIH-25 -> prashastmathur@gmail.com
+2026-08-30 12:05:08,650 [INFO] mailer: Successfully sent email to prashastmathur@gmail.com (Attempt 1)
+2026-08-30 12:05:08,653 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:05:11,654 [INFO] app: [26/69] Sending 'invitation' email to team SIH-26 -> prekshitdave@gmail.com
+2026-08-30 12:05:17,867 [INFO] mailer: Successfully sent email to prekshitdave@gmail.com (Attempt 1)
+2026-08-30 12:05:17,867 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:05:20,868 [INFO] app: [27/69] Sending 'invitation' email to team SIH-27 -> manaskumar20056@gmail.com
+2026-08-30 12:05:27,596 [INFO] mailer: Successfully sent email to manaskumar20056@gmail.com (Attempt 1)
+2026-08-30 12:05:27,598 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:05:30,599 [INFO] app: [28/69] Sending 'invitation' email to team SIH-28 -> samadhiyarudra123@gmail.com
+2026-08-30 12:05:36,612 [INFO] mailer: Successfully sent email to samadhiyarudra123@gmail.com (Attempt 1)
+2026-08-30 12:05:36,616 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:05:39,617 [INFO] app: [29/69] Sending 'invitation' email to team SIH-29 -> itsnishant444@gmail.com
+2026-08-30 12:05:45,621 [INFO] mailer: Successfully sent email to itsnishant444@gmail.com (Attempt 1)
+2026-08-30 12:05:45,622 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:05:48,623 [INFO] app: [30/69] Sending 'invitation' email to team SIH-30 -> pranjaltamr99@gmail.com
+2026-08-30 12:05:55,246 [INFO] mailer: Successfully sent email to pranjaltamr99@gmail.com (Attempt 1)
+2026-08-30 12:05:55,251 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:05:58,252 [INFO] app: [31/69] Sending 'invitation' email to team SIH-31 -> forwebdevelopment59@gmail.com
+2026-08-30 12:06:04,358 [INFO] mailer: Successfully sent email to forwebdevelopment59@gmail.com (Attempt 1)
+2026-08-30 12:06:04,361 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:06:07,361 [INFO] app: [32/69] Sending 'invitation' email to team SIH-32 -> pranavpolawar123@gmail.com
+2026-08-30 12:06:13,638 [INFO] mailer: Successfully sent email to pranavpolawar123@gmail.com (Attempt 1)
+2026-08-30 12:06:13,640 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:06:16,640 [INFO] app: [33/69] Sending 'invitation' email to team SIH-33 -> upasnap03@gmail.com
+2026-08-30 12:06:22,391 [INFO] mailer: Successfully sent email to upasnap03@gmail.com (Attempt 1)
+2026-08-30 12:06:22,393 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:06:25,394 [INFO] app: [34/69] Sending 'invitation' email to team SIH-34 -> saurabhpal4567@gmail.com
+2026-08-30 12:06:31,372 [INFO] mailer: Successfully sent email to saurabhpal4567@gmail.com (Attempt 1)
+2026-08-30 12:06:31,384 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:06:34,385 [INFO] app: [35/69] Sending 'invitation' email to team SIH-35 -> deepakgoyal201204@gmail.com
+2026-08-30 12:06:40,601 [INFO] mailer: Successfully sent email to deepakgoyal201204@gmail.com (Attempt 1)
+2026-08-30 12:06:40,611 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:06:43,612 [INFO] app: [36/69] Sending 'invitation' email to team SIH-36 -> mriduixb7454@gmail.com
+2026-08-30 12:06:49,517 [INFO] mailer: Successfully sent email to mriduixb7454@gmail.com (Attempt 1)
+2026-08-30 12:06:49,519 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:06:52,521 [INFO] app: [37/69] Sending 'invitation' email to team SIH-37 -> dharuvbhola@gmail.com
+2026-08-30 12:06:58,530 [INFO] mailer: Successfully sent email to dharuvbhola@gmail.com (Attempt 1)
+2026-08-30 12:06:58,531 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:07:01,532 [INFO] app: [38/69] Sending 'invitation' email to team SIH-38 -> shatakshichowksey.01@gmail.com
+2026-08-30 12:07:07,122 [INFO] mailer: Successfully sent email to shatakshichowksey.01@gmail.com (Attempt 1)
+2026-08-30 12:07:07,128 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:07:10,129 [INFO] app: [39/69] Sending 'invitation' email to team SIH-39 -> vkmac119@gmail.com
+2026-08-30 12:07:16,139 [INFO] mailer: Successfully sent email to vkmac119@gmail.com (Attempt 1)
+2026-08-30 12:07:16,145 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:07:19,146 [INFO] app: [40/69] Sending 'invitation' email to team SIH-40 -> shawprem217@gmail.com
+2026-08-30 12:07:24,951 [INFO] mailer: Successfully sent email to shawprem217@gmail.com (Attempt 1)
+2026-08-30 12:07:24,951 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:07:27,953 [INFO] app: [41/69] Sending 'invitation' email to team SIH-41 -> siddhant10022008@gmail.com
+2026-08-30 12:07:34,193 [INFO] mailer: Successfully sent email to siddhant10022008@gmail.com (Attempt 1)
+2026-08-30 12:07:34,196 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:07:37,196 [INFO] app: [42/69] Sending 'invitation' email to team SIH-42 -> roshanbano8795@gmail.com
+2026-08-30 12:07:43,383 [INFO] mailer: Successfully sent email to roshanbano8795@gmail.com (Attempt 1)
+2026-08-30 12:07:43,386 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:07:46,387 [INFO] app: [43/69] Sending 'invitation' email to team SIH-43 -> devjain191207@gmail.com
+2026-08-30 12:07:54,033 [INFO] mailer: Successfully sent email to devjain191207@gmail.com (Attempt 1)
+2026-08-30 12:07:54,035 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:07:57,036 [INFO] app: [44/69] Sending 'invitation' email to team SIH-44 -> pavitrasahu251218@gmail.com
+2026-08-30 12:08:03,663 [INFO] mailer: Successfully sent email to pavitrasahu251218@gmail.com (Attempt 1)
+2026-08-30 12:08:03,665 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:08:06,666 [INFO] app: [45/69] Sending 'invitation' email to team SIH-45 -> thakurarya1710@gmail.com
+2026-08-30 12:08:12,875 [INFO] mailer: Successfully sent email to thakurarya1710@gmail.com (Attempt 1)
+2026-08-30 12:08:12,877 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:08:15,878 [INFO] app: [46/69] Sending 'invitation' email to team SIH-46 -> rahulverma945717@gmail.com
+2026-08-30 12:08:22,087 [INFO] mailer: Successfully sent email to rahulverma945717@gmail.com (Attempt 1)
+2026-08-30 12:08:22,093 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:08:25,094 [INFO] app: [47/69] Sending 'invitation' email to team SIH-47 -> tshaswat32@gmail.com
+2026-08-30 12:08:31,718 [INFO] mailer: Successfully sent email to tshaswat32@gmail.com (Attempt 1)
+2026-08-30 12:08:31,719 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:08:34,720 [INFO] app: [48/69] Sending 'invitation' email to team SIH-48 -> aryanag818@gmail.com
+2026-08-30 12:08:41,434 [INFO] mailer: Successfully sent email to aryanag818@gmail.com (Attempt 1)
+2026-08-30 12:08:41,434 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:08:44,436 [INFO] app: [49/69] Sending 'invitation' email to team SIH-49 -> anikaryan476@gmail.com
+2026-08-30 12:08:51,174 [INFO] mailer: Successfully sent email to anikaryan476@gmail.com (Attempt 1)
+2026-08-30 12:08:51,176 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:08:54,177 [INFO] app: [50/69] Sending 'invitation' email to team SIH-50 -> atuljoshi85117@gmail.com
+2026-08-30 12:09:00,493 [INFO] mailer: Successfully sent email to atuljoshi85117@gmail.com (Attempt 1)
+2026-08-30 12:09:00,494 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:09:03,495 [INFO] app: [51/69] Sending 'invitation' email to team SIH-51 -> eshanm19@gmail.com
+2026-08-30 12:09:10,017 [INFO] mailer: Successfully sent email to eshanm19@gmail.com (Attempt 1)
+2026-08-30 12:09:10,019 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:09:13,019 [INFO] app: [52/69] Sending 'invitation' email to team SIH-52 -> 25U020061@iiitbhopal.ac.in
+2026-08-30 12:09:18,609 [INFO] mailer: Successfully sent email to 25U020061@iiitbhopal.ac.in (Attempt 1)
+2026-08-30 12:09:18,618 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:09:21,619 [INFO] app: [53/69] Sending 'invitation' email to team SIH-53 -> mauryajay10125@gmail.com
+2026-08-30 12:09:27,742 [INFO] mailer: Successfully sent email to mauryajay10125@gmail.com (Attempt 1)
+2026-08-30 12:09:27,744 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:09:30,744 [INFO] app: [54/69] Sending 'invitation' email to team SIH-54 -> nitinshu29@gmail.com
+2026-08-30 12:09:36,744 [INFO] mailer: Successfully sent email to nitinshu29@gmail.com (Attempt 1)
+2026-08-30 12:09:36,746 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:09:39,747 [INFO] app: [55/69] Sending 'invitation' email to team SIH-55 -> aayush.varshney.9c@gmail.com
+2026-08-30 12:09:45,662 [INFO] mailer: Successfully sent email to aayush.varshney.9c@gmail.com (Attempt 1)
+2026-08-30 12:09:45,664 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:09:48,665 [INFO] app: [56/69] Sending 'invitation' email to team SIH-56 -> guptaansh1209@gmail.com
+2026-08-30 12:09:54,759 [INFO] mailer: Successfully sent email to guptaansh1209@gmail.com (Attempt 1)
+2026-08-30 12:09:54,770 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:09:57,770 [INFO] app: [57/69] Sending 'invitation' email to team SIH-57 -> anujprjt22@gmail.com
+2026-08-30 12:10:04,081 [INFO] mailer: Successfully sent email to anujprjt22@gmail.com (Attempt 1)
+2026-08-30 12:10:04,088 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:10:07,089 [INFO] app: [58/69] Sending 'invitation' email to team SIH-58 -> pratyakshdwivedi563@gmail.com
+2026-08-30 12:10:13,094 [INFO] mailer: Successfully sent email to pratyakshdwivedi563@gmail.com (Attempt 1)
+2026-08-30 12:10:13,101 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:10:16,102 [INFO] app: [59/69] Sending 'invitation' email to team SIH-59 -> ravindramilieus545@gmail.com
+2026-08-30 12:10:22,111 [INFO] mailer: Successfully sent email to ravindramilieus545@gmail.com (Attempt 1)
+2026-08-30 12:10:22,112 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:10:25,113 [INFO] app: [60/69] Sending 'invitation' email to team SIH-60 -> vigneshmurarkar@gmail.com
+2026-08-30 12:10:32,276 [INFO] mailer: Successfully sent email to vigneshmurarkar@gmail.com (Attempt 1)
+2026-08-30 12:10:32,285 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:10:35,286 [INFO] app: [61/69] Sending 'invitation' email to team SIH-61 -> anupambichpuria5@gmail.com
+2026-08-30 12:10:41,145 [INFO] mailer: Successfully sent email to anupambichpuria5@gmail.com (Attempt 1)
+2026-08-30 12:10:41,158 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:10:44,159 [INFO] app: [62/69] Sending 'invitation' email to team SIH-62 -> 408akshat@gmail.com
+2026-08-30 12:10:51,711 [INFO] mailer: Successfully sent email to 408akshat@gmail.com (Attempt 1)
+2026-08-30 12:10:51,714 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:10:54,715 [INFO] app: [63/69] Sending 'invitation' email to team SIH-63 -> rohitpatelgurjar@gmail.com
+2026-08-30 12:11:00,449 [INFO] mailer: Successfully sent email to rohitpatelgurjar@gmail.com (Attempt 1)
+2026-08-30 12:11:00,452 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:11:03,452 [INFO] app: [64/69] Skipping team SIH-64: Already sent in previous run.
+2026-08-30 12:11:03,452 [INFO] app: [65/69] Sending 'invitation' email to team SIH-65 -> soumyashekharjha30@gmail.com
+2026-08-30 12:11:09,287 [INFO] mailer: Successfully sent email to soumyashekharjha30@gmail.com (Attempt 1)
+2026-08-30 12:11:09,290 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:11:12,290 [INFO] app: [66/69] Sending 'invitation' email to team SIH-66 -> vivekprajapati8839@gmail.com
+2026-08-30 12:11:17,770 [INFO] mailer: Successfully sent email to vivekprajapati8839@gmail.com (Attempt 1)
+2026-08-30 12:11:17,776 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:11:20,777 [INFO] app: [67/69] Sending 'invitation' email to team SIH-67 -> vishnuvats171@gmail.com
+2026-08-30 12:11:26,832 [INFO] mailer: Successfully sent email to vishnuvats171@gmail.com (Attempt 1)
+2026-08-30 12:11:26,834 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:11:29,835 [INFO] app: [68/69] Sending 'invitation' email to team SIH-68 -> amansharma.krmr@gmail.com
+2026-08-30 12:11:35,841 [INFO] mailer: Successfully sent email to amansharma.krmr@gmail.com (Attempt 1)
+2026-08-30 12:11:35,843 [INFO] app: Throttling for 3.0 seconds...
+2026-08-30 12:11:38,844 [INFO] app: [69/69] Sending 'invitation' email to team SIH-69 -> aadarshwork2007@gmail.com
+2026-08-30 12:11:44,754 [INFO] mailer: Successfully sent email to aadarshwork2007@gmail.com (Attempt 1)
+2026-08-30 12:11:44,758 [INFO] app: ====================================================
+2026-08-30 12:11:44,758 [INFO] app:                 EXECUTION SUMMARY                   
+2026-08-30 12:11:44,763 [INFO] app: ====================================================
+2026-08-30 12:11:44,763 [INFO] app: Template:               invitation
+2026-08-30 12:11:44,763 [INFO] app: Mode:                   live
+2026-08-30 12:11:44,763 [INFO] app: Total teams loaded:     69
+2026-08-30 12:11:44,790 [INFO] app: Skipped (already sent): 1
+2026-08-30 12:11:44,790 [INFO] app: Successfully processed: 68
+2026-08-30 12:11:44,790 [INFO] app: Failed to process:      0
+2026-08-30 12:11:44,790 [INFO] app: ====================================================

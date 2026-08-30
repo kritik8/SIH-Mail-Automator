@@ -25,16 +25,16 @@ class EmailRenderer:
                 "Smart India Hackathon 2026 - Internal Invitation\n"
                 "Indian Institute of Information Technology, Bhopal\n\n"
                 "Dear {{ leader_name }},\n\n"
-                "Your team has been shortlisted for the Internal SIH Invitation at IIIT Bhopal.\n\n"
+                "Your team has been shortlisted for the Internal SIH Invitation at IIIT Bhopal. Below are your assigned team details.\n\n"
                 "--- Team Information ---\n"
-                "Team Number: {{ team_number }}\n"
+                "Team ID: {{ team_number }}\n"
                 "Team Name: {{ team_name }}\n"
-                "{% if track %}Category / Track: {{ track }}\n{% endif %}"
-                "{% if problem_theme %}Problem Theme: {{ problem_theme }}\n{% endif %}\n"
+                "{% if track %}Category of PS: {{ track }}\n{% endif %}"
+                "{% if mentor_allocated %}Mentor Allocated: {{ mentor_allocated }}\n{% endif %}\n"
                 "Team Members:\n"
-                "  - {{ leader.name }} (Leader) | Scholar ID: {{ leader.scholar_id }} | Phone: {{ leader.phone }} | Gen: {{ leader.gender }}\n"
+                "  - {{ leader.name }} (Leader) | Scholar No: {{ leader.scholar_id }} | Gender: {{ leader.gender }}\n"
                 "{% for m in members %}"
-                "  - {{ m.name }} | Scholar ID: {{ m.scholar_id }} | Phone: {{ m.phone }} | Gen: {{ m.gender }}\n"
+                "  - {{ m.name }} | Scholar No: {{ m.scholar_id }} | Gender: {{ m.gender }}\n"
                 "{% endfor %}\n"
                 "--- Event Schedule ---\n"
                 "Date: {{ event_date }}\n"
@@ -111,7 +111,8 @@ class EmailRenderer:
             "event_venue": config.event_venue,
             "spoc_name": config.spoc_name,
             "spoc_role": config.spoc_role,
-            "spoc_email": config.spoc_email
+            "spoc_email": config.spoc_email,
+            "mentor_allocated": getattr(team, "mentor_allocated", "")
         }
         
         try:

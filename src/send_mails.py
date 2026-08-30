@@ -91,6 +91,17 @@ def main() -> None:
         action="store_true",
         help="Ignore sending logs and force resend emails to all targets"
     )
+    parser.add_argument(
+        "--team",
+        type=str,
+        default="",
+        help="Only process the team with this team ID/number (e.g. SIH-64 or 64)"
+    )
+    parser.add_argument(
+        "--no-cc",
+        action="store_true",
+        help="Do not include CC recipients in sent emails"
+    )
     args = parser.parse_args()
 
     # 2. Load Configuration
@@ -99,6 +110,10 @@ def main() -> None:
     except ConfigError as ce:
         logger.error(f"Configuration error: {ce}")
         sys.exit(1)
+
+    if args.no_cc:
+        config.cc_emails = []
+        logger.info("CC list has been explicitly disabled (--no-cc).")
 
     # 3. Apply mode overrides
     if args.mode == "test":
@@ -162,6 +177,14 @@ def main() -> None:
         sys.exit(1)
 
     logger.info(f"Loaded {len(teams)} valid team rows from CSV.")
+
+    if args.team:
+        target = args.team.strip()
+        teams = [t for t in teams if t.team_number == target or t.team_number == f"SIH-{target}" or target == f"SIH-{t.team_number}"]
+        if not teams:
+            logger.error(f"Team '{args.team}' not found in loaded CSV.")
+            sys.exit(1)
+        logger.info(f"Filtered teams list to run only for team: {teams[0].team_number}")
 
     # 5. Initialize tracking log and fetch sent states
     log_path = get_log_path(args.mode, args.template)

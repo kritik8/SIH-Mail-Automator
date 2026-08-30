@@ -18,28 +18,71 @@ class Participant(BaseModel):
         s = s.strip()
         if not s:
             return cls()
+            
+        import re
+        original_s = s
         
-        # Split on commas
-        parts = [p.strip() for p in s.split(",")]
-        
-        if len(parts) >= 5:
-            return cls(
-                name=parts[0],
-                scholar_id=parts[1],
-                phone=parts[2],
-                email=parts[3],
-                gender=parts[4]
-            )
-        elif len(parts) > 1:
-            name = parts[0]
-            scholar_id = parts[1] if len(parts) > 1 else "N/A"
-            phone = parts[2] if len(parts) > 2 else "N/A"
-            email = parts[3] if len(parts) > 3 else "N/A"
-            gender = parts[4] if len(parts) > 4 else "N/A"
-            return cls(name=name, scholar_id=scholar_id, phone=phone, email=email, gender=gender)
-        else:
-            # Fallback for simple name only
-            return cls(name=s)
+        # Strip outer brackets if present
+        if s.startswith("[") and s.endswith("]"):
+            s = s[1:-1].strip()
+            
+        # Helper to remove a match by span index
+        def remove_span(string, match):
+            if match:
+                start, end = match.span()
+                return string[:start] + string[end:]
+            return string
+
+        # 1. Extract email
+        email = "N/A"
+        email_match = re.search(r"\b[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}\b", s)
+        if email_match:
+            email = email_match.group(0).strip()
+            s = remove_span(s, email_match)
+            
+        # 2. Extract scholar number
+        scholar_id = "N/A"
+        scholar_match = re.search(r"\b\d{2}[uUpP][a-zA-Z0-9]{2,10}\b", s)
+        if scholar_match:
+            scholar_id = scholar_match.group(0).strip()
+            s = remove_span(s, scholar_match)
+            
+        # 3. Extract gender
+        gender = "N/A"
+        gender_match = re.search(r"\b(male|female|other|m|f|o)\b", s, re.IGNORECASE)
+        if gender_match:
+            g_str = gender_match.group(0).strip().upper()
+            if g_str.startswith("M"):
+                gender = "M"
+            elif g_str.startswith("F"):
+                gender = "F"
+            elif g_str.startswith("O"):
+                gender = "O"
+            s = remove_span(s, gender_match)
+            
+        # 4. Extract phone number
+        phone = "N/A"
+        phone_match = re.search(r"\+?[\d\s-]{8,16}", s)
+        if phone_match:
+            ph = phone_match.group(0).strip()
+            if sum(c.isdigit() for c in ph) >= 7:
+                phone = ph
+                s = remove_span(s, phone_match)
+                
+        # 5. Extract name (remaining text)
+        name = re.sub(r"[\s,;.-]+", " ", s).strip()
+        if not name:
+            parts = original_s.split(",")
+            if parts:
+                name = parts[0].strip()
+                
+        return cls(
+            name=name,
+            scholar_id=scholar_id,
+            phone=phone,
+            email=email,
+            gender=gender
+        )
 
 class TeamData(BaseModel):
     team_number: str = Field(..., min_length=1)
@@ -48,6 +91,7 @@ class TeamData(BaseModel):
     problem_theme: str = ""
     track: str = ""
     members: List[Participant] = Field(default_factory=list)
+    mentor_allocated: str = ""
 
     @property
     def leader_email(self) -> str:
@@ -154,30 +198,68 @@ def load_teams_from_csv(csv_path: str) -> List[TeamData]:
     
     with open(file_path, mode="r", newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
+        # Handle cases where reader.fieldnames is None
         fieldnames = reader.fieldnames or []
         
+        # Helper to find header key matching a substring (case-insensitive)
+        def find_header_key(substrings: list[str]) -> Optional[str]:
+            for field in fieldnames:
+                for sub in substrings:
+                    if sub.lower() in field.lower():
+                        return field
+            return None
+
+        # Resolve header keys
+        key_team_num = find_header_key(["team id/no", "team_number", "team id"])
+        key_team_name = find_header_key(["team name", "team_name"])
+        key_leader_details = find_header_key(["participant 1 details (leader)", "leader_details"])
+        key_leader_email = find_header_key(["email address of team leader", "leader_email"])
+        key_track = find_header_key(["type", "track"])
+        key_mentor_allocated = find_header_key(["mentor allocated", "mentor_allocated"])
+        
+        # Member details keys 2 to 6
+        key_members = []
+        for i in range(2, 7):
+            m_key = find_header_key([f"participant {i} details", f"member_{i}_details", f"member_{i}_name"])
+            key_members.append(m_key)
+            
         for line_num, row in enumerate(reader, start=2): # 1-based csv indexing (line 1 is headers)
-            team_num = row.get("team_number") or ""
+            # 1. Team number
+            raw_team_num = ""
+            if key_team_num:
+                raw_team_num = (row.get(key_team_num) or "").strip()
             
-            # 1. Check for team number
-            if not team_num.strip():
-                logger.warning(f"[Line {line_num}] Skipping row: 'team_number' is empty.")
+            if not raw_team_num:
+                logger.warning(f"[Line {line_num}] Skipping row: Team number is empty.")
                 continue
-            
-            # 2. Extract and parse leader details
-            leader_details = row.get("leader_details") or ""
-            leader = Participant()
-            if leader_details.strip():
-                leader = Participant.from_string(leader_details)
+                
+            # Prefix team number with "SIH-" if not already present
+            if not raw_team_num.upper().startswith("SIH-"):
+                team_num = f"SIH-{raw_team_num}"
             else:
-                # Compatibility: try legacy header names if leader_details is absent
-                legacy_name = row.get("leader_name") or ""
-                legacy_email = row.get("leader_email") or ""
-                if legacy_name or legacy_email:
-                    leader = Participant(name=legacy_name.strip(), email=legacy_email.strip())
+                team_num = raw_team_num
+                
+            # 2. Extract and parse leader details
+            leader = Participant()
+            leader_details = ""
+            if key_leader_details:
+                leader_details = (row.get(key_leader_details) or "").strip()
+                
+            if leader_details:
+                leader = Participant.from_string(leader_details)
             
-            if not leader.name or not leader.email or leader.email == "N/A":
-                logger.warning(f"[Line {line_num}] Skipping row: Leader name or email is empty or invalid.")
+            # If email is not parsed correctly or is N/A, fallback to the direct email column
+            if key_leader_email and (not leader.email or leader.email == "N/A"):
+                direct_email = (row.get(key_leader_email) or "").strip()
+                if direct_email:
+                    leader.email = direct_email
+                    
+            if not leader.name:
+                # If leader name is still missing, fallback to parsing it
+                leader.name = "Team Leader"
+                
+            if not leader.email or leader.email == "N/A":
+                logger.warning(f"[Line {line_num}] Skipping team {team_num}: Leader email is empty or invalid.")
                 continue
                 
             # Basic email syntax check (must have @)
@@ -186,35 +268,36 @@ def load_teams_from_csv(csv_path: str) -> List[TeamData]:
                 continue
                 
             # 3. Collect other details
-            team_name = row.get("team_name") or "Unnamed Team"
-            
-            # Map problem_theme, fallback to problem_statement_title or ID if theme is missing
-            theme = row.get("problem_theme") or ""
-            if not theme:
-                ps_id = row.get("problem_statement_id") or ""
-                ps_title = row.get("problem_statement_title") or ""
-                if ps_id or ps_title:
-                    theme = f"[{ps_id}] {ps_title}" if ps_id else ps_title
-                    
-            track = row.get("track") or ""
-            
+            team_name = "Unnamed Team"
+            if key_team_name:
+                team_name = (row.get(key_team_name) or "Unnamed Team").strip()
+                
+            track = ""
+            if key_track:
+                track = (row.get(key_track) or "").strip()
+                
             # 4. Extract other 5 members
             members = []
-            for i in range(2, 7):
-                # Try member_X_details first, fallback to member_X_name
-                m_str = row.get(f"member_{i}_details") or row.get(f"member_{i}_name") or ""
-                if m_str.strip():
-                    m_obj = Participant.from_string(m_str)
-                    if m_obj.name:
-                        members.append(m_obj)
-            
+            for m_key in key_members:
+                if m_key:
+                    m_str = (row.get(m_key) or "").strip()
+                    if m_str:
+                        m_obj = Participant.from_string(m_str)
+                        if m_obj.name:
+                            members.append(m_obj)
+                            
+            mentor_allocated = ""
+            if key_mentor_allocated:
+                mentor_allocated = (row.get(key_mentor_allocated) or "").strip()
+
             team = TeamData(
-                team_number=team_num.strip(),
-                team_name=team_name.strip(),
+                team_number=team_num,
+                team_name=team_name,
                 leader=leader,
-                problem_theme=theme.strip(),
-                track=track.strip(),
-                members=members
+                problem_theme="", # Omit theme as requested
+                track=track,
+                members=members,
+                mentor_allocated=mentor_allocated
             )
             valid_teams.append(team)
             
@@ -223,8 +306,11 @@ def load_teams_from_csv(csv_path: str) -> List[TeamData]:
         try:
             team_indices = []
             for t in valid_teams:
-                # Strip and convert to int to validate it's numeric
-                team_indices.append(int(t.team_number.strip()))
+                # Strip "SIH-" prefix for sequential validation
+                num_str = t.team_number.strip()
+                if num_str.upper().startswith("SIH-"):
+                    num_str = num_str[4:]
+                team_indices.append(int(num_str))
             
             # Check for duplicates
             if len(team_indices) != len(set(team_indices)):
@@ -245,7 +331,7 @@ def load_teams_from_csv(csv_path: str) -> List[TeamData]:
                 )
         except ValueError as e:
             logger.error(f"LOUD WARNING: Could not validate team number sequence (non-integer detected): {e}")
-                
+            
     return valid_teams
 
 if __name__ == "__main__":
