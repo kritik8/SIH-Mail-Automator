@@ -10,7 +10,7 @@ from email import encoders
 from typing import List, Optional
 from jinja2 import Environment, FileSystemLoader, TemplateError
 from src.config import AppConfig
-from src.csv_loader import TeamData
+from src.csv_loader import TeamData, Participant
 
 logger = logging.getLogger("mailer")
 
@@ -22,29 +22,37 @@ class EmailRenderer:
         # Plain text template structures for fallbacks
         self.text_templates = {
             "invitation": (
-                "Smart India Hackathon 2026 - Internal Invitation\n"
+                "Smart India Hackathon 2026 - Registration Confirmation\n"
                 "Indian Institute of Information Technology, Bhopal\n\n"
                 "Dear {{ leader_name }},\n\n"
-                "Your team has been shortlisted for the Internal SIH Invitation at IIIT Bhopal. Below are your assigned team details.\n\n"
-                "--- Team Information ---\n"
+                "This email confirms that your team has successfully registered for the Internal Selection Round of Smart India Hackathon (SIH) 2026 at IIIT Bhopal. Below are your assigned team details, your allocated mentor, the mandatory PPT submission link, and event guidelines.\n\n"
+                "--- Team Details ---\n"
                 "Team ID: {{ team_number }}\n"
                 "Team Name: {{ team_name }}\n"
                 "{% if track %}Category of PS: {{ track }}\n{% endif %}"
-                "{% if mentor_allocated %}Mentor Allocated: {{ mentor_allocated }}\n{% endif %}\n"
+                "{% if mentor_allocated %}Allocated Mentor: {{ mentor_allocated }}\n{% endif %}"
+                "Note: Mentor allocation has been distributed fairly based on stated mentor preferences (priorities) and faculty availability.\n\n"
                 "Team Members:\n"
                 "  - {{ leader.name }} (Leader) | Scholar No: {{ leader.scholar_id }} | Gender: {{ leader.gender }}\n"
                 "{% for m in members %}"
                 "  - {{ m.name }} | Scholar No: {{ m.scholar_id }} | Gender: {{ m.gender }}\n"
                 "{% endfor %}\n"
+                "--- Mandatory PPT Submission ---\n"
+                "Form Link: https://forms.gle/8n5jDnZwSFgnRixZ8\n"
+                "Deadline: 11:00 AM, 2nd September 2026\n"
+                "Note: The evaluation team will evaluate all submitted PPTs and decide whether your team is shortlisted to deliver the physical presentation during the event.\n\n"
+                "--- Official WhatsApp Group ---\n"
+                "Link: https://chat.whatsapp.com/KPdgd7TUcWTKHGKcHHHrMC\n"
+                "(Join to receive further updates and announcements regarding the hackathon)\n\n"
                 "--- Event Schedule ---\n"
                 "Date: {{ event_date }}\n"
                 "Venue: {{ event_venue }}\n\n"
                 "--- Participant Guidelines ---\n"
                 "1. Each team must consist of exactly 6 members from the same institution.\n"
                 "2. At least one female member is mandatory in every team.\n"
-                "3. Registrations are processed solely via College SPOC nomination.\n"
-                "4. Nominated teams must submit their project ideas under the selected problem theme.\n"
-                "5. The final rounds are conducted as a physical 36-hour hackathon.\n\n"
+                "3. Registrations are processed solely via College SPOC nomination on the national portal.\n"
+                "4. The evaluation team will evaluate your PPT, and will decide whether your team will be allowed to present the PPT during the event rounds.\n"
+                "5. Shortlisted teams must be present on 12 September 2026, Saturday at NTB, IIIT Bhopal.\n\n"
                 "For any queries, contact the institutional SPOC:\n"
                 "{{ spoc_name }} ({{ spoc_role }})\n"
                 "Email: {{ spoc_email }}\n\n"
@@ -78,15 +86,43 @@ class EmailRenderer:
                 "Participation certificates for all 6 of your registered team members are attached to this email.\n\n"
                 "Regards,\n"
                 "SIH Organizing Committee, IIIT Bhopal"
+            ),
+            "member_notification": (
+                "Smart India Hackathon 2026 - Team Member Notification\n"
+                "Indian Institute of Information Technology, Bhopal\n\n"
+                "Dear {{ member_name }},\n\n"
+                "This is an official notification that your team has been registered for the Internal Selection Round of Smart India Hackathon (SIH) 2026 at IIIT Bhopal.\n\n"
+                "--- Team Details ---\n"
+                "Team ID: {{ team_number }}\n"
+                "Team Name: {{ team_name }}\n"
+                "Team Leader: {{ leader_name }} ({{ leader_email }})\n\n"
+                "--- Action Required ---\n"
+                "Your team leader, {{ leader_name }}, has received the primary registration confirmation email containing essential details including:\n"
+                "  - Allocated Faculty Mentor\n"
+                "  - Mandatory PPT Submission Link & Deadline (11:00 AM, 2nd September 2026)\n"
+                "  - Presentation round evaluation criteria\n\n"
+                "Please coordinate with your team leader immediately to prepare and submit your presentation before the deadline.\n\n"
+                "--- Official WhatsApp Group ---\n"
+                "Link: https://chat.whatsapp.com/KPdgd7TUcWTKHGKcHHHrMC\n"
+                "(Join to receive further updates and announcements regarding the hackathon)\n\n"
+                "--- Event Schedule ---\n"
+                "Date: {{ event_date }}\n"
+                "Venue: {{ event_venue }}\n\n"
+                "For any queries, contact the institutional SPOC:\n"
+                "{{ spoc_name }} ({{ spoc_role }})\n"
+                "Email: {{ spoc_email }}\n\n"
+                "Regards,\n"
+                "SIH Organizing Committee, IIIT Bhopal"
             )
         }
 
-    def render(self, team: TeamData, config: AppConfig, template_type: str) -> tuple[str, str]:
+    def render(self, team: TeamData, config: AppConfig, template_type: str, member: Optional[Participant] = None) -> tuple[str, str]:
         """Renders both HTML and plain-text versions of the selected invitation type."""
         template_files = {
             "invitation": "1_invitation.html.j2",
             "reminder": "2_reminder.html.j2",
-            "thankyou": "3_thankyou.html.j2"
+            "thankyou": "3_thankyou.html.j2",
+            "member_notification": "4_member_notification.html.j2"
         }
         
         if template_type not in template_files:
@@ -104,9 +140,13 @@ class EmailRenderer:
             "team_name": team.team_name,
             "leader": team.leader,
             "leader_name": team.leader_name,
+            "leader_email": team.leader_email,
             "track": team.track,
             "problem_theme": team.problem_theme,
             "members": team.members,
+            "member": member,
+            "member_name": member.name if member else "",
+            "member_email": member.email if member else "",
             "event_date": config.event_date,
             "event_venue": config.event_venue,
             "spoc_name": config.spoc_name,
@@ -144,11 +184,14 @@ class Mailer:
 
         # Build subject line
         subject_prefixes = {
-            "invitation": "Internal Invitation",
+            "invitation": "Registration Confirmation",
             "reminder": "Internal Hackathon - Tomorrow!",
             "thankyou": "Thank You for Participating"
         }
-        subject = f"Smart India Hackathon 2026 - {subject_prefixes[template_type]} (Team: {team.team_number})"
+        if template_type == "invitation":
+            subject = f"Smart India Hackathon 2026 - {subject_prefixes[template_type]}"
+        else:
+            subject = f"Smart India Hackathon 2026 - {subject_prefixes[template_type]} (Team: {team.team_number})"
 
         # If dry-run, save preview to file
         if self.config.dry_run:
@@ -186,6 +229,43 @@ class Mailer:
                 html_body=html_body,
                 text_body=text_body,
                 attachments=attachments
+            )
+
+    def send_member_email(self, team: TeamData, member: Participant, template_type: str = "member_notification") -> bool:
+        """Sends an email specifically to a non-leader team member (never CCs coordinators)."""
+        if not member.email or member.email == "N/A" or "@" not in member.email:
+            logger.warning(f"Skipping member '{member.name}' in team {team.team_number}: invalid or missing email ({member.email})")
+            return False
+
+        try:
+            html_body, text_body = self.renderer.render(team, self.config, template_type, member=member)
+        except Exception as e:
+            logger.error(f"Error rendering member email for {member.name} (Team {team.team_number}): {e}")
+            return False
+
+        subject = "Smart India Hackathon 2026 - Team Member Notification"
+
+        if self.config.dry_run:
+            tmpl_preview_dir = self.preview_dir / template_type
+            tmpl_preview_dir.mkdir(parents=True, exist_ok=True)
+            safe_member_name = "".join(c for c in member.name if c.isalnum() or c in (' ', '_', '-')).strip().replace(' ', '_')
+            preview_file = tmpl_preview_dir / f"team_{team.team_number}_{safe_member_name}.html"
+            try:
+                with open(preview_file, "w", encoding="utf-8") as f:
+                    f.write(html_body)
+                logger.info(f"[DRY RUN] Generated member preview for {member.name} ({team.team_number}) at: {preview_file}")
+            except Exception as e:
+                logger.error(f"[DRY RUN] Failed to write member preview for {member.name}: {e}")
+            return True
+        else:
+            # Member notification emails must NEVER CC coordinators
+            return self._transmit_smtp(
+                to_email=member.email,
+                cc_emails=[],
+                subject=subject,
+                html_body=html_body,
+                text_body=text_body,
+                attachments=None
             )
 
     def _transmit_smtp(self, to_email: str, cc_emails: List[str], subject: str, html_body: str, text_body: str, attachments: List[Path] = None) -> bool:

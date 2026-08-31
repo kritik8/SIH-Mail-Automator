@@ -70,7 +70,7 @@ def main() -> None:
         "--template",
         type=str,
         required=True,
-        choices=["invitation", "reminder", "thankyou"],
+        choices=["invitation", "reminder", "thankyou", "member_notification"],
         help="Select the lifecycle email template to send"
     )
     parser.add_argument(
@@ -111,9 +111,9 @@ def main() -> None:
         logger.error(f"Configuration error: {ce}")
         sys.exit(1)
 
-    if args.no_cc:
+    if args.no_cc or args.template == "member_notification":
         config.cc_emails = []
-        logger.info("CC list has been explicitly disabled (--no-cc).")
+        logger.info("CC list has been explicitly disabled.")
 
     # 3. Apply mode overrides
     if args.mode == "test":
@@ -189,62 +189,113 @@ def main() -> None:
     # 5. Initialize tracking log and fetch sent states
     log_path = get_log_path(args.mode, args.template)
     init_send_log_file(log_path)
-    already_sent = get_already_sent_teams(log_path)
-    logger.info(f"Found {len(already_sent)} teams already successfully processed in {log_path.name}.")
 
     # 6. Initialize Mailer components
     renderer = EmailRenderer()
     mailer = Mailer(config, renderer)
 
     # Progress stats
-    total = len(teams)
     skipped_sent = 0
     success_count = 0
     failed_count = 0
 
-    # 7. Processing Loop
-    for idx, team in enumerate(teams, 1):
-        # Idempotency check
-        if team.team_number in already_sent and not args.force:
-            logger.info(f"[{idx}/{total}] Skipping team {team.team_number}: Already sent in previous run.")
-            skipped_sent += 1
-            continue
+    # 7. Processing Loop (Branches for member_notification vs team leader templates)
+    if args.template == "member_notification":
+        # Member Notification Workflow
+        already_sent_recipients = set()
+        if log_path.exists():
+            with open(log_path, mode="r", newline="", encoding="utf-8") as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    if row.get("status") == "SUCCESS":
+                        rec = row.get("recipient")
+                        if rec:
+                            already_sent_recipients.add(rec.strip().lower())
 
-        # Certificate mapping (Only for Thank You emails)
-        attachments = []
-        if args.template == "thankyou":
-            try:
-                attachments = get_certificate_files(team.team_number, certs_dir)
-            except (CertificateError, FileNotFoundError) as err:
-                logger.error(f"[{idx}/{total}] Skipping team {team.team_number} due to certificate error: {err}")
-                append_to_send_log(log_path, team.team_number, team.leader_email, "FAILED", f"Certificate error: {err}")
-                failed_count += 1
+        all_member_tasks = []
+        for team in teams:
+            for member in team.members:
+                if member.email and member.email != "N/A" and "@" in member.email:
+                    all_member_tasks.append((team, member))
+                else:
+                    logger.warning(f"Skipping team {team.team_number} member '{member.name}': no valid email ({member.email})")
+
+        total = len(all_member_tasks)
+        logger.info(f"Prepared {total} non-leader member emails across {len(teams)} teams.")
+
+        for idx, (team, member) in enumerate(all_member_tasks, 1):
+            rec_email = member.email.strip()
+            if rec_email.lower() in already_sent_recipients and not args.force:
+                logger.info(f"[{idx}/{total}] Skipping member {member.name} ({rec_email}): Already sent in previous run.")
+                skipped_sent += 1
                 continue
 
-        # Print progress info
-        recipient_display = config.test_recipient if (config.dry_run and config.test_recipient) else team.leader_email
-        logger.info(f"[{idx}/{total}] Sending '{args.template}' email to team {team.team_number} -> {recipient_display}")
-        if attachments:
-            logger.info(f"   Attached certificates: {', '.join([p.name for p in attachments])}")
+            logger.info(f"[{idx}/{total}] Sending member notification to {member.name} ({team.team_number}) -> {rec_email}")
+            success = mailer.send_member_email(team, member, args.template)
 
-        # Send email
-        success = mailer.send_email(team, args.template, attachments)
-
-        if success:
-            success_count += 1
-            if config.dry_run and not config.test_recipient:
-                append_to_send_log(log_path, team.team_number, "PREVIEW", "PREVIEW", "", attachments)
+            if success:
+                success_count += 1
+                if config.dry_run:
+                    append_to_send_log(log_path, team.team_number, "PREVIEW", "PREVIEW", "")
+                else:
+                    append_to_send_log(log_path, team.team_number, rec_email, "SUCCESS", "")
             else:
-                append_to_send_log(log_path, team.team_number, recipient_display, "SUCCESS", "", attachments)
-        else:
-            failed_count += 1
-            append_to_send_log(log_path, team.team_number, recipient_display, "FAILED", "SMTP/Render failure", attachments)
+                failed_count += 1
+                append_to_send_log(log_path, team.team_number, rec_email, "FAILED", "SMTP/Render failure")
 
-        # Rate limiting: wait if there are more emails left to send
-        need_throttle = (not config.dry_run) or (config.dry_run and config.test_recipient)
-        if need_throttle and idx < total:
-            logger.info(f"Throttling for {config.rate_limit_delay} seconds...")
-            time.sleep(config.rate_limit_delay)
+            need_throttle = not config.dry_run
+            if need_throttle and idx < total:
+                logger.info(f"Throttling for {config.rate_limit_delay} seconds...")
+                time.sleep(config.rate_limit_delay)
+
+    else:
+        # Standard Team Leader Templates (invitation, reminder, thankyou)
+        already_sent = get_already_sent_teams(log_path)
+        logger.info(f"Found {len(already_sent)} teams already successfully processed in {log_path.name}.")
+        total = len(teams)
+
+        for idx, team in enumerate(teams, 1):
+            # Idempotency check
+            if team.team_number in already_sent and not args.force:
+                logger.info(f"[{idx}/{total}] Skipping team {team.team_number}: Already sent in previous run.")
+                skipped_sent += 1
+                continue
+
+            # Certificate mapping (Only for Thank You emails)
+            attachments = []
+            if args.template == "thankyou":
+                try:
+                    attachments = get_certificate_files(team.team_number, certs_dir)
+                except (CertificateError, FileNotFoundError) as err:
+                    logger.error(f"[{idx}/{total}] Skipping team {team.team_number} due to certificate error: {err}")
+                    append_to_send_log(log_path, team.team_number, team.leader_email, "FAILED", f"Certificate error: {err}")
+                    failed_count += 1
+                    continue
+
+            # Print progress info
+            recipient_display = config.test_recipient if (config.dry_run and config.test_recipient) else team.leader_email
+            logger.info(f"[{idx}/{total}] Sending '{args.template}' email to team {team.team_number} -> {recipient_display}")
+            if attachments:
+                logger.info(f"   Attached certificates: {', '.join([p.name for p in attachments])}")
+
+            # Send email
+            success = mailer.send_email(team, args.template, attachments)
+
+            if success:
+                success_count += 1
+                if config.dry_run and not config.test_recipient:
+                    append_to_send_log(log_path, team.team_number, "PREVIEW", "PREVIEW", "", attachments)
+                else:
+                    append_to_send_log(log_path, team.team_number, recipient_display, "SUCCESS", "", attachments)
+            else:
+                failed_count += 1
+                append_to_send_log(log_path, team.team_number, recipient_display, "FAILED", "SMTP/Render failure", attachments)
+
+            # Rate limiting: wait if there are more emails left to send
+            need_throttle = (not config.dry_run) or (config.dry_run and config.test_recipient)
+            if need_throttle and idx < total:
+                logger.info(f"Throttling for {config.rate_limit_delay} seconds...")
+                time.sleep(config.rate_limit_delay)
 
     # 8. Report final metrics
     logger.info("====================================================")
@@ -252,7 +303,7 @@ def main() -> None:
     logger.info("====================================================")
     logger.info(f"Template:               {args.template}")
     logger.info(f"Mode:                   {args.mode}")
-    logger.info(f"Total teams loaded:     {total}")
+    logger.info(f"Total targets:          {total}")
     logger.info(f"Skipped (already sent): {skipped_sent}")
     logger.info(f"Successfully processed: {success_count}")
     logger.info(f"Failed to process:      {failed_count}")

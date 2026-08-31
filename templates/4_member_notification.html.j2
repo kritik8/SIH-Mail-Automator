@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart India Hackathon 2026 - Team Member Notification</title>
+  <style>
+    @media only screen and (max-width: 600px) {
+      .main-container {
+        padding: 16px 12px !important;
+      }
+      .content-card {
+        padding: 24px 18px !important;
+      }
+      .meta-table td {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      .meta-label {
+        padding-bottom: 2px !important;
+      }
+      .meta-value {
+        padding-bottom: 10px !important;
+      }
+      .btn-link {
+        display: block !important;
+        text-align: center !important;
+      }
+    }
+  </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f9fafb; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; color: #111827; line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+
+  <!-- Hidden Preheader Text for Email Clients -->
+  <div style="display: none; font-size: 1px; color: #f9fafb; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all;">
+    Internal SIH 2026 Team Member Notification &bull; Team {{ team_number }} ({{ team_name }}) &bull; IIIT Bhopal
+  </div>
+
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" class="main-container" style="background-color: #f9fafb; padding: 40px 0;">
+    <tr>
+      <td align="center">
+        <!-- Main Card Container -->
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="content-card" style="max-width: 620px; background-color: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05); overflow: hidden;">
+          
+          <!-- Top Accent Bar -->
+          <tr>
+            <td style="background-color: #111827; height: 5px; font-size: 0; line-height: 0;">&nbsp;</td>
+          </tr>
+
+          <!-- Content Body -->
+          <tr>
+            <td style="padding: 36px 32px;">
+              <!-- Header Section -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 24px; border-bottom: 1px solid #e5e7eb; padding-bottom: 18px;">
+                <tr>
+                  <td>
+                    <span style="font-size: 11px; font-weight: 700; color: #4b5563; text-transform: uppercase; letter-spacing: 0.12em; display: block; margin-bottom: 4px;">Indian Institute of Information Technology, Bhopal</span>
+                    <h1 style="margin: 0; font-size: 20px; font-weight: 700; color: #111827; letter-spacing: -0.02em;">Smart India Hackathon 2026</h1>
+                    <span style="font-size: 13px; color: #6b7280; font-weight: 500; display: block; margin-top: 2px;">Internal Selection Round &bull; Team Member Notification</span>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Greeting -->
+              <p style="margin: 0 0 14px 0; font-size: 15px; font-weight: 600; color: #111827;">
+                Dear {{ member_name }},
+              </p>
+              
+              <p style="margin: 0 0 24px 0; font-size: 14px; color: #374151; line-height: 1.65;">
+                This is an official notification that your team has been registered for the <strong>Internal Selection Round</strong> of Smart India Hackathon (SIH) 2026 at IIIT Bhopal.
+              </p>
+
+              <!-- Team Info Box -->
+              <div style="background-color: #f9fafb; border: 1px solid #e5e7eb; border-radius: 6px; padding: 18px 20px; margin-bottom: 24px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" class="meta-table">
+                  <tr style="vertical-align: top;">
+                    <td width="35%" class="meta-label" style="padding: 4px 0; font-size: 13px; font-weight: 600; color: #4b5563;">Team ID:</td>
+                    <td class="meta-value" style="padding: 4px 0; font-size: 14px; font-weight: 700; color: #111827;">{{ team_number }}</td>
+                  </tr>
+                  <tr style="vertical-align: top;">
+                    <td class="meta-label" style="padding: 4px 0; font-size: 13px; font-weight: 600; color: #4b5563;">Team Name:</td>
+                    <td class="meta-value" style="padding: 4px 0; font-size: 13px; color: #111827; font-weight: 500;">{{ team_name }}</td>
+                  </tr>
+                  <tr style="vertical-align: top;">
+                    <td class="meta-label" style="padding: 4px 0; font-size: 13px; font-weight: 600; color: #4b5563;">Team Leader:</td>
+                    <td class="meta-value" style="padding: 4px 0; font-size: 13px; color: #111827; font-weight: 600;">{{ leader_name }} ({{ leader_email }})</td>
+                  </tr>
+                </table>
+              </div>
+
+              <!-- Important Action Item Callout -->
+              <div style="background-color: #f9fafb; border: 1px solid #111827; border-left: 4px solid #111827; border-radius: 6px; padding: 18px 20px; margin-bottom: 24px;">
+                <h3 style="margin: 0 0 8px 0; font-size: 14px; font-weight: 700; color: #111827;">
+                  Action Required &bull; Connect With Your Team Leader
+                </h3>
+                <p style="margin: 0 0 10px 0; font-size: 13px; color: #374151; line-height: 1.6;">
+                  Your team leader, <strong>{{ leader_name }}</strong>, has received the primary registration confirmation email containing all essential guidelines and submission requirements, including:
+                </p>
+                <ul style="margin: 0 0 12px 0; padding-left: 20px; font-size: 13px; color: #374151; line-height: 1.6;">
+                  <li>Your team's <strong>Allocated Faculty Mentor</strong></li>
+                  <li>The <strong>Mandatory PPT Submission Link</strong></li>
+                  <li>The PPT Submission Deadline: <strong>11:00 AM, 2nd September 2026</strong></li>
+                  <li>Evaluation guidelines for the internal physical presentation round</li>
+                </ul>
+                <p style="margin: 0; font-size: 12px; color: #4b5563; line-height: 1.5;">
+                  <em>Please coordinate with your team leader immediately to prepare and submit your presentation before the deadline.</em>
+                </p>
+              </div>
+
+              <!-- WhatsApp Community Box -->
+              <div style="background-color: #f9fafb; border: 1px solid #e5e7eb; border-radius: 6px; padding: 18px 20px; margin-bottom: 28px;">
+                <h3 style="margin: 0 0 6px 0; font-size: 13px; font-weight: 700; color: #111827;">
+                  Official WhatsApp Group
+                </h3>
+                <p style="margin: 0 0 14px 0; font-size: 13px; color: #374151; line-height: 1.5;">
+                  All team members should join the official WhatsApp group to receive real-time updates and announcements regarding the hackathon:
+                </p>
+                <div>
+                  <a href="https://chat.whatsapp.com/KPdgd7TUcWTKHGKcHHHrMC" target="_blank" class="btn-link" style="display: inline-block; background-color: #111827; color: #ffffff; text-decoration: none; font-size: 13px; font-weight: 600; padding: 9px 18px; border-radius: 4px;">
+                    <table border="0" cellpadding="0" cellspacing="0" style="display: inline-table; vertical-align: middle;">
+                      <tr>
+                        <td style="vertical-align: middle; padding-right: 8px; line-height: 1;">
+                          <svg width="15" height="15" viewBox="0 0 24 24" fill="#ffffff" style="display: block;">
+                            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.392-10.416c-5.514 0-10 4.486-10 10 0 1.761.458 3.417 1.258 4.86l-1.297 4.74 4.864-1.276c1.392.76 2.977 1.196 4.675 1.196 5.514 0 10-4.486 10-10s-4.486-10-10-10z"/>
+                          </svg>
+                        </td>
+                        <td style="vertical-align: middle; color: #ffffff; font-size: 13px; font-weight: 600; line-height: 1;">
+                          Join WhatsApp Group
+                        </td>
+                      </tr>
+                    </table>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Event Schedule Box -->
+              <div style="background-color: #f3f4f6; border: 1px solid #e5e7eb; border-radius: 6px; padding: 14px 18px; margin-bottom: 28px;">
+                <h3 style="margin: 0 0 4px 0; font-size: 12px; font-weight: 700; color: #4b5563; text-transform: uppercase; letter-spacing: 0.05em;">
+                  Internal Hackathon Schedule
+                </h3>
+                <p style="margin: 0; font-size: 13px; color: #111827; line-height: 1.5;">
+                  <strong>Date:</strong> {{ event_date }}
+                  <br>
+                  <strong>Venue:</strong> {{ event_venue }}
+                </p>
+              </div>
+
+              <!-- SPOC Contact Info -->
+              <div style="border-top: 1px solid #e5e7eb; padding-top: 20px; font-size: 12px; color: #4b5563; line-height: 1.55;">
+                For any queries or coordination, please contact the institutional SPOC:
+                <div style="margin-top: 6px; color: #111827; font-weight: 500;">
+                  <strong>{{ spoc_name }}</strong>
+                  <br>
+                  {{ spoc_role }}
+                  <br>
+                  Email: <a href="mailto:{{ spoc_email }}" style="color: #111827; text-decoration: underline; font-weight: 600;">{{ spoc_email }}</a>
+                </div>
+              </div>
+
+            </td>
+          </tr>
+
+          <!-- Footer Area -->
+          <tr>
+            <td style="background-color: #f9fafb; border-top: 1px solid #e5e7eb; padding: 20px 32px; text-align: center; font-size: 11px; color: #6b7280; line-height: 1.5;">
+              <p style="margin: 0 0 4px 0;">
+                This email was sent to registered team members of Smart India Hackathon 2026.
+              </p>
+              <p style="margin: 0; font-weight: 500; color: #4b5563;">
+                &copy; 2026 Indian Institute of Information Technology, Bhopal. All rights reserved.
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
