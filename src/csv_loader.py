@@ -334,6 +334,97 @@ def load_teams_from_csv(csv_path: str) -> List[TeamData]:
             
     return valid_teams
 
+def load_selected_teams_from_csv(
+    selected_csv_path: str,
+    master_csv_path: str = "SIH 2026 Registrations (Responses) - Complete teams with Mentor alloc (29_08).csv"
+) -> List[TeamData]:
+    """Reads shortlisted teams from the selected CSV and enriches them with master registration data."""
+    sel_path = Path(selected_csv_path)
+    if not sel_path.exists():
+        raise FileNotFoundError(f"Selected teams CSV not found at: {selected_csv_path}")
+
+    # Build lookup dictionaries from master registration data if available
+    master_by_id = {}
+    master_by_name = {}
+    master_by_email = {}
+
+    master_path = Path(master_csv_path)
+    if master_path.exists():
+        try:
+            master_list = load_teams_from_csv(str(master_path))
+            for t in master_list:
+                master_by_id[t.team_number.upper()] = t
+                master_by_name[t.team_name.lower().strip()] = t
+                if t.leader_email:
+                    master_by_email[t.leader_email.lower().strip()] = t
+        except Exception as e:
+            logger.warning(f"Could not load master registration data for enrichment: {e}")
+
+    # Explicit manual mapping overrides for edge cases
+    manual_email_map = {
+        "85": "toyogeshkumar99@gmail.com",
+        "97": "vishallakshya2004@gmail.com",
+        "SIH-85": "toyogeshkumar99@gmail.com",
+        "SIH-97": "vishallakshya2004@gmail.com",
+    }
+
+    selected_teams = []
+    with open(sel_path, mode="r", newline="", encoding="utf-8") as f:
+        reader = csv.reader(f)
+        headers = next(reader)
+        for line_num, row in enumerate(reader, start=2):
+            if not row or not any(row):
+                continue
+            raw_email = row[0].strip() if len(row) > 0 else ""
+            raw_tid = row[1].strip() if len(row) > 1 else ""
+            raw_tname = row[2].strip() if len(row) > 2 else ""
+
+            if not raw_tid and not raw_tname and not raw_email:
+                continue
+
+            tid = f"SIH-{raw_tid}" if not raw_tid.upper().startswith("SIH-") else raw_tid.upper()
+
+            # Find matching master record
+            master = master_by_id.get(tid)
+            if not master:
+                master = master_by_name.get(raw_tname.lower())
+            if not master and "@" in raw_email:
+                master = master_by_email.get(raw_email.lower())
+
+            # Determine email
+            email = raw_email
+            if raw_tid in manual_email_map:
+                email = manual_email_map[raw_tid]
+            elif "@" not in email and master:
+                email = master.leader_email
+
+            leader_name = master.leader_name if master else "Team Leader"
+            scholar_id = master.leader.scholar_id if master else "N/A"
+            gender = master.leader.gender if master else "N/A"
+            phone = master.leader.phone if master else "N/A"
+
+            leader = Participant(
+                name=leader_name,
+                email=email,
+                scholar_id=scholar_id,
+                gender=gender,
+                phone=phone
+            )
+
+            team = TeamData(
+                team_number=tid,
+                team_name=raw_tname or (master.team_name if master else "Unnamed Team"),
+                leader=leader,
+                problem_theme=master.problem_theme if master else "",
+                track=master.track if master else "",
+                members=master.members if master else [],
+                mentor_allocated=master.mentor_allocated if master else ""
+            )
+            selected_teams.append(team)
+
+    logger.info(f"Loaded {len(selected_teams)} shortlisted teams from {sel_path.name}")
+    return selected_teams
+
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     generate_sample_csv()

@@ -113,6 +113,24 @@ class EmailRenderer:
                 "Email: {{ spoc_email }}\n\n"
                 "Regards,\n"
                 "SIH Organizing Committee, IIIT Bhopal"
+            ),
+            "presentation_invitation": (
+                "Smart India Hackathon 2026 - Offline Presentation Round Invitation\n"
+                "Indian Institute of Information Technology, Bhopal\n\n"
+                "Dear {{ leader_name }},\n\n"
+                "Congratulations! Following the preliminary PPT evaluation round, we are pleased to inform you that your team, {{ team_name }} ({{ team_number }}), has been shortlisted and selected for the Offline Internal Presentation Round of Smart India Hackathon (SIH) 2026 at IIIT Bhopal.\n\n"
+                "--- Event Details ---\n"
+                "Date: {{ event_date }}\n"
+                "Time: 9:00 AM\n"
+                "Venue: {{ event_venue }}\n\n"
+                "--- Official WhatsApp Group ---\n"
+                "If you haven't joined it yet, please join now for presentation slot timings, schedule updates, and further announcements:\n"
+                "Link: https://chat.whatsapp.com/KPdgd7TUcWTKHGKcHHHrMC\n\n"
+                "For any queries, you can contact the institutional SPOC:\n"
+                "{{ spoc_name }} ({{ spoc_role }})\n"
+                "Email: {{ spoc_email }}\n\n"
+                "Regards,\n"
+                "SIH Organizing Committee, IIIT Bhopal"
             )
         }
 
@@ -122,7 +140,8 @@ class EmailRenderer:
             "invitation": "1_invitation.html.j2",
             "reminder": "2_reminder.html.j2",
             "thankyou": "3_thankyou.html.j2",
-            "member_notification": "4_member_notification.html.j2"
+            "member_notification": "4_member_notification.html.j2",
+            "presentation_invitation": "5_presentation_invitation.html.j2"
         }
         
         if template_type not in template_files:
@@ -186,9 +205,10 @@ class Mailer:
         subject_prefixes = {
             "invitation": "Registration Confirmation",
             "reminder": "Internal Hackathon - Tomorrow!",
-            "thankyou": "Thank You for Participating"
+            "thankyou": "Thank You for Participating",
+            "presentation_invitation": "Offline Presentation Round Invitation"
         }
-        if template_type == "invitation":
+        if template_type in ["invitation", "presentation_invitation"]:
             subject = f"Smart India Hackathon 2026 - {subject_prefixes[template_type]}"
         else:
             subject = f"Smart India Hackathon 2026 - {subject_prefixes[template_type]} (Team: {team.team_number})"

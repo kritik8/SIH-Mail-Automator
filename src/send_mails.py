@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Set, List
 
 from src.config import AppConfig, ConfigError
-from src.csv_loader import load_teams_from_csv, TeamData
+from src.csv_loader import load_teams_from_csv, load_selected_teams_from_csv, TeamData
 from src.mailer import EmailRenderer, Mailer
 from src.certificates import get_certificate_files, CertificateError
 
@@ -70,7 +70,7 @@ def main() -> None:
         "--template",
         type=str,
         required=True,
-        choices=["invitation", "reminder", "thankyou", "member_notification"],
+        choices=["invitation", "reminder", "thankyou", "member_notification", "presentation_invitation"],
         help="Select the lifecycle email template to send"
     )
     parser.add_argument(
@@ -118,7 +118,7 @@ def main() -> None:
     # 3. Apply mode overrides
     if args.mode == "test":
         # Sandbox paths
-        csv_path = "test/test_teams.csv"
+        csv_path = args.csv if args.csv else "test/test_teams.csv"
         certs_dir = Path("test/certificates")
         
         # Test mode defaults: enforce NO CCs and trigger real sends to test recipients
@@ -133,7 +133,12 @@ def main() -> None:
         logger.info("====================================================")
         
     elif args.mode == "dry-run":
-        csv_path = args.csv if args.csv else "data/sample_teams_test.csv"
+        if args.csv:
+            csv_path = args.csv
+        elif args.template == "presentation_invitation":
+            csv_path = "Selected team for internal round.csv"
+        else:
+            csv_path = "data/sample_teams_test.csv"
         certs_dir = Path("data/certificates")
         config.dry_run = True
         
@@ -144,7 +149,12 @@ def main() -> None:
         logger.info("====================================================")
         
     else:  # live
-        csv_path = args.csv if args.csv else "data/sample_teams_test.csv" # Real CSV goes here
+        if args.csv:
+            csv_path = args.csv
+        elif args.template == "presentation_invitation":
+            csv_path = "Selected team for internal round.csv"
+        else:
+            csv_path = "data/sample_teams_test.csv"
         certs_dir = Path("data/certificates")
         config.dry_run = False
         
@@ -168,7 +178,10 @@ def main() -> None:
     # 4. Load CSV data
     logger.info(f"Loading teams from: {csv_path}")
     try:
-        teams = load_teams_from_csv(csv_path)
+        if args.template == "presentation_invitation" or "selected" in str(csv_path).lower():
+            teams = load_selected_teams_from_csv(csv_path)
+        else:
+            teams = load_teams_from_csv(csv_path)
     except FileNotFoundError:
         logger.error(f"CSV file not found: {csv_path}")
         sys.exit(1)
