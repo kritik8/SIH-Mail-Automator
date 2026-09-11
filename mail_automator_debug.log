@@ -6053,3 +6053,280 @@ leader_email
 2026-09-09 23:21:00,766 [INFO] app: Successfully processed: 89
 2026-09-09 23:21:00,766 [INFO] app: Failed to process:      0
 2026-09-09 23:21:00,767 [INFO] app: ====================================================
+2026-09-11 01:21:31,392 [INFO] app: ====================================================
+2026-09-11 01:21:31,394 [INFO] app:                  DRY RUN ACTIVE                     
+2026-09-11 01:21:31,394 [INFO] app: ====================================================
+2026-09-11 01:21:31,394 [INFO] app: Writing rendered HTML files to preview/presentation_invitation/
+2026-09-11 01:21:31,395 [INFO] app: ====================================================
+2026-09-11 01:21:31,395 [INFO] app: Loading teams from: Selected team for internal round.csv
+2026-09-11 01:21:31,408 [WARNING] csv_loader: [Line 71] Skipping row: Team number is empty.
+2026-09-11 01:21:31,419 [INFO] csv_loader: Loaded 101 shortlisted teams from Selected team for internal round.csv
+2026-09-11 01:21:31,419 [INFO] app: Loaded 101 valid team rows from CSV.
+2026-09-11 01:21:31,434 [INFO] app: Found 89 teams already successfully processed in send_log_presentation_invitation.csv.
+2026-09-11 01:21:31,434 [INFO] app: [1/101] Skipping team SIH-1: Already sent in previous run.
+2026-09-11 01:21:31,437 [INFO] app: [2/101] Skipping team SIH-2: Already sent in previous run.
+2026-09-11 01:21:31,437 [INFO] app: [3/101] Skipping team SIH-3: Already sent in previous run.
+2026-09-11 01:21:31,437 [INFO] app: [4/101] Skipping team SIH-4: Already sent in previous run.
+2026-09-11 01:21:31,437 [INFO] app: [5/101] Skipping team SIH-5: Already sent in previous run.
+2026-09-11 01:21:31,437 [INFO] app: [6/101] Skipping team SIH-6: Already sent in previous run.
+2026-09-11 01:21:31,438 [INFO] app: [7/101] Skipping team SIH-7: Already sent in previous run.
+2026-09-11 01:21:31,438 [INFO] app: [8/101] Skipping team SIH-8: Already sent in previous run.
+2026-09-11 01:21:31,438 [INFO] app: [9/101] Skipping team SIH-10: Already sent in previous run.
+2026-09-11 01:21:31,438 [INFO] app: [10/101] Skipping team SIH-11: Already sent in previous run.
+2026-09-11 01:21:31,438 [INFO] app: [11/101] Skipping team SIH-12: Already sent in previous run.
+2026-09-11 01:21:31,438 [INFO] app: [12/101] Skipping team SIH-13: Already sent in previous run.
+2026-09-11 01:21:31,438 [INFO] app: [13/101] Skipping team SIH-14: Already sent in previous run.
+2026-09-11 01:21:31,438 [INFO] app: [14/101] Skipping team SIH-15: Already sent in previous run.
+2026-09-11 01:21:31,438 [INFO] app: [15/101] Skipping team SIH-16: Already sent in previous run.
+2026-09-11 01:21:31,438 [INFO] app: [16/101] Skipping team SIH-18: Already sent in previous run.
+2026-09-11 01:21:31,438 [INFO] app: [17/101] Skipping team SIH-19: Already sent in previous run.
+2026-09-11 01:21:31,438 [INFO] app: [18/101] Skipping team SIH-20: Already sent in previous run.
+2026-09-11 01:21:31,438 [INFO] app: [19/101] Skipping team SIH-22: Already sent in previous run.
+2026-09-11 01:21:31,438 [INFO] app: [20/101] Skipping team SIH-24: Already sent in previous run.
+2026-09-11 01:21:31,438 [INFO] app: [21/101] Skipping team SIH-25: Already sent in previous run.
+2026-09-11 01:21:31,438 [INFO] app: [22/101] Skipping team SIH-26: Already sent in previous run.
+2026-09-11 01:21:31,439 [INFO] app: [23/101] Skipping team SIH-27: Already sent in previous run.
+2026-09-11 01:21:31,439 [INFO] app: [24/101] Skipping team SIH-28: Already sent in previous run.
+2026-09-11 01:21:31,439 [INFO] app: [25/101] Skipping team SIH-29: Already sent in previous run.
+2026-09-11 01:21:31,440 [INFO] app: [26/101] Skipping team SIH-30: Already sent in previous run.
+2026-09-11 01:21:31,440 [INFO] app: [27/101] Skipping team SIH-31: Already sent in previous run.
+2026-09-11 01:21:31,440 [INFO] app: [28/101] Skipping team SIH-33: Already sent in previous run.
+2026-09-11 01:21:31,440 [INFO] app: [29/101] Skipping team SIH-34: Already sent in previous run.
+2026-09-11 01:21:31,440 [INFO] app: [30/101] Skipping team SIH-35: Already sent in previous run.
+2026-09-11 01:21:31,440 [INFO] app: [31/101] Skipping team SIH-36: Already sent in previous run.
+2026-09-11 01:21:31,440 [INFO] app: [32/101] Skipping team SIH-38: Already sent in previous run.
+2026-09-11 01:21:31,440 [INFO] app: [33/101] Skipping team SIH-39: Already sent in previous run.
+2026-09-11 01:21:31,440 [INFO] app: [34/101] Skipping team SIH-40: Already sent in previous run.
+2026-09-11 01:21:31,440 [INFO] app: [35/101] Skipping team SIH-41: Already sent in previous run.
+2026-09-11 01:21:31,440 [INFO] app: [36/101] Skipping team SIH-44: Already sent in previous run.
+2026-09-11 01:21:31,440 [INFO] app: [37/101] Skipping team SIH-45: Already sent in previous run.
+2026-09-11 01:21:31,440 [INFO] app: [38/101] Skipping team SIH-46: Already sent in previous run.
+2026-09-11 01:21:31,440 [INFO] app: [39/101] Skipping team SIH-48: Already sent in previous run.
+2026-09-11 01:21:31,441 [INFO] app: [40/101] Skipping team SIH-49: Already sent in previous run.
+2026-09-11 01:21:31,441 [INFO] app: [41/101] Skipping team SIH-51: Already sent in previous run.
+2026-09-11 01:21:31,441 [INFO] app: [42/101] Skipping team SIH-52: Already sent in previous run.
+2026-09-11 01:21:31,441 [INFO] app: [43/101] Skipping team SIH-54: Already sent in previous run.
+2026-09-11 01:21:31,441 [INFO] app: [44/101] Skipping team SIH-55: Already sent in previous run.
+2026-09-11 01:21:31,441 [INFO] app: [45/101] Skipping team SIH-57: Already sent in previous run.
+2026-09-11 01:21:31,442 [INFO] app: [46/101] Skipping team SIH-58: Already sent in previous run.
+2026-09-11 01:21:31,442 [INFO] app: [47/101] Skipping team SIH-59: Already sent in previous run.
+2026-09-11 01:21:31,442 [INFO] app: [48/101] Skipping team SIH-60: Already sent in previous run.
+2026-09-11 01:21:31,442 [INFO] app: [49/101] Skipping team SIH-61: Already sent in previous run.
+2026-09-11 01:21:31,442 [INFO] app: [50/101] Skipping team SIH-62: Already sent in previous run.
+2026-09-11 01:21:31,442 [INFO] app: [51/101] Skipping team SIH-64: Already sent in previous run.
+2026-09-11 01:21:31,442 [INFO] app: [52/101] Skipping team SIH-65: Already sent in previous run.
+2026-09-11 01:21:31,442 [INFO] app: [53/101] Skipping team SIH-66: Already sent in previous run.
+2026-09-11 01:21:31,442 [INFO] app: [54/101] Skipping team SIH-67: Already sent in previous run.
+2026-09-11 01:21:31,442 [INFO] app: [55/101] Skipping team SIH-68: Already sent in previous run.
+2026-09-11 01:21:31,442 [INFO] app: [56/101] Skipping team SIH-69: Already sent in previous run.
+2026-09-11 01:21:31,442 [INFO] app: [57/101] Skipping team SIH-72: Already sent in previous run.
+2026-09-11 01:21:31,442 [INFO] app: [58/101] Skipping team SIH-76: Already sent in previous run.
+2026-09-11 01:21:31,442 [INFO] app: [59/101] Skipping team SIH-78: Already sent in previous run.
+2026-09-11 01:21:31,443 [INFO] app: [60/101] Skipping team SIH-79: Already sent in previous run.
+2026-09-11 01:21:31,443 [INFO] app: [61/101] Skipping team SIH-80: Already sent in previous run.
+2026-09-11 01:21:31,443 [INFO] app: [62/101] Skipping team SIH-81: Already sent in previous run.
+2026-09-11 01:21:31,443 [INFO] app: [63/101] Skipping team SIH-82: Already sent in previous run.
+2026-09-11 01:21:31,443 [INFO] app: [64/101] Skipping team SIH-85: Already sent in previous run.
+2026-09-11 01:21:31,443 [INFO] app: [65/101] Skipping team SIH-86: Already sent in previous run.
+2026-09-11 01:21:31,443 [INFO] app: [66/101] Skipping team SIH-87: Already sent in previous run.
+2026-09-11 01:21:31,443 [INFO] app: [67/101] Skipping team SIH-89: Already sent in previous run.
+2026-09-11 01:21:31,443 [INFO] app: [68/101] Skipping team SIH-91: Already sent in previous run.
+2026-09-11 01:21:31,443 [INFO] app: [69/101] Skipping team SIH-93: Already sent in previous run.
+2026-09-11 01:21:31,443 [INFO] app: [70/101] Skipping team SIH-94: Already sent in previous run.
+2026-09-11 01:21:31,444 [INFO] app: [71/101] Skipping team SIH-95: Already sent in previous run.
+2026-09-11 01:21:31,444 [INFO] app: [72/101] Skipping team SIH-97: Already sent in previous run.
+2026-09-11 01:21:31,444 [INFO] app: [73/101] Skipping team SIH-98: Already sent in previous run.
+2026-09-11 01:21:31,444 [INFO] app: [74/101] Skipping team SIH-99: Already sent in previous run.
+2026-09-11 01:21:31,444 [INFO] app: [75/101] Skipping team SIH-100: Already sent in previous run.
+2026-09-11 01:21:31,444 [INFO] app: [76/101] Skipping team SIH-101: Already sent in previous run.
+2026-09-11 01:21:31,444 [INFO] app: [77/101] Skipping team SIH-102: Already sent in previous run.
+2026-09-11 01:21:31,444 [INFO] app: [78/101] Skipping team SIH-103: Already sent in previous run.
+2026-09-11 01:21:31,444 [INFO] app: [79/101] Skipping team SIH-104: Already sent in previous run.
+2026-09-11 01:21:31,444 [INFO] app: [80/101] Skipping team SIH-105: Already sent in previous run.
+2026-09-11 01:21:31,444 [INFO] app: [81/101] Skipping team SIH-106: Already sent in previous run.
+2026-09-11 01:21:31,444 [INFO] app: [82/101] Skipping team SIH-107: Already sent in previous run.
+2026-09-11 01:21:31,444 [INFO] app: [83/101] Skipping team SIH-108: Already sent in previous run.
+2026-09-11 01:21:31,444 [INFO] app: [84/101] Skipping team SIH-109: Already sent in previous run.
+2026-09-11 01:21:31,444 [INFO] app: [85/101] Skipping team SIH-110: Already sent in previous run.
+2026-09-11 01:21:31,445 [INFO] app: [86/101] Skipping team SIH-111: Already sent in previous run.
+2026-09-11 01:21:31,445 [INFO] app: [87/101] Skipping team SIH-112: Already sent in previous run.
+2026-09-11 01:21:31,445 [INFO] app: [88/101] Skipping team SIH-113: Already sent in previous run.
+2026-09-11 01:21:31,445 [INFO] app: [89/101] Skipping team SIH-114: Already sent in previous run.
+2026-09-11 01:21:31,445 [INFO] app: [90/101] Sending 'presentation_invitation' email to team SIH-21 -> ojasvsoni@gmail.com
+2026-09-11 01:21:31,559 [INFO] mailer: [DRY RUN] Generated preview for team SIH-21 (presentation_invitation) at: preview\presentation_invitation\team_SIH-21.html
+2026-09-11 01:21:31,562 [INFO] app: [91/101] Sending 'presentation_invitation' email to team SIH-23 -> singhtomarsunil8@gmail.com
+2026-09-11 01:21:31,569 [INFO] mailer: [DRY RUN] Generated preview for team SIH-23 (presentation_invitation) at: preview\presentation_invitation\team_SIH-23.html
+2026-09-11 01:21:31,570 [INFO] app: [92/101] Sending 'presentation_invitation' email to team SIH-32 -> pranavpolawar123@gmail.com
+2026-09-11 01:21:31,574 [INFO] mailer: [DRY RUN] Generated preview for team SIH-32 (presentation_invitation) at: preview\presentation_invitation\team_SIH-32.html
+2026-09-11 01:21:31,576 [INFO] app: [93/101] Sending 'presentation_invitation' email to team SIH-37 -> dharuvbhola@gmail.com
+2026-09-11 01:21:31,581 [INFO] mailer: [DRY RUN] Generated preview for team SIH-37 (presentation_invitation) at: preview\presentation_invitation\team_SIH-37.html
+2026-09-11 01:21:31,582 [INFO] app: [94/101] Sending 'presentation_invitation' email to team SIH-47 -> tshaswat32@gmail.com
+2026-09-11 01:21:31,585 [INFO] mailer: [DRY RUN] Generated preview for team SIH-47 (presentation_invitation) at: preview\presentation_invitation\team_SIH-47.html
+2026-09-11 01:21:31,586 [INFO] app: [95/101] Sending 'presentation_invitation' email to team SIH-50 -> atuljoshi85117@gmail.com
+2026-09-11 01:21:31,590 [INFO] mailer: [DRY RUN] Generated preview for team SIH-50 (presentation_invitation) at: preview\presentation_invitation\team_SIH-50.html
+2026-09-11 01:21:31,592 [INFO] app: [96/101] Sending 'presentation_invitation' email to team SIH-56 -> guptaansh1209@gmail.com
+2026-09-11 01:21:31,597 [INFO] mailer: [DRY RUN] Generated preview for team SIH-56 (presentation_invitation) at: preview\presentation_invitation\team_SIH-56.html
+2026-09-11 01:21:31,598 [INFO] app: [97/101] Sending 'presentation_invitation' email to team SIH-63 -> rohitpatelgurjar@gmail.com
+2026-09-11 01:21:31,602 [INFO] mailer: [DRY RUN] Generated preview for team SIH-63 (presentation_invitation) at: preview\presentation_invitation\team_SIH-63.html
+2026-09-11 01:21:31,603 [INFO] app: [98/101] Sending 'presentation_invitation' email to team SIH-77 -> abhay123tin@gmail.com
+2026-09-11 01:21:31,607 [INFO] mailer: [DRY RUN] Generated preview for team SIH-77 (presentation_invitation) at: preview\presentation_invitation\team_SIH-77.html
+2026-09-11 01:21:31,608 [INFO] app: [99/101] Sending 'presentation_invitation' email to team SIH-83 -> gtarun261005@gmail.com
+2026-09-11 01:21:31,612 [INFO] mailer: [DRY RUN] Generated preview for team SIH-83 (presentation_invitation) at: preview\presentation_invitation\team_SIH-83.html
+2026-09-11 01:21:31,613 [INFO] app: [100/101] Sending 'presentation_invitation' email to team SIH-88 -> 25u020009@iiitbhopal.ac.in
+2026-09-11 01:21:31,619 [INFO] mailer: [DRY RUN] Generated preview for team SIH-88 (presentation_invitation) at: preview\presentation_invitation\team_SIH-88.html
+2026-09-11 01:21:31,620 [INFO] app: [101/101] Sending 'presentation_invitation' email to team SIH-96 -> priyanshusharma48431@gmail.com
+2026-09-11 01:21:31,624 [INFO] mailer: [DRY RUN] Generated preview for team SIH-96 (presentation_invitation) at: preview\presentation_invitation\team_SIH-96.html
+2026-09-11 01:21:31,625 [INFO] app: ====================================================
+2026-09-11 01:21:31,625 [INFO] app:                 EXECUTION SUMMARY                   
+2026-09-11 01:21:31,625 [INFO] app: ====================================================
+2026-09-11 01:21:31,625 [INFO] app: Template:               presentation_invitation
+2026-09-11 01:21:31,625 [INFO] app: Mode:                   dry-run
+2026-09-11 01:21:31,625 [INFO] app: Total targets:          101
+2026-09-11 01:21:31,626 [INFO] app: Skipped (already sent): 89
+2026-09-11 01:21:31,626 [INFO] app: Successfully processed: 12
+2026-09-11 01:21:31,626 [INFO] app: Failed to process:      0
+2026-09-11 01:21:31,626 [INFO] app: ====================================================
+2026-09-11 01:21:56,004 [INFO] app: ====================================================
+2026-09-11 01:21:56,006 [INFO] app:                 !!! LIVE RUN !!!                    
+2026-09-11 01:21:56,006 [INFO] app: ====================================================
+2026-09-11 01:21:56,006 [INFO] app: Targeting real recipients with CC to: ['sourabh.jain@iiitbhopal.ac.in', 'rekhakaushik@iiitbhopal.ac.in']
+2026-09-11 01:21:56,006 [INFO] app: ====================================================
+2026-09-11 01:21:56,006 [INFO] app: Loading teams from: Selected team for internal round.csv
+2026-09-11 01:21:56,021 [WARNING] csv_loader: [Line 71] Skipping row: Team number is empty.
+2026-09-11 01:21:56,030 [INFO] csv_loader: Loaded 101 shortlisted teams from Selected team for internal round.csv
+2026-09-11 01:21:56,031 [INFO] app: Loaded 101 valid team rows from CSV.
+2026-09-11 01:21:56,052 [INFO] app: Found 89 teams already successfully processed in send_log_presentation_invitation.csv.
+2026-09-11 01:21:56,052 [INFO] app: [1/101] Skipping team SIH-1: Already sent in previous run.
+2026-09-11 01:21:56,053 [INFO] app: [2/101] Skipping team SIH-2: Already sent in previous run.
+2026-09-11 01:21:56,053 [INFO] app: [3/101] Skipping team SIH-3: Already sent in previous run.
+2026-09-11 01:21:56,053 [INFO] app: [4/101] Skipping team SIH-4: Already sent in previous run.
+2026-09-11 01:21:56,053 [INFO] app: [5/101] Skipping team SIH-5: Already sent in previous run.
+2026-09-11 01:21:56,054 [INFO] app: [6/101] Skipping team SIH-6: Already sent in previous run.
+2026-09-11 01:21:56,054 [INFO] app: [7/101] Skipping team SIH-7: Already sent in previous run.
+2026-09-11 01:21:56,054 [INFO] app: [8/101] Skipping team SIH-8: Already sent in previous run.
+2026-09-11 01:21:56,054 [INFO] app: [9/101] Skipping team SIH-10: Already sent in previous run.
+2026-09-11 01:21:56,054 [INFO] app: [10/101] Skipping team SIH-11: Already sent in previous run.
+2026-09-11 01:21:56,054 [INFO] app: [11/101] Skipping team SIH-12: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [12/101] Skipping team SIH-13: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [13/101] Skipping team SIH-14: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [14/101] Skipping team SIH-15: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [15/101] Skipping team SIH-16: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [16/101] Skipping team SIH-18: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [17/101] Skipping team SIH-19: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [18/101] Skipping team SIH-20: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [19/101] Skipping team SIH-22: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [20/101] Skipping team SIH-24: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [21/101] Skipping team SIH-25: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [22/101] Skipping team SIH-26: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [23/101] Skipping team SIH-27: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [24/101] Skipping team SIH-28: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [25/101] Skipping team SIH-29: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [26/101] Skipping team SIH-30: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [27/101] Skipping team SIH-31: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [28/101] Skipping team SIH-33: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [29/101] Skipping team SIH-34: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [30/101] Skipping team SIH-35: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [31/101] Skipping team SIH-36: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [32/101] Skipping team SIH-38: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [33/101] Skipping team SIH-39: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [34/101] Skipping team SIH-40: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [35/101] Skipping team SIH-41: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [36/101] Skipping team SIH-44: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [37/101] Skipping team SIH-45: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [38/101] Skipping team SIH-46: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [39/101] Skipping team SIH-48: Already sent in previous run.
+2026-09-11 01:21:56,055 [INFO] app: [40/101] Skipping team SIH-49: Already sent in previous run.
+2026-09-11 01:21:56,057 [INFO] app: [41/101] Skipping team SIH-51: Already sent in previous run.
+2026-09-11 01:21:56,057 [INFO] app: [42/101] Skipping team SIH-52: Already sent in previous run.
+2026-09-11 01:21:56,057 [INFO] app: [43/101] Skipping team SIH-54: Already sent in previous run.
+2026-09-11 01:21:56,057 [INFO] app: [44/101] Skipping team SIH-55: Already sent in previous run.
+2026-09-11 01:21:56,057 [INFO] app: [45/101] Skipping team SIH-57: Already sent in previous run.
+2026-09-11 01:21:56,057 [INFO] app: [46/101] Skipping team SIH-58: Already sent in previous run.
+2026-09-11 01:21:56,058 [INFO] app: [47/101] Skipping team SIH-59: Already sent in previous run.
+2026-09-11 01:21:56,058 [INFO] app: [48/101] Skipping team SIH-60: Already sent in previous run.
+2026-09-11 01:21:56,058 [INFO] app: [49/101] Skipping team SIH-61: Already sent in previous run.
+2026-09-11 01:21:56,058 [INFO] app: [50/101] Skipping team SIH-62: Already sent in previous run.
+2026-09-11 01:21:56,058 [INFO] app: [51/101] Skipping team SIH-64: Already sent in previous run.
+2026-09-11 01:21:56,058 [INFO] app: [52/101] Skipping team SIH-65: Already sent in previous run.
+2026-09-11 01:21:56,058 [INFO] app: [53/101] Skipping team SIH-66: Already sent in previous run.
+2026-09-11 01:21:56,058 [INFO] app: [54/101] Skipping team SIH-67: Already sent in previous run.
+2026-09-11 01:21:56,059 [INFO] app: [55/101] Skipping team SIH-68: Already sent in previous run.
+2026-09-11 01:21:56,059 [INFO] app: [56/101] Skipping team SIH-69: Already sent in previous run.
+2026-09-11 01:21:56,059 [INFO] app: [57/101] Skipping team SIH-72: Already sent in previous run.
+2026-09-11 01:21:56,059 [INFO] app: [58/101] Skipping team SIH-76: Already sent in previous run.
+2026-09-11 01:21:56,059 [INFO] app: [59/101] Skipping team SIH-78: Already sent in previous run.
+2026-09-11 01:21:56,059 [INFO] app: [60/101] Skipping team SIH-79: Already sent in previous run.
+2026-09-11 01:21:56,059 [INFO] app: [61/101] Skipping team SIH-80: Already sent in previous run.
+2026-09-11 01:21:56,059 [INFO] app: [62/101] Skipping team SIH-81: Already sent in previous run.
+2026-09-11 01:21:56,059 [INFO] app: [63/101] Skipping team SIH-82: Already sent in previous run.
+2026-09-11 01:21:56,059 [INFO] app: [64/101] Skipping team SIH-85: Already sent in previous run.
+2026-09-11 01:21:56,059 [INFO] app: [65/101] Skipping team SIH-86: Already sent in previous run.
+2026-09-11 01:21:56,059 [INFO] app: [66/101] Skipping team SIH-87: Already sent in previous run.
+2026-09-11 01:21:56,059 [INFO] app: [67/101] Skipping team SIH-89: Already sent in previous run.
+2026-09-11 01:21:56,059 [INFO] app: [68/101] Skipping team SIH-91: Already sent in previous run.
+2026-09-11 01:21:56,059 [INFO] app: [69/101] Skipping team SIH-93: Already sent in previous run.
+2026-09-11 01:21:56,059 [INFO] app: [70/101] Skipping team SIH-94: Already sent in previous run.
+2026-09-11 01:21:56,059 [INFO] app: [71/101] Skipping team SIH-95: Already sent in previous run.
+2026-09-11 01:21:56,061 [INFO] app: [72/101] Skipping team SIH-97: Already sent in previous run.
+2026-09-11 01:21:56,061 [INFO] app: [73/101] Skipping team SIH-98: Already sent in previous run.
+2026-09-11 01:21:56,061 [INFO] app: [74/101] Skipping team SIH-99: Already sent in previous run.
+2026-09-11 01:21:56,061 [INFO] app: [75/101] Skipping team SIH-100: Already sent in previous run.
+2026-09-11 01:21:56,061 [INFO] app: [76/101] Skipping team SIH-101: Already sent in previous run.
+2026-09-11 01:21:56,061 [INFO] app: [77/101] Skipping team SIH-102: Already sent in previous run.
+2026-09-11 01:21:56,061 [INFO] app: [78/101] Skipping team SIH-103: Already sent in previous run.
+2026-09-11 01:21:56,061 [INFO] app: [79/101] Skipping team SIH-104: Already sent in previous run.
+2026-09-11 01:21:56,061 [INFO] app: [80/101] Skipping team SIH-105: Already sent in previous run.
+2026-09-11 01:21:56,061 [INFO] app: [81/101] Skipping team SIH-106: Already sent in previous run.
+2026-09-11 01:21:56,061 [INFO] app: [82/101] Skipping team SIH-107: Already sent in previous run.
+2026-09-11 01:21:56,061 [INFO] app: [83/101] Skipping team SIH-108: Already sent in previous run.
+2026-09-11 01:21:56,062 [INFO] app: [84/101] Skipping team SIH-109: Already sent in previous run.
+2026-09-11 01:21:56,062 [INFO] app: [85/101] Skipping team SIH-110: Already sent in previous run.
+2026-09-11 01:21:56,062 [INFO] app: [86/101] Skipping team SIH-111: Already sent in previous run.
+2026-09-11 01:21:56,062 [INFO] app: [87/101] Skipping team SIH-112: Already sent in previous run.
+2026-09-11 01:21:56,062 [INFO] app: [88/101] Skipping team SIH-113: Already sent in previous run.
+2026-09-11 01:21:56,062 [INFO] app: [89/101] Skipping team SIH-114: Already sent in previous run.
+2026-09-11 01:21:56,062 [INFO] app: [90/101] Sending 'presentation_invitation' email to team SIH-21 -> ojasvsoni@gmail.com
+2026-09-11 01:22:03,756 [INFO] mailer: Successfully sent email to ojasvsoni@gmail.com (Attempt 1)
+2026-09-11 01:22:03,757 [INFO] app: Throttling for 3.0 seconds...
+2026-09-11 01:22:06,758 [INFO] app: [91/101] Sending 'presentation_invitation' email to team SIH-23 -> singhtomarsunil8@gmail.com
+2026-09-11 01:22:13,479 [INFO] mailer: Successfully sent email to singhtomarsunil8@gmail.com (Attempt 1)
+2026-09-11 01:22:13,480 [INFO] app: Throttling for 3.0 seconds...
+2026-09-11 01:22:16,481 [INFO] app: [92/101] Sending 'presentation_invitation' email to team SIH-32 -> pranavpolawar123@gmail.com
+2026-09-11 01:22:23,416 [INFO] mailer: Successfully sent email to pranavpolawar123@gmail.com (Attempt 1)
+2026-09-11 01:22:23,419 [INFO] app: Throttling for 3.0 seconds...
+2026-09-11 01:22:26,420 [INFO] app: [93/101] Sending 'presentation_invitation' email to team SIH-37 -> dharuvbhola@gmail.com
+2026-09-11 01:22:34,471 [INFO] mailer: Successfully sent email to dharuvbhola@gmail.com (Attempt 1)
+2026-09-11 01:22:34,471 [INFO] app: Throttling for 3.0 seconds...
+2026-09-11 01:22:37,478 [INFO] app: [94/101] Sending 'presentation_invitation' email to team SIH-47 -> tshaswat32@gmail.com
+2026-09-11 01:22:43,588 [INFO] mailer: Successfully sent email to tshaswat32@gmail.com (Attempt 1)
+2026-09-11 01:22:43,591 [INFO] app: Throttling for 3.0 seconds...
+2026-09-11 01:22:46,592 [INFO] app: [95/101] Sending 'presentation_invitation' email to team SIH-50 -> atuljoshi85117@gmail.com
+2026-09-11 01:22:54,434 [INFO] mailer: Successfully sent email to atuljoshi85117@gmail.com (Attempt 1)
+2026-09-11 01:22:54,434 [INFO] app: Throttling for 3.0 seconds...
+2026-09-11 01:22:57,447 [INFO] app: [96/101] Sending 'presentation_invitation' email to team SIH-56 -> guptaansh1209@gmail.com
+2026-09-11 01:23:04,067 [INFO] mailer: Successfully sent email to guptaansh1209@gmail.com (Attempt 1)
+2026-09-11 01:23:04,072 [INFO] app: Throttling for 3.0 seconds...
+2026-09-11 01:23:07,073 [INFO] app: [97/101] Sending 'presentation_invitation' email to team SIH-63 -> rohitpatelgurjar@gmail.com
+2026-09-11 01:23:14,207 [INFO] mailer: Successfully sent email to rohitpatelgurjar@gmail.com (Attempt 1)
+2026-09-11 01:23:14,210 [INFO] app: Throttling for 3.0 seconds...
+2026-09-11 01:23:17,210 [INFO] app: [98/101] Sending 'presentation_invitation' email to team SIH-77 -> abhay123tin@gmail.com
+2026-09-11 01:23:23,928 [INFO] mailer: Successfully sent email to abhay123tin@gmail.com (Attempt 1)
+2026-09-11 01:23:23,928 [INFO] app: Throttling for 3.0 seconds...
+2026-09-11 01:23:26,938 [INFO] app: [99/101] Sending 'presentation_invitation' email to team SIH-83 -> gtarun261005@gmail.com
+2026-09-11 01:23:33,547 [INFO] mailer: Successfully sent email to gtarun261005@gmail.com (Attempt 1)
+2026-09-11 01:23:33,564 [INFO] app: Throttling for 3.0 seconds...
+2026-09-11 01:23:36,565 [INFO] app: [100/101] Sending 'presentation_invitation' email to team SIH-88 -> 25u020009@iiitbhopal.ac.in
+2026-09-11 01:23:43,288 [INFO] mailer: Successfully sent email to 25u020009@iiitbhopal.ac.in (Attempt 1)
+2026-09-11 01:23:43,292 [INFO] app: Throttling for 3.0 seconds...
+2026-09-11 01:23:46,293 [INFO] app: [101/101] Sending 'presentation_invitation' email to team SIH-96 -> priyanshusharma48431@gmail.com
+2026-09-11 01:23:52,291 [INFO] mailer: Successfully sent email to priyanshusharma48431@gmail.com (Attempt 1)
+2026-09-11 01:23:52,291 [INFO] app: ====================================================
+2026-09-11 01:23:52,291 [INFO] app:                 EXECUTION SUMMARY                   
+2026-09-11 01:23:52,291 [INFO] app: ====================================================
+2026-09-11 01:23:52,291 [INFO] app: Template:               presentation_invitation
+2026-09-11 01:23:52,291 [INFO] app: Mode:                   live
+2026-09-11 01:23:52,291 [INFO] app: Total targets:          101
+2026-09-11 01:23:52,291 [INFO] app: Skipped (already sent): 89
+2026-09-11 01:23:52,291 [INFO] app: Successfully processed: 12
+2026-09-11 01:23:52,291 [INFO] app: Failed to process:      0
+2026-09-11 01:23:52,291 [INFO] app: ====================================================
